@@ -117,17 +117,21 @@ _As of 4th June 2022_
 | ----------- | ----------- |
 | **Migraine**:  High levels of stress, excessive tiredness, lack of regular eating/drinking habits contribute to onset of migraine. Early outwardly recognisable symptons: (1) Inability to concentrate on seemingly simple tasks (2) Emesis (in extreme cases where workarounds are not present) | Sleep. Preferably in a dark room.  Early access to Coffee, Painkillers, Sumatriptan.|
 | **Context assumption**:  I sometimes assume everyone has the same context as I do. If that happens, I might not communicate the context or my perspective as clearly as I should.| Please remind me to provide more context if I do this. |
-| **Misophonia**: Some noises, such as loud eating or tea slurping, will trigger an emotional response.  | If I eat at the same time, the effect is lessened and normality will be restored.  In extreme cases, I will make my excuses and leave for a period of time;  I may dress this up  as "going to get a coffee" |
+| **Misophonia**: Some noises, such as loud eating or tea slurping, will trigger an emotional response.  | If I eat at the same time, the effect is lessened and normality will be restored.  In extreme cases, I will make my excuses and leave for a period of time;  I may dress this up  as "going to get a ~coffee~ drink" |
 
 ---
 
 ## Version Information
-**Current Version:  v2.18.0**
+
+**Current Version:  v3.0.0**
 
 All notable changes to the User Guide will be documented in this changelog.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning for Documents](https://semverdoc.org/).
+
+### [3.0.0] - 2023-08-15
+ - Forked the user guide from my old github account which I lost access to.
 
 ### [2.18.1] - 2022-06-07
  - Improved grammar on misophonia defect section.
