@@ -38,18 +38,20 @@ If you have your own User Guide, please share it with me so I can learn how best
 > It is good to have an end to journey toward; but it is the journey that matters, in the end - Ursula K. Le Guin
 
 ### Books I'm reading
-_As of 4th June 2022_
-* The Little Book of Hygge (The Danish Way to Live Well)
+_As of 16 August 2023_
+* The Making of the Atomic Bomb, by Richard Rhodes.
 * [No Office](https://nooffice.org/book/) (because works is something you do, not where you go)
-* Surrounded by Idiots
-* Something Doesn't Add Up
 
 ### Things I'm interested right now
-_As of 4th June 2022_
+_As of 16th June 2023_
 * [Digital compartmentalisation](https://medium.com/codex/everyone-should-implement-digital-compartmentalization-e1cc45395db2)
 * [GitHub Pages](https://docs.github.com/en/pages/quickstart "GitHub Pages Quick Start")
-* Building the most efficient point to point WiFi to my garden office. 
+* The rollout of Fibre to my home, and 1Gbps internet connectivity.  I'll need to upgrade my home office point to point wifi
 * User Guides
+
+### Accomplishments
+_Not all of them... just the once I'm really pleased with_
+* The point to point wifi from my house to garden office.  Router to PoE WiFi AP via cat6 PoE --> AP Bridge --> via cat6 PoE to switch
 
 ---
 
@@ -57,15 +59,17 @@ _As of 4th June 2022_
 
 ### Communication
 
-* My preferred hierarchy of communication (least → most urgent): Email → Teams → WhatsApp → Phone Call.
+* My preferred hierarchy of communication (least → most urgent): Email → Teams → WhatsApp → Teams Phone Call.
 * I prefer email to be used when detailed information and data needs to be shared.  I find emails much easier when retreival is required at a later date.
 * Real-time sometimes, asynchronous most of the time.
 * I don't expect a response to anything in real-time. If it's urgent, the hierarchy of communication should change.
 * If we find ourselves in an almost real-time conversation on email or Teams, or if takes more than 2-3 messages to bring closure to a topic, then I may suggested we move to voice/video.
 * I mostly prefer long-form writing using collaboration tools such as Confluence.
 * Don't expect an answer if you just write "Hello" in Microsoft Teams chat. Phrase your message that allows me to provide a meaningful response as soon as I've read and had time to answer.  Find our more at [https://NoHello.net](https://nohello.net/en) or [https://aka.ms/nohello](https://aka.ms/nohello)
-* I have a direct communication style.  I say what I mean.  I'll be explicit and unambiguous.
+* I have a direct communication style, and can sometimes come across as blunt.  I never mean to offend!  I say what I mean.  I'll be explicit and unambiguous.
+* I prefer (and really appreicate) clear written communications, preferably in bullet points.  Over-communication is key :)
 * I am clearer in writing than in person. In person, I may talk my thoughts out loud which can feel rambling; you'll get to see my mind at work -- good luck ;)
+
 
 #### Email
 * I read all of them.  I only reply if absolutely necessary.  _Note: I've not figured out all my rules for replying, Hufffington Post has pretty good [article](https://www.huffingtonpost.co.uk/entry/when-stop-replying-email_l_619bfd74e4b0f398af09184e)_ 
@@ -123,12 +127,18 @@ _As of 4th June 2022_
 
 ## Version Information
 
-**Current Version:  v3.0.0**
+**Current Version:  v3.1.0**
 
 All notable changes to the User Guide will be documented in this changelog.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning for Documents](https://semverdoc.org/).
+
+### [3.1.0] - 2023-08-16
+ - Added in accomplishments
+ - Updated my reading list
+ - Updated things I'm interested in
+ - Took some learnings from Nicola Mizen on ways of communicating, and added them to my own user guide.
 
 ### [3.0.0] - 2023-08-15
  - Forked the user guide from my old github account which I lost access to.
