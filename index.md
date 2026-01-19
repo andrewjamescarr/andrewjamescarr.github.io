@@ -45,16 +45,19 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 			<ul>
 				<li>Remembering to step out of the weeds</li>
 				<li>Avoiding context switching</li>
-				<li>Slowing down—my brain runs faster than I can speak</li>
+				<li>Slowing down; my brain runs faster than I can speak</li>
 				<li>Telling people I don't feel well</li>
 				<li>Sending things before my wife proofreads them</li>
 			</ul>
 
 			<h3>Favourite quotes</h3>
 			<blockquote>
-				It is good to have an end to journey toward; but it is the journey that matters, in the end. — Ursula K. Le Guin<br />
-				Progress over perfection.
+				It is good to have an end to journey toward; but it is the journey that matters, in the end. — Ursula K. Le Guin
 			</blockquote>
+
+            <br />
+            <blockquote>Progress over perfection
+            </blockquote>
 
 			<h3>Books I'm reading (Jan 2026)</h3>
 			<ul>
@@ -82,10 +85,10 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 			<ul>
 				<li>Preferred urgency ladder: Email → Teams → WhatsApp → Teams phone call.</li>
 				<li>Email for detail and retrieval; real-time only when truly needed.</li>
-				<li>If a thread needs &gt;2–3 back-and-forths, suggest voice/video.</li>
+				<li>If a thread needs &gt;2 - 3 back-and-forths, suggest voice/video.</li>
 				<li>Direct style; never intended to offend—explicit and unambiguous is the goal.</li>
 				<li>Clear, bullet-heavy writing appreciated; over-communication beats ambiguity.</li>
-				<li>Clear asks beat "Hello" pings; see https://nohello.net/en.</li>
+				<li>Clear asks beat "Hello" pings; see <a href="https://nohello.net/en">https://nohello.net/en</a>.</li>
 				<li>I'm clearer in writing than in person; in person you may hear my thinking process aloud.</li>
 			</ul>
 
@@ -94,17 +97,24 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 				<li>I read everything; I reply only when needed.</li>
 				<li>CC is for FYI; I read CC slower than TO.</li>
 				<li>Use @mentions to flag actions.</li>
-				<li>Bottom Line Up Front works best: actions/dates first, then conclusion, then supporting facts.</li>
+				<li>Bottom Line Up Front works best:
+					<ul>
+						<li>Actions/dates first</li>
+						<li>Then conclusion</li>
+						<li>Then supporting facts</li>
+					</ul>
+				</li>
 			</ul>
 		</section>
 
 		<section id="logistics">
 			<h2>🧭 Logistics</h2>
 			<ul>
-				<li>Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.</li>
+				<li>In the office:  Monday and Wednesday (7am to 4pm)</li>
+                <li>Remote working on other days:  Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.</li>
 				<li>I adapt for dispersed teams; time is taken back later.</li>
 				<li>Personal boundaries matter; please share yours so we can respect them together.</li>
-				<li>Calendar rules: always current; accept what I can attend, decline what I can't; avoid tentative. Prefer breaks between meetings and clear noun-based outcomes ("agreement on..."). Location is shown; feel free to book when free.</li>
+				<li>Calendar rules: always current; I accept what I can attend, decline what I can't; avoid tentative. Prefer breaks between meetings and clear noun-based outcomes ("agreement on..."). Location is shown; feel free to book when free.</li>
 				<li>Meeting notes/actions should be captured collaboratively in real time.</li>
 			</ul>
 		</section>
@@ -112,7 +122,14 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 		<section id="how-i-work">
 			<h2>🧠 How I Like to Work</h2>
 			<ul>
-				<li>Aim for Level 1 of the Pyramid of Communication: deep work first, then feedback loops, then messaging, then immediate feedback, then meetings.</li>
+				<li>Aim for Level 1 of the Pyramid of Communication:
+                <ul>
+                <li>deep work first</li>
+                <li>then feedback loops
+                <li>then messaging</li>
+                <li>then immediate feedback</li>
+                <li>then meetings.</li>
+                </ul>
 				<li>I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.</li>
 				<li>I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).</li>
 			</ul>
