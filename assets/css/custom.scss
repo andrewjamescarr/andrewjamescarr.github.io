@@ -22,6 +22,39 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem 0.5rem;
+  background: rgba(247, 249, 251, 0.96);
+  backdrop-filter: blur(6px);
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.top-nav a {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: white;
+  color: $teal-dark;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.top-nav a:hover {
+  border-color: rgba(15, 118, 110, 0.4);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.1);
+  transform: translateY(-1px);
+}
+
 .page-header .project-name {
   font-weight: 700;
   letter-spacing: -0.02em;

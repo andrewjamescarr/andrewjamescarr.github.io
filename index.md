@@ -6,7 +6,20 @@ title: Andrew Carr's User Guide
 # 👋 Welcome
 A single-page user manual so new teammates can work smoothly with me. Skim the highlights, then dive deeper where needed.
 
-## ✅ Quick Facts
+<nav class="top-nav">
+	<a href="#quick-facts">Quick Facts</a>
+	<a href="#communication">Communication</a>
+	<a href="#logistics">Logistics</a>
+	<a href="#how-i-work">How I Work</a>
+	<a href="#decision-frameworks">Decisions</a>
+	<a href="#availability">Availability</a>
+	<a href="#working-preferences">Preferences</a>
+	<a href="#known-defects">Defects</a>
+	<a href="#version-information">Version Info</a>
+	<a href="#todo">TODO</a>
+</nav>
+
+## ✅ Quick Facts {#quick-facts}
 ### Conversation starters
 - Why I took up running
 - The time I handcuffed myself to a shopping trolley
@@ -44,7 +57,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 ### Accomplishments
 - My new Ubiquiti Unifi home network
 
-## 💬 Communication
+## 💬 Communication {#communication}
 - Preferred urgency ladder: Email → Teams → WhatsApp → Teams phone call.
 - Email for detail and retrieval; real-time only when truly needed.
 - If a thread needs >2–3 back-and-forths, suggest voice/video.
@@ -59,14 +72,14 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 - Use @mentions to flag actions.
 - Bottom Line Up Front works best: actions/dates first, then conclusion, then supporting facts.
 
-## 🧭 Logistics
+## 🧭 Logistics {#logistics}
 - Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.
 - I adapt for dispersed teams; time is taken back later.
 - Personal boundaries matter; please share yours so we can respect them together.
 - Calendar rules: always current; accept what I can attend, decline what I can't; avoid tentative. Prefer breaks between meetings and clear noun-based outcomes ("agreement on…"). Location is shown; feel free to book when free.
 - Meeting notes/actions should be captured collaboratively in real time.
 
-## 🧠 How I Like to Work
+## 🧠 How I Like to Work {#how-i-work}
 - Aim for Level 1 of the Pyramid of Communication: deep work first, then feedback loops, then messaging, then immediate feedback, then meetings.
 - I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.
 - I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).
@@ -75,30 +88,35 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 - We keep a shared working doc (Teams Notes, Confluence, Wiki, SharePoint).
 - Agenda is yours: concerns, development, issues; not for project status.
 
-## 🧩 Decision Frameworks
+## 🧩 Decision Frameworks {#decision-frameworks}
 _Use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like. Add examples of recent decisions and why they went that way._
 - Consider noting: when to ship vs. perfect, risk tolerance, criteria for saying no, when to seek consensus vs. decide.
 - Helpful reads: [The Decision Book](https://www.amazon.com/dp/0393652370), [Mental Models by Farnam Street](https://fs.blog/mental-models/), [RACI basics](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix).
 
-## 📅 Availability
+## 📅 Availability {#availability}
 _Describe patterns people can expect: focus blocks, meeting-free windows, response-time expectations, and how to reach you if something is truly urgent._
 - Example: "Deep work 9–11 most days; replies slower then."  
 - Example: "If red in calendar = truly heads-down; urgent = call."  
 - Resource: [Cal Newport on time blocking](https://www.calnewport.com/blog/category/time-blocking/).
 
-## ⚙️ Working Preferences
+## ⚙️ Working Preferences {#working-preferences}
 _Clarify environmental and collaboration preferences so teammates can set you up for success._
 - Examples to capture: preferred document formats, async vs sync bias, feedback style (direct/softened), pairing cadence, meeting length defaults, camera/mic norms.
 - Resource: [GitLab Handbook – Communication](https://about.gitlab.com/handbook/communication/).
 
-## 🐛 Known Defects
-| Defect | Workaround |
-| --- | --- |
-| Migraine: Stress, tiredness, poor eating/drinking can trigger; early signs: difficulty concentrating, possible emesis. | Sleep in a dark room; coffee, painkillers, sumatriptan. |
-| Context assumption: I may assume shared context and skip details. | Ask me to add context; I will happily expand. |
-| Misophonia: Noises like loud eating/tea slurping can trigger. | If I eat too the effect lessens; I may step away briefly. |
+## 🐛 Known Defects {#known-defects}
+<table>
+	<thead>
+		<tr><th>Defect</th><th>Workaround</th></tr>
+	</thead>
+	<tbody>
+		<tr><td>Migraine: Stress, tiredness, poor eating/drinking can trigger; early signs: difficulty concentrating, possible emesis.</td><td>Sleep in a dark room; coffee, painkillers, sumatriptan.</td></tr>
+		<tr><td>Context assumption: I may assume shared context and skip details.</td><td>Ask me to add context; I will happily expand.</td></tr>
+		<tr><td>Misophonia: Noises like loud eating/tea slurping can trigger.</td><td>If I eat too the effect lessens; I may step away briefly.</td></tr>
+	</tbody>
+</table>
 
-## 📈 Version Information
+## 📈 Version Information {#version-information}
 _Current Version: v3.2.0_
 
 All notable changes follow Keep a Changelog and semantic versioning for documents.
@@ -114,7 +132,7 @@ All notable changes follow Keep a Changelog and semantic versioning for document
 - 1.1.0 — 2022-05-25: Typos; how I process emails.
 - 1.0.0 — 2022-05-25: First wider release with Quick Facts, Communication, Logistics, How I like to work, Defects, TODO.
 
-## 📌 TODO
+## 📌 TODO {#todo}
 - I don't like surprises
 - Names are our identity
 - My humour (or lack of, according to my 9-year-old)
