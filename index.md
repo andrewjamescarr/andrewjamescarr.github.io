@@ -6,8 +6,6 @@ title: Andrew Carr's User Guide
 # 👋 Welcome
 A single-page user manual so new teammates can work smoothly with me. Skim the highlights, then dive deeper where needed.
 
-_Current version: v3.2.0 · [Full version history](/version/)_
-
 <div class="layout-with-nav">
 	<aside class="side-nav">
 		<div class="nav-title">Jump to</div>
@@ -110,8 +108,13 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 		<section id="logistics">
 			<h2>🧭 Logistics</h2>
 			<ul>
-				<li>In the office:  Monday and Wednesday (7am to 4pm)</li>
-                <li>Remote working on other days:  Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.</li>
+				<li>In the Bristol office:  Monday and Wednesday (7am to 4pm)</li>
+                <li>Remote working on other days:
+                    <ul>
+                    <li>Core hours roughly 9–5, with flexibility for life</li>
+                    </ul>
+                </li>
+                <li>Non-negotiable: evenings/weekends are family time.</li>
 				<li>I adapt for dispersed teams; time is taken back later.</li>
 				<li>Personal boundaries matter; please share yours so we can respect them together.</li>
 			</ul>
