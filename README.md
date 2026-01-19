@@ -1,8 +1,6 @@
 # README
 ---
 ## Introduction
-<img align="right" src="https://user-images.githubusercontent.com/26958886/170279034-4abdc690-d43c-4412-b9c3-76c4c763986e.jpg">
-
 A user guide for Andrew Carr.  I offer this to you because the faster we get to know each other and how we work, the better and stronger our relationship will be, and the more we can accomplish together.
 
 If you have your own User Guide, please share it with me so I can learn how best to work with you.
@@ -27,31 +25,36 @@ If you have your own User Guide, please share it with me so I can learn how best
 * GIF Games
 
 ### What I'm not good at
-* Asking for help
 * Remembering to step out of the weeds
 * Avoiding context switching
 * Slowing down. My brain runs faster than I can speak
 * Telling people I don't feel well
 * Sending things before I allow my wife to proof read them
 
-### Favourite quote
+### Favourite quotes
 > It is good to have an end to journey toward; but it is the journey that matters, in the end - Ursula K. Le Guin
+> Progress over perfection.
 
 ### Books I'm reading
-_As of 16 August 2023_
-* The Making of the Atomic Bomb, by Richard Rhodes.
+_As of January 2026_
+
+* The Decision Book, by Mikael Krogerus
+* Ambulance Care Practice, by Richard Pilbery
+* Four Thousand Weeks, by Oliver Burkeman
 * [No Office](https://nooffice.org/book/) (because works is something you do, not where you go)
+*~~The Making of the Atomic Bomb, by Richard Rhodes.~~
+
 
 ### Things I'm interested right now
 _As of 16th June 2023_
 * [Digital compartmentalisation](https://medium.com/codex/everyone-should-implement-digital-compartmentalization-e1cc45395db2)
 * [GitHub Pages](https://docs.github.com/en/pages/quickstart "GitHub Pages Quick Start")
-* The rollout of Fibre to my home, and 1Gbps internet connectivity.  I'll need to upgrade my home office point to point wifi
-* User Guides
+* Building my Home Office, navigating planning permission, using AI to write my Design Access Statement, and creating scale drawings by hand.
+
 
 ### Accomplishments
 _Not all of them... just the once I'm really pleased with_
-* The point to point wifi from my house to garden office.  Router to PoE WiFi AP via cat6 PoE --> AP Bridge --> via cat6 PoE to switch
+* My new Ubiquiti Unifi home network.  
 
 ---
 
@@ -127,12 +130,15 @@ _Not all of them... just the once I'm really pleased with_
 
 ## Version Information
 
-**Current Version:  v3.1.0**
+**Current Version:  v3.2.0**
 
 All notable changes to the User Guide will be documented in this changelog.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning for Documents](https://semverdoc.org/).
+
+### [3.2.0] - 2026-01-119
+ - Some timely updates to accomplishments, reading list, and things I'm interested in
 
 ### [3.1.0] - 2023-08-16
  - Added in accomplishments
