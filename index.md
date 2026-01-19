@@ -86,7 +86,7 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 				<li>Preferred urgency ladder: Email → Teams → WhatsApp → Teams phone call.</li>
 				<li>Email for detail and retrieval; real-time only when truly needed.</li>
 				<li>If a thread needs &gt;2 - 3 back-and-forths, suggest voice/video.</li>
-				<li>Direct style; never intended to offend—explicit and unambiguous is the goal.</li>
+				<li>Direct style; never intended to offend - explicit and unambiguous is the goal.</li>
 				<li>Clear, bullet-heavy writing appreciated; over-communication beats ambiguity.</li>
 				<li>Clear asks beat "Hello" pings; see <a href="https://nohello.net/en">https://nohello.net/en</a>.</li>
 				<li>I'm clearer in writing than in person; in person you may hear my thinking process aloud.</li>
@@ -95,7 +95,7 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 			<h4>Email specifics</h4>
 			<ul>
 				<li>I read everything; I reply only when needed.</li>
-				<li>CC is for FYI; I read CC slower than TO.</li>
+				<li>CC is for FYI; I read CC less often than TO.</li>
 				<li>Use @mentions to flag actions.</li>
 				<li>Bottom Line Up Front works best:
 					<ul>
@@ -114,7 +114,13 @@ _Current version: v3.2.0 · [Full version history](/version/)_
                 <li>Remote working on other days:  Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.</li>
 				<li>I adapt for dispersed teams; time is taken back later.</li>
 				<li>Personal boundaries matter; please share yours so we can respect them together.</li>
-				<li>Calendar rules: always current; I accept what I can attend, decline what I can't; avoid tentative. Prefer breaks between meetings and clear noun-based outcomes ("agreement on..."). Location is shown; feel free to book when free.</li>
+				<li>Calendar rules: 
+                    <ul>
+                    <li>always current; I accept what I can attend</li>
+                    <li>decline what I can't; avoid tentative.</li>
+                    <li>Prefer breaks between meetings and clear noun-based outcomes ("agreement on...")</li>
+                    <li>Location is shown; feel free to book when free.</li>
+                    </ul>
 				<li>Meeting notes/actions should be captured collaboratively in real time.</li>
 			</ul>
 		</section>
@@ -123,14 +129,14 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 			<h2>🧠 How I Like to Work</h2>
 			<ul>
 				<li>Aim for Level 1 of the Pyramid of Communication:
-					<ul>
-						<li>deep work first</li>
-						<li>then feedback loops</li>
-						<li>then messaging</li>
-						<li>then immediate feedback</li>
-						<li>then meetings</li>
-					</ul>
-				</li>
+                <ul>
+                    <li>deep work first</li>
+                    <li>then feedback loops
+                    <li>then messaging</li>
+                    <li>then immediate feedback</li>
+                    <li>then meetings.</li>
+                </ul>
+
 				<li>I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.</li>
 				<li>I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).</li>
 			</ul>
