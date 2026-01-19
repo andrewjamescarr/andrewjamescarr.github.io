@@ -111,7 +111,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 				<li>In the Bristol office:  Monday and Wednesday (7am to 4pm)</li>
                 <li>Remote working on other days:
                     <ul>
-                    <li>Core hours roughly 9–5, with flexibility for life</li>
+                    <li>Core hours roughly 9am to 5pm, with flexibility for life</li>
                     </ul>
                 </li>
                 <li>Non-negotiable: evenings/weekends are family time.</li>
@@ -132,8 +132,14 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
                         <li>then meetings.</li>
                     </ul>
                 </li>
-				<li>I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.</li>
-				<li>I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).</li>
+				<li>I dislike context switching; mitigations: 
+                <ul>
+                    <li>15-minute buffers</li>
+                    <li>task batching</li>
+                    <li>time blocking, Pomodoro.</li>
+                </ul>
+                </li>
+				<li>I need reflection time to frame rationale: I minimize notifications (email off, Teams set to DND during deep work).</li>
                 <li>Meeting notes/actions should be captured collaboratively in real time.</li>
 			</ul>
 
@@ -146,29 +152,37 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 
 		<section id="decision-frameworks">
 			<h2>🧩 Decision Frameworks</h2>
-			<p><em>Use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like. Add examples of recent decisions and why they went that way.</em></p>
-			<ul>
-				<li>Consider noting: when to ship vs. perfect, risk tolerance, criteria for saying no, when to seek consensus vs. decide.</li>
+			<p><em>I use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like. TODO // Add examples of recent decisions and why they went that way.</em></p>
+			<p>Before I make a decision, I need four specific types of signal.  If I'm missing one, I'm gambling, not deciding:</p>
+            <ul>
+                <li>The "Root Cause" Signal: Is this a symptom or the disease? (eg, "Sales are down" is a symptom; "The checkout button is broken" is the disease).</li>
+                <li>The "Reversibility" Signal: How hard is it to undo this? (See the Type 1 vs. Type 2 framework below).</li>
+                <li>The "Counter-Evidence" Signal: What is the strongest argument against this choice? If I can't find one, I have confirmation bias.</li>
+                <li>The "Opportunity Cost" Signal: If I spend £10,000 and 3 weeks on Option A, what am I explicitly choosing not to do?</li>
+            </ul>
+            <p>TODO My criteria for saying no</p>
+            <p>TODO My risk tolerance</p>
+            <h3>Core Frameworks</h3>
+            <p><strong>A. The Reversibility Scale (Jeff Bezos’s "Two Doors")</strong>
 				<li>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</li>
 			</ul>
 		</section>
 
 		<section id="availability">
 			<h2>📅 Availability</h2>
-			<p><em>Describe patterns people can expect: focus blocks, meeting-free windows, response-time expectations, and how to reach you if something is truly urgent.</em></p>
+			<p><em>Here I describe patterns people can expect: focus blocks, meeting-free windows, response-time expectations, and how to reach you if something is truly urgent.</em></p>
             <ul>
-                <li>Deep work every Friday.  Will decline most meetings</li>
+                <li>Deep work every Friday.  Will decline most meetings.</li>
                 <li>If 'red' in calendar = truly heads down; urgent = call</li>
                 <li>I time block; see <a href="https://calnewport.com/deep-habits-the-importance-of-planning-every-minute-of-your-work-day">See Cal Newport on Time Blocking</a>.</li>
                 <li>Calendar rules: 
                     <ul>
-                        <li>always current; I accept what I can attend</li>
+                        <li>always current; I accept what I can attend.</li>
                         <li>decline what I can't; avoid tentative.</li>
-                        <li>Prefer breaks between meetings and clear noun-based outcomes ("agreement on...")</li>
+                        <li>Prefer breaks between meetings</li>
                         <li>Location is shown; feel free to book when free.</li>
                     </ul>
                 </li>
-
 			</ul>
 		</section>
 
