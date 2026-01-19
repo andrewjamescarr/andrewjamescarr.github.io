@@ -5,6 +5,9 @@ title: Andrew Carr's User Guide
 
 # 👋 Welcome
 A single-page user manual so new teammates can work smoothly with me. Skim the highlights, then dive deeper where needed.
+
+_Current version: v3.2.0 · [Full version history](/version/)_
+
 <div class="layout-with-nav">
 	<aside class="side-nav">
 		<div class="nav-title">Jump to</div>

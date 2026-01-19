@@ -3,5 +3,3 @@ plugins:
   - jekyll-remote-theme
 title: Andrew Carr's User Guide
 description: The User Guide for Andrew Carr.
-sass:
-  sass_dir: assets/css
