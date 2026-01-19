@@ -132,7 +132,7 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 				<li>Aim for Level 1 of the Pyramid of Communication:
                 <ul>
                     <li>deep work first</li>
-                    <li>then feedback loops
+                    <li>then feedback loops</li>
                     <li>then messaging</li>
                     <li>then immediate feedback</li>
                     <li>then meetings.</li>
