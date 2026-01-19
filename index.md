@@ -131,6 +131,7 @@ _Current version: v3.2.0 · [Full version history](/version/)_
                 </li>
 				<li>I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.</li>
 				<li>I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).</li>
+                <li>Meeting notes/actions should be captured collaboratively in real time.</li>
 			</ul>
 
 			<h4>1:1s</h4>
@@ -164,7 +165,7 @@ _Current version: v3.2.0 · [Full version history](/version/)_
                         <li>Location is shown; feel free to book when free.</li>
                     </ul>
                 </li>
-				<li>Meeting notes/actions should be captured collaboratively in real time.</li>
+
 			</ul>
 		</section>
 
