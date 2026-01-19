@@ -5,134 +5,171 @@ title: Andrew Carr's User Guide
 
 # 👋 Welcome
 A single-page user manual so new teammates can work smoothly with me. Skim the highlights, then dive deeper where needed.
+<div class="layout-with-nav">
+	<aside class="side-nav">
+		<div class="nav-title">Jump to</div>
+		<a href="#quick-facts">✅ Quick Facts</a>
+		<a href="#communication">💬 Communication</a>
+		<a href="#logistics">🧭 Logistics</a>
+		<a href="#how-i-work">🧠 How I Work</a>
+		<a href="#decision-frameworks">🧩 Decisions</a>
+		<a href="#availability">📅 Availability</a>
+		<a href="#working-preferences">⚙️ Preferences</a>
+		<a href="#known-defects">🐛 Defects</a>
+		<a href="#todo">📌 TODO</a>
+	</aside>
 
-<nav class="top-nav">
-	<a href="#quick-facts">Quick Facts</a>
-	<a href="#communication">Communication</a>
-	<a href="#logistics">Logistics</a>
-	<a href="#how-i-work">How I Work</a>
-	<a href="#decision-frameworks">Decisions</a>
-	<a href="#availability">Availability</a>
-	<a href="#working-preferences">Preferences</a>
-	<a href="#known-defects">Defects</a>
-	<a href="#version-information">Version Info</a>
-	<a href="#todo">TODO</a>
-</nav>
+	<div class="main-sections">
+		<section id="quick-facts">
+			<h2>✅ Quick Facts</h2>
+			<h3>Conversation starters</h3>
+			<ul>
+				<li>Why I took up running</li>
+				<li>The time I handcuffed myself to a shopping trolley</li>
+				<li>The Back to the Future Trilogy</li>
+				<li>Why I became qualified as a touch-typist at age 16 (RSA I/II/III, Pitman Advanced, C&G)</li>
+				<li>One space or two after a full stop; discuss</li>
+			</ul>
 
-## ✅ Quick Facts {#quick-facts}
-### Conversation starters
-- Why I took up running
-- The time I handcuffed myself to a shopping trolley
-- The Back to the Future Trilogy
-- Why I became qualified as a touch-typist at age 16 (RSA I/II/III, Pitman Advanced, C&G)
-- One space or two after a full stop; discuss
+			<h3>What I'm good at</h3>
+			<ul>
+				<li>Order and structure; accuracy and quality</li>
+				<li>Listening and understanding; fact-checking</li>
+				<li>GIF games</li>
+			</ul>
 
-### What I'm good at
-- Order and structure; accuracy and quality
-- Listening and understanding; fact-checking
-- GIF games
+			<h3>What I'm not good at</h3>
+			<ul>
+				<li>Remembering to step out of the weeds</li>
+				<li>Avoiding context switching</li>
+				<li>Slowing down—my brain runs faster than I can speak</li>
+				<li>Telling people I don't feel well</li>
+				<li>Sending things before my wife proofreads them</li>
+			</ul>
 
-### What I'm not good at
-- Remembering to step out of the weeds
-- Avoiding context switching
-- Slowing down—my brain runs faster than I can speak
-- Telling people I don't feel well
-- Sending things before my wife proofreads them
+			<h3>Favourite quotes</h3>
+			<blockquote>
+				It is good to have an end to journey toward; but it is the journey that matters, in the end. — Ursula K. Le Guin<br />
+				Progress over perfection.
+			</blockquote>
 
-### Favourite quotes
-> It is good to have an end to journey toward; but it is the journey that matters, in the end. — Ursula K. Le Guin  
-> Progress over perfection.
+			<h3>Books I'm reading (Jan 2026)</h3>
+			<ul>
+				<li>The Decision Book — Mikael Krogerus</li>
+				<li>Ambulance Care Practice — Richard Pilbery</li>
+				<li>Four Thousand Weeks — Oliver Burkeman</li>
+				<li>No Office — because work is something you do, not where you go</li>
+			</ul>
 
-### Books I'm reading (Jan 2026)
-- The Decision Book — Mikael Krogerus
-- Ambulance Care Practice — Richard Pilbery
-- Four Thousand Weeks — Oliver Burkeman
-- No Office — because work is something you do, not where you go
+			<h3>Things I'm interested in (Jun 2023)</h3>
+			<ul>
+				<li>Digital compartmentalisation</li>
+				<li>GitHub Pages</li>
+				<li>Building my home office and navigating planning permission</li>
+			</ul>
 
-### Things I'm interested in (Jun 2023)
-- Digital compartmentalisation
-- GitHub Pages
-- Building my home office and navigating planning permission
+			<h3>Accomplishments</h3>
+			<ul>
+				<li>My new Ubiquiti Unifi home network</li>
+			</ul>
+		</section>
 
-### Accomplishments
-- My new Ubiquiti Unifi home network
+		<section id="communication">
+			<h2>💬 Communication</h2>
+			<ul>
+				<li>Preferred urgency ladder: Email → Teams → WhatsApp → Teams phone call.</li>
+				<li>Email for detail and retrieval; real-time only when truly needed.</li>
+				<li>If a thread needs &gt;2–3 back-and-forths, suggest voice/video.</li>
+				<li>Direct style; never intended to offend—explicit and unambiguous is the goal.</li>
+				<li>Clear, bullet-heavy writing appreciated; over-communication beats ambiguity.</li>
+				<li>Clear asks beat "Hello" pings; see https://nohello.net/en.</li>
+				<li>I'm clearer in writing than in person; in person you may hear my thinking process aloud.</li>
+			</ul>
 
-## 💬 Communication {#communication}
-- Preferred urgency ladder: Email → Teams → WhatsApp → Teams phone call.
-- Email for detail and retrieval; real-time only when truly needed.
-- If a thread needs >2–3 back-and-forths, suggest voice/video.
-- Direct style; never intended to offend—explicit and unambiguous is the goal.
-- Clear, bullet-heavy writing appreciated; over-communication beats ambiguity.
-- Clear asks beat "Hello" pings; see https://nohello.net/en.
-- I'm clearer in writing than in person; in person you may hear my thinking process aloud.
+			<h4>Email specifics</h4>
+			<ul>
+				<li>I read everything; I reply only when needed.</li>
+				<li>CC is for FYI; I read CC slower than TO.</li>
+				<li>Use @mentions to flag actions.</li>
+				<li>Bottom Line Up Front works best: actions/dates first, then conclusion, then supporting facts.</li>
+			</ul>
+		</section>
 
-#### Email specifics
-- I read everything; I reply only when needed.
-- CC is for FYI; I read CC slower than TO.
-- Use @mentions to flag actions.
-- Bottom Line Up Front works best: actions/dates first, then conclusion, then supporting facts.
+		<section id="logistics">
+			<h2>🧭 Logistics</h2>
+			<ul>
+				<li>Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.</li>
+				<li>I adapt for dispersed teams; time is taken back later.</li>
+				<li>Personal boundaries matter; please share yours so we can respect them together.</li>
+				<li>Calendar rules: always current; accept what I can attend, decline what I can't; avoid tentative. Prefer breaks between meetings and clear noun-based outcomes ("agreement on..."). Location is shown; feel free to book when free.</li>
+				<li>Meeting notes/actions should be captured collaboratively in real time.</li>
+			</ul>
+		</section>
 
-## 🧭 Logistics {#logistics}
-- Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.
-- I adapt for dispersed teams; time is taken back later.
-- Personal boundaries matter; please share yours so we can respect them together.
-- Calendar rules: always current; accept what I can attend, decline what I can't; avoid tentative. Prefer breaks between meetings and clear noun-based outcomes ("agreement on…"). Location is shown; feel free to book when free.
-- Meeting notes/actions should be captured collaboratively in real time.
+		<section id="how-i-work">
+			<h2>🧠 How I Like to Work</h2>
+			<ul>
+				<li>Aim for Level 1 of the Pyramid of Communication: deep work first, then feedback loops, then messaging, then immediate feedback, then meetings.</li>
+				<li>I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.</li>
+				<li>I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).</li>
+			</ul>
 
-## 🧠 How I Like to Work {#how-i-work}
-- Aim for Level 1 of the Pyramid of Communication: deep work first, then feedback loops, then messaging, then immediate feedback, then meetings.
-- I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.
-- I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).
+			<h4>1:1s</h4>
+			<ul>
+				<li>We keep a shared working doc (Teams Notes, Confluence, Wiki, SharePoint).</li>
+				<li>Agenda is yours: concerns, development, issues; not for project status.</li>
+			</ul>
+		</section>
 
-### 1:1s
-- We keep a shared working doc (Teams Notes, Confluence, Wiki, SharePoint).
-- Agenda is yours: concerns, development, issues; not for project status.
+		<section id="decision-frameworks">
+			<h2>🧩 Decision Frameworks</h2>
+			<p><em>Use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like. Add examples of recent decisions and why they went that way.</em></p>
+			<ul>
+				<li>Consider noting: when to ship vs. perfect, risk tolerance, criteria for saying no, when to seek consensus vs. decide.</li>
+				<li>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</li>
+			</ul>
+		</section>
 
-## 🧩 Decision Frameworks {#decision-frameworks}
-_Use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like. Add examples of recent decisions and why they went that way._
-- Consider noting: when to ship vs. perfect, risk tolerance, criteria for saying no, when to seek consensus vs. decide.
-- Helpful reads: [The Decision Book](https://www.amazon.com/dp/0393652370), [Mental Models by Farnam Street](https://fs.blog/mental-models/), [RACI basics](https://en.wikipedia.org/wiki/Responsibility_assignment_matrix).
+		<section id="availability">
+			<h2>📅 Availability</h2>
+			<p><em>Describe patterns people can expect: focus blocks, meeting-free windows, response-time expectations, and how to reach you if something is truly urgent.</em></p>
+			<ul>
+				<li>Example: "Deep work 9–11 most days; replies slower then."</li>
+				<li>Example: "If red in calendar = truly heads-down; urgent = call."</li>
+				<li>Resource: <a href="https://www.calnewport.com/blog/category/time-blocking/">Cal Newport on time blocking</a>.</li>
+			</ul>
+		</section>
 
-## 📅 Availability {#availability}
-_Describe patterns people can expect: focus blocks, meeting-free windows, response-time expectations, and how to reach you if something is truly urgent._
-- Example: "Deep work 9–11 most days; replies slower then."  
-- Example: "If red in calendar = truly heads-down; urgent = call."  
-- Resource: [Cal Newport on time blocking](https://www.calnewport.com/blog/category/time-blocking/).
+		<section id="working-preferences">
+			<h2>⚙️ Working Preferences</h2>
+			<p><em>Clarify environmental and collaboration preferences so teammates can set you up for success.</em></p>
+			<ul>
+				<li>Examples to capture: preferred document formats, async vs sync bias, feedback style (direct/softened), pairing cadence, meeting length defaults, camera/mic norms.</li>
+				<li>Resource: <a href="https://about.gitlab.com/handbook/communication/">GitLab Handbook – Communication</a>.</li>
+			</ul>
+		</section>
 
-## ⚙️ Working Preferences {#working-preferences}
-_Clarify environmental and collaboration preferences so teammates can set you up for success._
-- Examples to capture: preferred document formats, async vs sync bias, feedback style (direct/softened), pairing cadence, meeting length defaults, camera/mic norms.
-- Resource: [GitLab Handbook – Communication](https://about.gitlab.com/handbook/communication/).
+		<section id="known-defects">
+			<h2>🐛 Known Defects</h2>
+			<table>
+				<thead>
+					<tr><th>Defect</th><th>Workaround</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>Migraine: Stress, tiredness, poor eating/drinking can trigger; early signs: difficulty concentrating, possible emesis.</td><td>Sleep in a dark room; coffee, painkillers, sumatriptan.</td></tr>
+					<tr><td>Context assumption: I may assume shared context and skip details.</td><td>Ask me to add context; I will happily expand.</td></tr>
+					<tr><td>Misophonia: Noises like loud eating/tea slurping can trigger.</td><td>If I eat too the effect lessens; I may step away briefly.</td></tr>
+				</tbody>
+			</table>
+		</section>
 
-## 🐛 Known Defects {#known-defects}
-<table>
-	<thead>
-		<tr><th>Defect</th><th>Workaround</th></tr>
-	</thead>
-	<tbody>
-		<tr><td>Migraine: Stress, tiredness, poor eating/drinking can trigger; early signs: difficulty concentrating, possible emesis.</td><td>Sleep in a dark room; coffee, painkillers, sumatriptan.</td></tr>
-		<tr><td>Context assumption: I may assume shared context and skip details.</td><td>Ask me to add context; I will happily expand.</td></tr>
-		<tr><td>Misophonia: Noises like loud eating/tea slurping can trigger.</td><td>If I eat too the effect lessens; I may step away briefly.</td></tr>
-	</tbody>
-</table>
-
-## 📈 Version Information {#version-information}
-_Current Version: v3.2.0_
-
-All notable changes follow Keep a Changelog and semantic versioning for documents.
-
-- 3.2.0 — 2026-01-19: Timely updates to accomplishments, reading list, interests.
-- 3.1.0 — 2023-08-16: Added accomplishments; updated reading list and interests; comms learnings.
-- 3.0.0 — 2023-08-15: Forked user guide from old account.
-- 2.18.1 — 2022-06-07: Grammar on misophonia; added tea slurping.
-- 2.18.0 — 2022-06-07: Added changelog/version section.
-- 2.0.0–2.17.0: New repo; reconfig for Jekyll/GitHub Pages; minor layout/typo fixes.
-- 1.3.0 — 2022-05-27: Bullet tweaks; comms clarity; NoHello; email clarity; hierarchy for urgency.
-- 1.2.x — 2022-05-26–27: Bullet layout fixes; note on verbalizing thinking.
-- 1.1.0 — 2022-05-25: Typos; how I process emails.
-- 1.0.0 — 2022-05-25: First wider release with Quick Facts, Communication, Logistics, How I like to work, Defects, TODO.
-
-## 📌 TODO {#todo}
-- I don't like surprises
-- Names are our identity
-- My humour (or lack of, according to my 9-year-old)
+		<section id="todo">
+			<h2>📌 TODO</h2>
+			<ul>
+				<li>I don't like surprises</li>
+				<li>Names are our identity</li>
+				<li>My humour (or lack of, according to my 9-year-old)</li>
+			</ul>
+		</section>
+	</div>
+</div>
