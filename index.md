@@ -116,11 +116,12 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 				<li>Personal boundaries matter; please share yours so we can respect them together.</li>
 				<li>Calendar rules: 
                     <ul>
-                    <li>always current; I accept what I can attend</li>
-                    <li>decline what I can't; avoid tentative.</li>
-                    <li>Prefer breaks between meetings and clear noun-based outcomes ("agreement on...")</li>
-                    <li>Location is shown; feel free to book when free.</li>
+                        <li>always current; I accept what I can attend</li>
+                        <li>decline what I can't; avoid tentative.</li>
+                        <li>Prefer breaks between meetings and clear noun-based outcomes ("agreement on...")</li>
+                        <li>Location is shown; feel free to book when free.</li>
                     </ul>
+                </li>
 				<li>Meeting notes/actions should be captured collaboratively in real time.</li>
 			</ul>
 		</section>
