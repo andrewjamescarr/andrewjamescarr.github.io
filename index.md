@@ -114,15 +114,6 @@ _Current version: v3.2.0 · [Full version history](/version/)_
                 <li>Remote working on other days:  Core hours roughly 9–5, with flexibility for life; evenings/weekends are family time.</li>
 				<li>I adapt for dispersed teams; time is taken back later.</li>
 				<li>Personal boundaries matter; please share yours so we can respect them together.</li>
-				<li>Calendar rules: 
-                    <ul>
-                        <li>always current; I accept what I can attend</li>
-                        <li>decline what I can't; avoid tentative.</li>
-                        <li>Prefer breaks between meetings and clear noun-based outcomes ("agreement on...")</li>
-                        <li>Location is shown; feel free to book when free.</li>
-                    </ul>
-                </li>
-				<li>Meeting notes/actions should be captured collaboratively in real time.</li>
 			</ul>
 		</section>
 
@@ -161,10 +152,19 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 		<section id="availability">
 			<h2>📅 Availability</h2>
 			<p><em>Describe patterns people can expect: focus blocks, meeting-free windows, response-time expectations, and how to reach you if something is truly urgent.</em></p>
-			<ul>
-				<li>Example: "Deep work 9–11 most days; replies slower then."</li>
-				<li>Example: "If red in calendar = truly heads-down; urgent = call."</li>
-				<li>Resource: <a href="https://www.calnewport.com/blog/category/time-blocking/">Cal Newport on time blocking</a>.</li>
+            <li>Deep work every Friday.  Will decline most meetings</li>
+            <li>If 'red' in calendar = truly heads down; urgent = call</li>
+            <li>I time block; see <a href="https://calnewport.com/deep-habits-the-importance-of-planning-every-minute-of-your-work-day">See Cal Newport on Time Blocking</a>.</li>
+            <li>Calendar rules: 
+                    <ul>
+                        <li>always current; I accept what I can attend</li>
+                        <li>decline what I can't; avoid tentative.</li>
+                        <li>Prefer breaks between meetings and clear noun-based outcomes ("agreement on...")</li>
+                        <li>Location is shown; feel free to book when free.</li>
+                    </ul>
+                </li>
+				<li>Meeting notes/actions should be captured collaboratively in real time.</li>
+				
 			</ul>
 		</section>
 
