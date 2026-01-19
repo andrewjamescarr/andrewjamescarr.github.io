@@ -130,14 +130,14 @@ _Current version: v3.2.0 · [Full version history](/version/)_
 			<h2>🧠 How I Like to Work</h2>
 			<ul>
 				<li>Aim for Level 1 of the Pyramid of Communication:
-                <ul>
-                    <li>deep work first</li>
-                    <li>then feedback loops</li>
-                    <li>then messaging</li>
-                    <li>then immediate feedback</li>
-                    <li>then meetings.</li>
-                </ul>
-
+                    <ul>
+                        <li>deep work first</li>
+                        <li>then feedback loops</li>
+                        <li>then messaging</li>
+                        <li>then immediate feedback</li>
+                        <li>then meetings.</li>
+                    </ul>
+                </li>
 				<li>I dislike context switching; mitigations: 15-minute buffers, task batching, time blocking, Pomodoro.</li>
 				<li>I need reflection time to frame rationale; I minimize notifications (email off, Teams set to DND during deep work).</li>
 			</ul>
