@@ -162,9 +162,9 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
             </ul>
             <p>TODO My criteria for saying no</p>
             <p>TODO My risk tolerance</p>
-            <h3>Core Frameworks</h3>
-            <p><strong>A. The Reversibility Scale (Jeff Bezos’s "Two Doors")</strong>
-				<li>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</li>
+            <p>TODO My core frameworks</p>
+			<ul>
+                <li>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</li>
 			</ul>
 		</section>
 
