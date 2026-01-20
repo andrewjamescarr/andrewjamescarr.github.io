@@ -1,6 +1,3 @@
-Absolutely — here is a **full, professional, production‑quality README.md** tailored specifically to your repository **andrewjamescarr/andrewjamescarr.github.io**, your Jekyll setup, your GitHub Actions–based deployment, and your release‑driven publishing workflow.
-
-You can copy/paste this directly into your `README.md` file.
 
 ***
 
