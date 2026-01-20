@@ -22,25 +22,6 @@ jobs:
           mkdir public
           cp -r * public/ || true
 
-      # Markdown to HTML conversion for version file.
-      - name: Convert Markdown to HTML
-        run: |
-          pip install markdown
-          python - <<'EOF'
-          import markdown
-          import pathlib
-
-          md_path = pathlib.Path("version.md")
-          out_path = pathlib.Path("public/version.html")
-
-          if md_path.exists():
-              md = md_path.read_text()
-              html = markdown.markdown(md)
-              out_path.write_text(f"<html><body>{html}</body></html>")
-          else:
-              print("version.md not found — skipping conversion")
-          EOF
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
