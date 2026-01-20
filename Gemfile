@@ -1,9 +1,5 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-
-# Required for GitHub remote themes
+gem "github-pages", group: :jekyll_plugins
 gem "jekyll-remote-theme"
-
-# GitHub Pages plugin compatibility
-gem "jekyll-include-cache"
+``
