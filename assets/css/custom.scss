@@ -239,3 +239,14 @@ hr {
     text-align: center;
   }
 }
+
+
+/* Fix unwanted spacing before nested bullet lists */
+.page-content ul ul,
+.page-content ol ol,
+.page-content ul ol,
+.page-content ol ul {
+  margin-top: 0 !important;
+}
+
+
