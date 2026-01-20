@@ -30,6 +30,7 @@ body {
 }
 
 .page-header .project-name {
+  color: #fdfdfd;
   font-size: 2.75rem;
   font-weight: 700;
   line-height: 1.1;
@@ -39,6 +40,7 @@ body {
 }
 
 .page-header .project-tagline {
+  color: #f7fafc;
   font-size: 1.3rem;
   font-weight: 400;
   line-height: 1.4;
@@ -95,13 +97,13 @@ body {
   padding: 2.5rem 1.5rem 3.5rem;
 }
 
-h1, h2, h3 {
+.main-content h1, .main-content h2, .main-content h3 {
   letter-spacing: -0.015em;
   color: $teal-dark;
   margin-top: 1.8rem;
 }
 
-h1:first-of-type {
+.main-content h1:first-of-type {
   margin-top: 0;
 }
 

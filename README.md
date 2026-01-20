@@ -97,34 +97,39 @@ A Jekyll page (`version.md`) displays version information and is automatically b
 
 # 💻 Local Development
 
-You can build and preview the site locally using Ruby and Bundler.
+Choose either Docker (no system Ruby needed) or native Ruby.
 
-### 1. Install Ruby
+### Option A: Quick start with Docker (recommended)
 
-(Recommended: Ruby 3.1+ via rbenv or system Ruby)
+```bash
+docker run --rm -v "$PWD":/srv/jekyll -w /srv/jekyll -e BUNDLE_PATH=vendor/bundle -p 4000:4000 jekyll/jekyll:4 bundle exec jekyll serve --livereload --host 0.0.0.0
+```
 
-### 2. Install Bundler
+Then open 👉 <http://localhost:4000> (LiveReload on port 35729).
+
+### Option B: Native Ruby
+
+1) Install Ruby 3.1+ (rbenv or system Ruby)
+
+2) Install Bundler
 
 ```bash
 gem install bundler
 ```
 
-### 3. Install dependencies
+3) Install dependencies
 
 ```bash
 bundle install
 ```
 
-### 4. Run the Jekyll development server
+4) Run the Jekyll development server
 
 ```bash
 bundle exec jekyll serve
 ```
 
-### 5. View the site locally
-
-Open:  
-👉 <http://localhost:4000>
+5) Open 👉 <http://localhost:4000>
 
 Any changes made to Markdown, layouts, or assets will auto‑reload.
 

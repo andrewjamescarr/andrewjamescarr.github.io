@@ -48,12 +48,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 				<li>Sending things before my wife proofreads them</li>
 			</ul>
 
-			<h3>Favourite quotes</h3>
-			<blockquote>
-				It is good to have an end to journey toward; but it is the journey that matters, in the end. — Ursula K. Le Guin
-			</blockquote>
-
-            <br />
+			<h3>Favourite quote</h3>
             <blockquote>Progress over perfection
             </blockquote>
 
@@ -65,7 +60,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 				<li>No Office — because work is something you do, not where you go</li>
 			</ul>
 
-			<h3>Things I'm interested in (Jun 2023)</h3>
+			<h3>Things I'm interested in (Jun 2026)</h3>
 			<ul>
 				<li>Digital compartmentalisation</li>
 				<li>GitHub Pages</li>
@@ -167,19 +162,17 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
                 <li><strong>The "Counter-Evidence" Signal:</strong> What is the strongest argument against this choice? If I can't find one, I have confirmation bias.</li>
                 <li><strong>The "Opportunity Cost" Signal:</strong> If I spend £10,000 and 3 weeks on Option A, what am I explicitly choosing not to do?</li>
             </ul>
-			<h3>Avoiding ego or short term emotions</h3>
+			<h3>The WRAP Process</h3>
+			<p>I use this process so any short-term emotion doesn't affect the outcome.</p>
 			<ul>
-			 <li>Widen my options:  I never choose between "Yes or No".  I force myself to find at least three viable alternatives</li>
-			 <li>Reality test:  I find someone who diagrees with me.  Why?</li>
-			 <li>Gain distance:  What would I tell a friend to do in this situation?  <em>Removes my immediate fear or ego</em></li>
-			 <li>Prepare to be wrong:  Set a <strong>tripwire</strong>. If x hasn't happened by y, we stop.</li>
-            </ul>
-			<p>TODO My risk tolerance</p>
-            <p>TODO My core frameworks</p>
-			
-			<ul>
-                <li>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</li>
-			</ul>
+			  <li><strong>W</strong>iden my options:  I never choose between "Yes or No".  I force myself to find at least three viable alternatives</li>
+			  <li><strong>R</strong>eality test:  I find someone who diagrees with me.  Why?</li>
+			  <li><strong>A</strong>ttain distance:  What would I tell a friend to do in this situation?  <em>Removes my immediate fear or ego</em></li>
+			  <li><strong>P</strong>repare to be wrong:  Set a <strong>tripwire</strong>. <em>If x hasn't happened by y, we stop.</em></li>
+			</ul> 
+			 <p>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</p>
+			<p>//TODO My risk tolerance</p>
+            <p>//TODO My core frameworks</p>
 		</section>
 
 		<section id="no-protocols">
