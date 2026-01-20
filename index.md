@@ -52,7 +52,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
             <blockquote>Progress over perfection
             </blockquote>
 
-			<h3>Books I'm reading (Jan 2026)</h3>
+			<h3>Books I'm reading (January 2026)</h3>
 			<ul>
 				<li>The Decision Book — Mikael Krogerus</li>
 				<li>Ambulance Care Practice — Richard Pilbery</li>
@@ -60,16 +60,12 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 				<li>No Office — because work is something you do, not where you go</li>
 			</ul>
 
-			<h3>Things I'm interested in (Jun 2026)</h3>
+			<h3>Things I'm interested in (January 2026)</h3>
 			<ul>
 				<li>Digital compartmentalisation</li>
 				<li>GitHub Pages</li>
 				<li>Building my home office and navigating planning permission</li>
-			</ul>
-
-			<h3>Accomplishments</h3>
-			<ul>
-				<li>My new Ubiquiti Unifi home network</li>
+				<li>Building out my new Ubiquiti UniFi home network.</li>
 			</ul>
 		</section>
 
