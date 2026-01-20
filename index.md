@@ -188,7 +188,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 
 		<section id="working-preferences">
 			<h2>⚙️ Working Preferences</h2>
-			<p><em>Clarify environmental and collaboration preferences so teammates can set you up for success.</em></p>
+			<p><em>Here I clarify environmental and collaboration preferences so teammates are set up for success.</em></p>
 			<ul>
 				<li>Examples to capture: preferred document formats, async vs sync bias, feedback style (direct/softened), pairing cadence, meeting length defaults, camera/mic norms.</li>
 				<li>Resource: <a href="https://about.gitlab.com/handbook/communication/">GitLab Handbook – Communication</a>.</li>
@@ -197,14 +197,16 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 
 		<section id="known-defects">
 			<h2>🐛 Known Defects</h2>
+			<p>"Welcome to the Production Environment. Whilst every effort has been made to ship a stable version of myself, please be advised that this build contains several legacy features and unpatched vulnerabilities.</p>
+			<p>Below you’ll find a comprehensive list of Known Defects. Quirky architectural choices and 'working-as-intended' bugs that haven't quite made it to the next sprint. I decided to treat these as documented features rather than system failures, so please review the changelog below before submitting a formal bug report."
 			<table>
 				<thead>
 					<tr><th>Defect</th><th>Workaround</th></tr>
 				</thead>
 				<tbody>
-					<tr><td>Migraine: Stress, tiredness, poor eating/drinking can trigger; early signs: difficulty concentrating, possible emesis.</td><td>Sleep in a dark room; coffee, painkillers, sumatriptan.</td></tr>
-					<tr><td>Context assumption: I may assume shared context and skip details.</td><td>Ask me to add context; I will happily expand.</td></tr>
-					<tr><td>Misophonia: Noises like loud eating/tea slurping can trigger.</td><td>If I eat too the effect lessens; I may step away briefly.</td></tr>
+					<tr><td><strong>Migraine</strong></br>Stress, tiredness, poor eating/drinking can trigger; early signs: difficulty concentrating, possible emesis.</td><td>Sleep in a dark room; coffee, painkillers, sumatriptan.</td></tr>
+					<tr><td><strong>Context assumption</strong></br>I may assume shared context and skip details.</td><td>Ask me to add context; I will happily expand.</td></tr>
+					<tr><td><strong>Misophonia</strong><br/>Noises like loud eating/tea slurping can trigger.</td><td>If I eat too the effect lessens; I may step away briefly.</td></tr>
 				</tbody>
 			</table>
 		</section>

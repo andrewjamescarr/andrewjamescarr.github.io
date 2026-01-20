@@ -10,12 +10,15 @@ $orange: #f59e0b;
 $ink: #1f2933;
 $paper: #f7f9fb;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
   background: $paper;
   color: $ink;
   line-height: 1.7;
-  scroll-behavior: smooth;
 }
 
 .page-header {
