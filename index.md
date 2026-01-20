@@ -199,7 +199,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 		<section id="known-defects">
 			<h2>🐛 Known Defects</h2>
 			<p>Welcome to the Production Environment. Whilst every effort has been made to ship a stable version of myself, please be advised that this build contains several legacy features and unpatched vulnerabilities.</p>
-			<p>Below you’ll find a comprehensive list of Known Defects. Quirky architectural choices and 'working-as-intended' bugs that haven't quite made it to the next sprint. I decided to treat these as documented features rather than system failures, so please review the changelog below before submitting a formal bug report.
+			<p>Below you'll find a comprehensive list of Known Defects. Quirky architectural choices and 'working-as-intended' bugs that haven't quite made it to the next sprint. I decided to treat these as documented features rather than system failures, so please review the changelog below before submitting a formal bug report.</p>
 			<table>
 				<thead>
 					<tr><th>Defect</th><th>Workaround</th></tr>
