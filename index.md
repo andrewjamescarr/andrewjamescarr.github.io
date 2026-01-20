@@ -100,9 +100,9 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 			<h2>🧭 Logistics</h2>
 			<ul>
 				<li>In the Bristol office:  Monday and Wednesday (7am to 4pm)</li>
-                <li>Remote working on other days:
+                <li>Remote working or customer sites on other days:
                     <ul>
-                    <li>Core hours roughly 9am to 5pm, with flexibility for life</li>
+                    <li>Core hours roughly 10am to 4pm, with flexibility for life</li>
                     </ul>
                 </li>
                 <li>Non-negotiable: evenings/weekends are family time.</li>
@@ -114,7 +114,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 		<section id="how-i-work">
 			<h2>🧠 How I Like to Work</h2>
 			<ul>
-				<li>Aim for Level 1 of the Pyramid of Communication:
+				<li>I aim for Level 1 of the Pyramid of Communication:
                     <ul>
                         <li>deep work first</li>
                         <li>then feedback loops</li>
@@ -199,7 +199,7 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 
 		<section id="working-preferences">
 			<h2>⚙️ Working Preferences</h2>
-			<p><em>Here I clarify environmental and collaboration preferences so teammates are set up for success.</em></p>
+			<p><em>Here I set out any environmental and collaboration preferences so teammates are set up for success.</em></p>
 			<ul>
 				<li>Examples to capture: preferred document formats, async vs sync bias, feedback style (direct/softened), pairing cadence, meeting length defaults, camera/mic norms.</li>
 				<li>Resource: <a href="https://about.gitlab.com/handbook/communication/">GitLab Handbook – Communication</a>.</li>
