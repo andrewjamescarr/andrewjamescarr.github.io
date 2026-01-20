@@ -153,19 +153,38 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 
 		<section id="decision-frameworks">
 			<h2>🧩 Decision Frameworks</h2>
-			<p><em>I use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like. TODO // Add examples of recent decisions and why they went that way.</em></p>
+			<p><em>I use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like.</em></p>
+			<h3>Information Gathering</h3>
 			<p>Before I make a decision, I need four specific types of signal.  If I'm missing one, I'm gambling, not deciding:</p>
             <ul>
-                <li>The "Root Cause" Signal: Is this a symptom or the disease? (eg, "Sales are down" is a symptom; "The checkout button is broken" is the disease).</li>
-                <li>The "Reversibility" Signal: How hard is it to undo this? (See the Type 1 vs. Type 2 framework below).</li>
-                <li>The "Counter-Evidence" Signal: What is the strongest argument against this choice? If I can't find one, I have confirmation bias.</li>
-                <li>The "Opportunity Cost" Signal: If I spend £10,000 and 3 weeks on Option A, what am I explicitly choosing not to do?</li>
+                <li><strong>The "Root Cause" Signal:</strong> Is this a symptom or the disease? (eg, "Sales are down" is a symptom; "The checkout button is broken" is the disease).</li>
+                <li><strong>The "Reversibility" Signal:</strong> How hard is it to undo this? (See the Type 1 vs. Type 2 framework below).
+				 <ul>
+				  <li>Type 1 Decision (One way door): Very difficult to reverse.  Action:  Slow down.  Seek 90% confidence and mupltiple expert opinions</li>
+				  <li>Type 2 Decision (Two way door): Can be undone easily.  Action:  Move fast.  Seek 60%-70% confidence.  Progress is better than perfection.</li>
+				 </ul>
+				</li>
+                <li><strong>The "Counter-Evidence" Signal:</strong> What is the strongest argument against this choice? If I can't find one, I have confirmation bias.</li>
+                <li><strong>The "Opportunity Cost" Signal:</strong> If I spend £10,000 and 3 weeks on Option A, what am I explicitly choosing not to do?</li>
             </ul>
-            <p>TODO My criteria for saying no</p>
+			<h3>Avoiding ego or short term emotions</h3>
+			<ul>
+			 <li>Widen my options:  I never choose between "Yes or No".  I force myself to find at least three viable alternatives</li>
+			 <li>Reality test:  I find someone who diagrees with me.  Why?</li>
+			 <li>Gain distance:  What would I tell a friend to do in this situation?  <em>Removes my immediate fear or ego</em></li>
+			 <li>Prepare to be wrong:  Set a <strong>tripwire</strong>. If x hasn't happened by y, we stop.</li>
             <p>TODO My risk tolerance</p>
             <p>TODO My core frameworks</p>
 			<ul>
                 <li>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</li>
+			</ul>
+		</section>
+
+		<section id="no-protocols">
+			<h2>🚫 The "No" Protocols</h2>
+			<p><em>I project my time and focus by applying these filters to every request.</em></p>
+		    <ul>
+			 <li>TODO</li>
 			</ul>
 		</section>
 
