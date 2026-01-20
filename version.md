@@ -5,11 +5,12 @@ permalink: /version/
 ---
 
 # 📈 Version Information
-_Current Version: v3.2.0_
+_Current Version: v4.0.8_
 
 All notable changes follow Keep a Changelog and semantic versioning for documents.
 
-- 4.0.7 - 2026-01-20: Fixes to deployment workflows to move to Github. Learning... don't work in browser and test -- do it all locally first!
+- 4.0.8 — 2026-01-20: Updated content.  Minor fixes to CSS to remove line break after an indented bullet.
+- 4.0.7 — 2026-01-20: Fixes to deployment workflows to move to Github. Learning... don't work in browser and test -- do it all locally first!
 - 4.0.0 — 2026-01-20:  Moved to Github actions with Release trigger.  Acknowledge that a lot of updates made in between v3 and v4 that haven't followed proper semantic versioning :) 
 - 3.2.0 — 2026-01-19: Timely updates to accomplishments, reading list, interests.
 - 3.1.0 — 2023-08-16: Added accomplishments; updated reading list and interests; comms learnings.
