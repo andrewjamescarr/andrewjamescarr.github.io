@@ -173,8 +173,10 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 			 <li>Reality test:  I find someone who diagrees with me.  Why?</li>
 			 <li>Gain distance:  What would I tell a friend to do in this situation?  <em>Removes my immediate fear or ego</em></li>
 			 <li>Prepare to be wrong:  Set a <strong>tripwire</strong>. If x hasn't happened by y, we stop.</li>
-            <p>TODO My risk tolerance</p>
+            </ul>
+			<p>TODO My risk tolerance</p>
             <p>TODO My core frameworks</p>
+			
 			<ul>
                 <li>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</li>
 			</ul>
