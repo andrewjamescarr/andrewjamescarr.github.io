@@ -9,6 +9,7 @@ _Current Version: v3.2.0_
 
 All notable changes follow Keep a Changelog and semantic versioning for documents.
 
+- 4.0.0 — 2026-01-20:  Moved to Github actions with Release trigger.  Acknowledge that a lot of updates made in between v3 and v4 that haven't followed proper semantic versioning :) 
 - 3.2.0 — 2026-01-19: Timely updates to accomplishments, reading list, interests.
 - 3.1.0 — 2023-08-16: Added accomplishments; updated reading list and interests; comms learnings.
 - 3.0.0 — 2023-08-15: Forked user guide from old account.
