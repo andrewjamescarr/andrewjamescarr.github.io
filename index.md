@@ -164,70 +164,58 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 		<section id="how-i-work">
 			<h3>🧠 How I Like to Work</h3>
 			<ul>
-				<li>I aim for Level 1 of the Pyramid of Communication:
-                    <ul>
-                        <li>deep work first</li>
-                        <li>then feedback loops</li>
-                        <li>then messaging</li>
-                        <li>then immediate feedback</li>
-                        <li>then meetings.</li>
-                    </ul>
-                </li>
-				<li>I dislike context switching; mitigations: 
-                <ul>
-                    <li>15-minute buffers</li>
-                    <li>task batching</li>
-                    <li>time blocking</li>
-					<li>Pomodoro.</li>
-                </ul>
-                </li>
-				<li>I need reflection time to frame rationale: I minimize notifications (email off, Teams set to DND during deep work).</li>
-				<li>I don't like surprises: flag blockers, delays, or changes early so I can adjust.</li>
-                <li>Meeting notes/actions should be captured collaboratively in real time.</li>
+				<li><strong>Meetings as a last resort:</strong> I prefer async communication and written updates. If we need a meeting, there should be clear preparation, a pre-read, and a specific agenda. No surprises.</li>
+				<li><strong>I hate surprises:</strong> Flag blockers, delays, scope changes, or problems early so I can adjust and respond thoughtfully. Transparency before panic.</li>
+				<li><strong>I need preparation time:</strong> I minimize notifications during deep work (email off, Teams on DND). During focus blocks, I'm truly focused.  Come back when the time is right.</li>
+				<li><strong>Capture as you go:</strong> Meeting notes and actions should be written collaboratively in real time. Clarity in the moment saves rework later.</li>
 			</ul>
 
-			<h4>1:1s</h4>
+			<h4>How I structure 1:1s</h4>
 			<ul>
-				<li>We keep a shared working doc (Teams Notes, Confluence, Wiki, SharePoint).</li>
-				<li>Agenda is yours: concerns, development, issues; not for project status.</li>
+				<li><strong>Shared working doc:</strong> We keep running notes in Teams, Confluence, or SharePoint. Agenda is yours.  Raise concerns, development topics, blockers, anything that matters.</li>
+				<li><strong>Pastoral, not status:</strong> 1:1s are for relationship-building and development, not project status (that's async).  If you need something, I'm here for it.</li>
+				<li><strong>Your agenda:</strong> You own what we discuss. I'm here to listen, coach, unblock, and support your growth.</li>
 			</ul>
 		</section>
 
 		<section id="decision-frameworks">
 			<h3>🧩 Decision Frameworks</h3>
-			<p><em>I use this to spell out how I make calls: principles, thresholds, when I defer, and what "good" evidence looks like.</em></p>
-			<h4>Information Gathering</h4>
-			<p>Before I make a decision, I need four specific types of signal.  If I'm missing one, I'm gambling, not deciding:</p>
+			<p>I use a few core principles to make calls clearly. Here's how I think about decisions:</p>
+			
+			<h4>The four signals I need before deciding</h4>
+			<p>If I'm missing any of these, I'm gambling, not deciding. I need:</p>
             <ul>
-                <li><strong>The "Root Cause" Signal:</strong> Is this a symptom or the disease? (eg, "Sales are down" is a symptom; "The checkout button is broken" is the disease).</li>
-                <li><strong>The "Reversibility" Signal:</strong> How hard is it to undo this? (See the Type 1 vs. Type 2 framework below).
-				 <ul>
-				  <li>Type 1 Decision (One way door): Very difficult to reverse.  Action:  Slow down.  Seek 90% confidence and mupltiple expert opinions</li>
-				  <li>Type 2 Decision (Two way door): Can be undone easily.  Action:  Move fast.  Seek 60%-70% confidence.  Progress is better than perfection.</li>
-				 </ul>
+                <li><strong>Root cause signal:</strong> Is this a symptom or the disease? Example: "Sales are down" is a symptom; "the checkout button is broken" is the disease.</li>
+                <li><strong>Reversibility signal:</strong> How hard is it to undo this decision?
+					<ul>
+						<li><strong>Type 1 (one-way door):</strong> Very difficult to reverse. Slow down. Seek 90% confidence and multiple expert opinions.</li>
+						<li><strong>Type 2 (two-way door):</strong> Can be undone easily. Move fast. Seek 60-70% confidence. Progress beats perfection.</li>
+					</ul>
 				</li>
-                <li><strong>The "Counter-Evidence" Signal:</strong> What is the strongest argument against this choice? If I can't find one, I have confirmation bias.</li>
-                <li><strong>The "Opportunity Cost" Signal:</strong> If I spend £10,000 and 3 weeks on Option A, what am I explicitly choosing not to do?</li>
+                <li><strong>Counter-evidence signal:</strong> What's the strongest argument against this choice? If I can't find one, I probably have confirmation bias.</li>
+                <li><strong>Opportunity cost signal:</strong> If I spend time and resources on Option A, what am I explicitly choosing NOT to do?</li>
             </ul>
-			<h4>The WRAP Process</h4>
-			<p>I use this process so any short-term emotion doesn't affect the outcome.</p>
+
+			<h4>The WRAP process</h4>
+			<p>I use this to prevent short-term emotion from affecting outcomes:</p>
 			<ul>
-			  <li><strong>W</strong>iden my options:  I never choose between "Yes or No".  I force myself to find at least three viable alternatives</li>
-			  <li><strong>R</strong>eality test:  I find someone who diagrees with me.  Why?</li>
-			  <li><strong>A</strong>ttain distance:  What would I tell a friend to do in this situation?  <em>Removes my immediate fear or ego</em></li>
-			  <li><strong>P</strong>repare to be wrong:  Set a <strong>tripwire</strong>. <em>If x hasn't happened by y, we stop.</em></li>
-			</ul> 
-			 <p>Helpful reads: <a href="https://www.amazon.com/dp/0393652370">The Decision Book</a>, <a href="https://fs.blog/mental-models/">Mental Models by Farnam Street</a>, <a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI basics</a>.</p>
-			<p>//TODO My risk tolerance</p>
-            <p>//TODO My core frameworks</p>
+			  <li><strong>Widen my options:</strong> I never choose between "yes or no". I force myself to find at least three viable alternatives.</li>
+			  <li><strong>Reality test:</strong> I find someone who disagrees with me and understand why. This challenges my thinking.</li>
+			  <li><strong>Attain distance:</strong> What would I tell a friend to do in this situation? This removes my immediate fear or ego.</li>
+			  <li><strong>Prepare to be wrong:</strong> Set a tripwire—"If X hasn't happened by Y, we stop and reassess."</li>
+			</ul>
+
+			<h4>Resources I rely on</h4>
+			<ul>
+				<li><a href="https://www.amazon.com/dp/0393652370">The Decision Book</a> by Mikael Krogerus</li>
+				<li><a href="https://fs.blog/mental-models/">Mental Models</a> by Farnam Street</li>
+				<li><a href="https://en.wikipedia.org/wiki/Responsibility_assignment_matrix">RACI framework basics</a> for clarity on ownership</li>
+			</ul>
 		</section>
 
 		<section id="no-protocols">
 			<h3>🚫 The "No" Protocols</h3>
-			<p><em>I project my time and focus by applying these filters to every request.</em></p>
-		    <ul>
-			 <li>TODO</li>
-			</ul>
+			<p><em>How I protect my time and focus—still being written. Check back soon.</em></p>
 		</section>
 				</div>
 			</details>
