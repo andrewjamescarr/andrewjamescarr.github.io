@@ -15,13 +15,13 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 			<a href="#communication">💬 Communication</a>
 			<a href="#logistics">🧭 Logistics</a>
 			<a href="#availability">📅 Availability</a>
+			<a href="#no-protocols">🚫 No Protocols</a>
 			<a href="#working-preferences">⚙️ Preferences</a>
 		</div>
 		<div class="nav-group">
 			<div class="nav-group-label">🚀 Advanced</div>
 			<a href="#how-i-work">🧠 How I Work</a>
 			<a href="#decision-frameworks">🧩 Decisions</a>
-			<a href="#no-protocols">🚫 No Protocols</a>
 		</div>
 		<div class="nav-group">
 			<div class="nav-group-label">🐛 Other</div>
@@ -152,31 +152,41 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 					</ul>
 				</section>
 
-				</div>
-			</details>
+			<section id="availability">
+				<h3>📅 Availability</h3>
+				<p><em>Details about availability patterns—coming soon.</em></p>
+			</section>
 
-			<details class="accordion">
-				<summary class="accordion-summary">
-					<h2>🚀 Advanced Topics</h2>
-					<span class="accordion-icon">▼</span>
-				</summary>
-				<div class="accordion-content">
-		<section id="how-i-work">
-			<h3>🧠 How I Like to Work</h3>
-			<ul>
-				<li><strong>Meetings as a last resort:</strong> I prefer async communication and written updates. If we need a meeting, there should be clear preparation, a pre-read, and a specific agenda. No surprises.</li>
-				<li><strong>I hate surprises:</strong> Flag blockers, delays, scope changes, or problems early so I can adjust and respond thoughtfully. Transparency before panic.</li>
-				<li><strong>I need preparation time:</strong> I minimize notifications during deep work (email off, Teams on DND). During focus blocks, I'm truly focused.  Come back when the time is right.</li>
-				<li><strong>Capture as you go:</strong> Meeting notes and actions should be written collaboratively in real time. Clarity in the moment saves rework later.</li>
-			</ul>
+			<section id="no-protocols">
+				<h3>🚫 The "No" Protocols</h3>
+				<p><em>How I protect my time and focus—still being written. Check back soon.</em></p>
+			</section>
 
-			<h4>How I structure 1:1s</h4>
-			<ul>
-				<li><strong>Shared working doc:</strong> We keep running notes in Teams, Confluence, or SharePoint. Agenda is yours.  Raise concerns, development topics, blockers, anything that matters.</li>
-				<li><strong>Pastoral, not status:</strong> 1:1s are for relationship-building and development, not project status (that's async).  If you need something, I'm here for it.</li>
-				<li><strong>Your agenda:</strong> You own what we discuss. I'm here to listen, coach, unblock, and support your growth.</li>
-			</ul>
-		</section>
+ 		</div>
+	</details>
+
+	<details class="accordion">
+		<summary class="accordion-summary">
+			<h2>🚀 Advanced Topics</h2>
+			<span class="accordion-icon">▼</span>
+		</summary>
+		<div class="accordion-content">
+	<section id="how-i-work">
+		<h3>🧠 How I Like to Work</h3>
+		<ul>
+			<li><strong>Meetings as a last resort:</strong> I prefer async communication and written updates. If we need a meeting, there should be clear preparation, a pre-read, and a specific agenda. No surprises.</li>
+			<li><strong>I hate surprises:</strong> Flag blockers, delays, scope changes, or problems early so I can adjust and respond thoughtfully. Transparency before panic.</li>
+			<li><strong>I need preparation time:</strong> I minimize notifications during deep work (email off, Teams on DND). During focus blocks, I'm truly focused. Come back when the time is right.</li>
+			<li><strong>Capture as you go:</strong> Meeting notes and actions should be written collaboratively in real time. Clarity in the moment saves rework later.</li>
+		</ul>
+
+		<h4>How I structure 1:1s</h4>
+		<ul>
+			<li><strong>Shared working doc:</strong> We keep running notes in Teams, Confluence, or SharePoint. Agenda is yours.  Raise concerns, development topics, blockers, anything that matters.</li>
+			<li><strong>Pastoral, not status:</strong> 1:1s are for relationship-building and development, not project status (that's async).  If you need something, I'm here for it.</li>
+			<li><strong>Your agenda:</strong> You own what we discuss. I'm here to listen, coach, unblock, and support your growth.</li>
+		</ul>
+	</section>
 
 		<section id="decision-frameworks">
 			<h3>🧩 Decision Frameworks</h3>
@@ -215,7 +225,34 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 
 		<section id="no-protocols">
 			<h3>🚫 The "No" Protocols</h3>
-			<p><em>How I protect my time and focus—still being written. Check back soon.</em></p>
+			<p>I struggle with saying no. I want to help, and I worry that setting boundaries means letting people down. But unfiltered access to my time means I can't do deep work, and "yes" without process means commitments I can't keep. Here's how I'm trying to protect focus without being a blocker:</p>
+
+			<h4>How to ask for my time (the pipeline)</h4>
+			<ul>
+				<li><strong>Written requests win:</strong> Email or Teams message with context, the ask, and why it matters. This lets me assess impact, urgency, and fit with current work.</li>
+				<li><strong>Not drop-in asks:</strong> "Can you check this?" or "Can you read this?" interrupts focus and ignores my existing pipeline. Use the written request process instead.</li>
+				<li><strong>Lead time matters:</strong> Same-day asks are gambling on my availability. I need time to review, think, and prepare—especially for decisions.</li>
+				<li><strong>My counter-offer:</strong> "Yes, but later" or "Yes, but let me read it first". I'm happy to help, just not instantly.</li>
+			</ul>
+
+			<h4>When I automatically say no</h4>
+			<ul>
+				<li><strong>End-of-day asks:</strong> My brain is checked out. If you catch me at 3:45pm, I'm not ready for new information. Come back tomorrow.</li>
+				<li><strong>Surprise AOB items:</strong> Last-minute "any other business" that requires decisions or commitment. If it's not on the agenda, it waits.</li>
+				<li><strong>Meetings without agendas:</strong> No prep, no clarity, no attendance. See <a href="#how-i-work">How I Like to Work</a> for why.</li>
+				<li><strong>Information dumps followed by "decide now":</strong> I can't process a wall of verbal information and make good calls. Write it down, then I'll engage.</li>
+			</ul>
+
+			<h4>What counts as truly urgent</h4>
+			<p>If you need me <em>right now</em>, it should be one of these:</p>
+			<ul>
+				<li><strong>Life or death:</strong> Literal safety risk to people.</li>
+				<li><strong>Imminent harm:</strong> We're about to destroy something critical (data, systems, relationships, reputation).</li>
+				<li><strong>Everything else can wait:</strong> Even "urgent" work benefits from time to think. Write it down, flag it clearly, and I'll respond.</li>
+			</ul>
+
+			<h4>What I'm working on (honestly)</h4>
+			<p>I'm trying to stop trading my time now for theoretical future reciprocity. Saying yes doesn't bank goodwill—it just means I'm overcommitted and underdelivering. I need better boundaries, but I'm not there yet. If you see me slipping, call it out.</p>
 		</section>
 				</div>
 			</details>
