@@ -264,6 +264,17 @@ hr {
 .page-content ul ol,
 .page-content ol ul {
   margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.page-content li > ul {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.page-content li > ul + * {
+  margin-top: 0 !important;
 }
 
 /* Accordion Styling */

@@ -113,42 +113,40 @@ A single-page user manual so new teammates can work smoothly with me. Skim the h
 
 				<section id="communication">
 					<h3>💬 Communication</h3>
+					
+					<h4>How to reach me (in order of preference)</h4>
 					<ul>
-						<li>Preferred urgency ladder: Email → Teams → WhatsApp → Teams phone call.</li>
-						<li>Email for detail and retrieval; real-time only when truly needed.</li>
-						<li>If a thread needs &gt;2 - 3 back-and-forths, suggest voice/video.</li>
-						<li>Direct style; never intended to offend - explicit and unambiguous is the goal.</li>
-						<li>Clear, bullet-heavy writing appreciated; over-communication beats ambiguity.</li>
-						<li>Clear asks beat "Hello" pings; see <a href="https://nohello.net/en">https://nohello.net/en</a>.</li>
-						<li>I'm clearer in writing than in person; in person you may hear my thinking process aloud.</li>
-						<li><strong>Names are our identity:</strong> Getting your name right matters, and I will ask if I'm unsure.</li>
+						<li><strong>Email:</strong> For anything that needs detail, retrieval, or a record.</li>
+						<li><strong>Teams:</strong> For time-sensitive things that need same-day response.</li>
+						<li><strong>WhatsApp/Signal:</strong> For truly urgent matters that need immediate attention.</li>
+						<li><strong>Teams call:</strong> Only if it's genuinely urgent; I'll pick up.</li>
+					</ul>
+
+					<h4>My communication style</h4>
+					<ul>
+						<li><strong>Direct and explicit:</strong> Never intended to offend, but clarity wins over softness.</li>
+						<li><strong>I read everything:</strong> I reply only when needed. Silence usually means I agree.</li>
+						<li><strong>Writing beats in-person:</strong> I'm clearer in writing. In conversation, you'll hear my thinking process out loud.</li>
+						<li><strong>Over-communication wins:</strong> Use bullets, use @mentions, be specific.<br />Ambiguity is worse than too much detail.</li>
+						<li><strong>Clear asks, not pings:</strong> "Hello" without context is noise. Specific asks are music. See <a href="https://nohello.net/en">nohello.net</a> for why.</li>
+						<li><strong>Names matter:</strong> Getting your name right is important. If I get it wrong, I genuinely want to know.</li>
 					</ul>
 
 					<h4>Email specifics</h4>
 					<ul>
-						<li>I read everything; I reply only when needed.</li>
-						<li>CC is for FYI; I read CC less often than TO.</li>
-						<li>Use @mentions to flag actions.</li>
-						<li>Bottom Line Up Front works best:
-							<ul>
-								<li>Actions/dates first</li>
-								<li>Then conclusion</li>
-								<li>Then supporting facts</li>
-							</ul>
-						</li>
+						<li><strong>CC:</strong> Means "for your information".  I check it less frequently than TO lines.</li>
+						<li><strong>@mentions:</strong> Flag action required. I'll see these and prioritise response.</li>
+						<li><strong>Structure:</strong> Lead with the ask/action/deadline, then reasoning, then supporting facts.<br />See <a href="https://www.linkedin.com/pulse/deliver-bottom-line-up-front-andrew-james-carr/">Bottom line up front</a> for why.</li>
+						<li><strong>Everything is kept:</strong> I read and archive everything. Useful for reference and follow-up.</li>
 					</ul>
 				</section>
 
 				<section id="logistics">
 					<h3>🧭 Logistics</h3>
 					<ul>
-						<li>In the Bristol office:  Monday and Wednesday (7am to 4pm)</li>
-	                    <li>Remote working or customer sites on other days:
-	                        <ul>
-	                        <li>Core hours roughly 10am to 4pm, with flexibility for life</li>
-	                        </ul>
-	                    </li>
-	                    <li>Non-negotiable: evenings/weekends are family time.</li>
+						<li>In the Bristol office: Monday and Wednesday (7am to 4pm).  I have a 2 hour commute!</li>
+						<li>Remote working or customer sites on other days: Core hours roughly 10am to 4pm, with flexibility for life.</li>
+						<li>Non-negotiable: evenings/weekends are family time.</li>
 						<li>I adapt for dispersed teams; time is taken back later.</li>
 						<li>Personal boundaries matter; please share yours so we can respect them together.</li>
 					</ul>
