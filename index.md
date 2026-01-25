@@ -19,14 +19,16 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 			<a href="#communication">💬 Communication</a>
 			<a href="#logistics">🧭 Logistics</a>
 			<a href="#availability">📅 Availability</a>
+			<a href="#feedback">💬 Feedback</a>
 			<a href="#no-protocols-basic">🚫 No Protocols</a>
 			<a href="#work-intake">📥 Work Intake</a>
+			<a href="#working-preferences">⚙️ Preferences</a>
 		</div>
 	<div class="nav-group">
 		<div class="nav-group-label">🚀 Advanced</div>
 		<a href="#how-i-work">🧠 How I Work</a>
 		<a href="#decision-frameworks">🧩 Decisions</a>
-		<a href="#no-protocols-advanced">🚫 No Protocols (Full)</a>
+		<a href="#measurement-of-success">📊 Measurement of Success</a>			<a href="#how-i-learn">🎓 How I Learn</a>		<a href="#no-protocols-advanced">🚫 No Protocols (Full)</a>
 		</div>
 		<div class="nav-group">
 			<div class="nav-group-label">🐛 Other</div>
@@ -202,7 +204,23 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 					<li><strong>Notice:</strong> I'll flag capacity changes at least 2 weeks ahead</li>
 				</ul>
 			</section>
+		<section id="feedback">
+			<h3>💬 How to Give Me Feedback</h3>
+			
+			<h4>What I need from you</h4>
+			<ul>
+				<li><strong>Be direct:</strong> Open and honest wins.  I can handle it.</li>
+				<li><strong>Tell me how to improve:</strong> Don't just tell me what I'm doing wrong.  Tell me what good looks like and how I can get there.</li>
+				<li><strong>Make it clear you're giving feedback:</strong> Say "I want to give you some feedback" so I know to listen differently.</li>
+				<li><strong>In the moment is best:</strong> Feedback minutes or hours after something happens is useful.  Days or weeks later loses context and impact.</li>
+			</ul>
 
+			<h4>How you'll know I've heard it</h4>
+			<p>I'll play back what I've heard to you.  This helps me check I understood correctly and shows I'm taking it seriously.</p>
+
+			<h4>Don't be scared</h4>
+			<p>If you're worried about giving me verbal feedback - don't be.  Honestly.  I'd rather hear it directly from you than wonder what you're thinking or have it come up later in a review.  Direct feedback helps me improve faster and shows you care about working well together.</p>
+		</section>
 <section id="no-protocols-basic">
 			<h3>🚫 The "No" Protocols</h3>
 			<ul>
@@ -247,6 +265,26 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 				<li><strong>Triage means "not yet assessed":</strong> Your request is logged but not prioritized yet.  Don't worry, I see it.</li>
 				<li><strong>In Progress means I'm working on it.</strong> Blocked means I'm waiting on something.</li>
 			</ul>
+		</section>
+
+		<section id="working-preferences">
+			<h3>⚙️ Working Preferences</h3>
+			
+			<h4>My tools of choice</h4>
+			<ul>
+				<li><strong>LogSeq and Obsidian:</strong> My go-to tools for notes, knowledge management, and thinking through problems.</li>
+				<li><strong>Bullet journaling:</strong> When I can't use digital tools, I revert to pen and paper.  Still effective.</li>
+			</ul>
+
+			<h4>I work in the open</h4>
+			<ul>
+				<li><strong>Available from day one:</strong> If I'm writing a whitepaper or document, it's accessible as soon as I write the first line.  No need to wait for "done".</li>
+				<li><strong>No permissions needed:</strong> I'll communicate where my open working directory is.  Jump in, read along, comment, collaborate.</li>
+				<li><strong>Work in progress is valuable:</strong> You'll see my thinking evolve.  Early feedback is welcome and saves rework later.</li>
+			</ul>
+
+			<h4>Documentation is my happy place</h4>
+			<p>I love writing documentation.  Yes, I'm a nerd.  Clear docs reduce confusion, save time, and help teams scale.  If something needs documenting, I'm probably already excited about it.</p>
 		</section>
 
  		</div>
@@ -310,7 +348,94 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 			</ul>
 		</section>
 
-<section id="no-protocols-advanced">
+		<section id="measurement-of-success">
+			<h3>📊 Measurement of Success</h3>
+			<p>I don't care where you do your work. It's about outputs and impact.  Here's how I measure whether work is actually successful:</p>
+
+			<h4>What "done" actually means</h4>
+			<ul>
+				<li><strong>Feature shipped to users:</strong> Code merged is nice; users benefiting is better.  It needs to be working and production-ready.</li>
+				<li><strong>Code quality checked:</strong> If you're rushing code through the pipeline ignoring quality issues flagged in review, it's not "done".  Get it right the first time.</li>
+				<li><strong>Decision made and documented:</strong> We might find it's wrong later.  That's fine.  But if you made it using available information and can explain why, that's success.  Document your reasoning so we learn from it.</li>
+				<li><strong>Deliverables completed:</strong> Even if not perfect.  Progress over perfection.  Completed, not abandoned.</li>
+			</ul>
+
+			<h4>How I measure impact</h4>
+			<ul>
+				<li><strong>Move your objectives forward:</strong> And help move others' forward too.  Don't be selfish.  Think about company impact.</li>
+				<li><strong>Use data to prove it:</strong> Saved cloud costs?  Made something more efficient?  Faster resolution on tickets?  Spread knowledge?  Show me the metrics.</li>
+				<li><strong>Customer validation matters:</strong> Faster ticket resolution is great, unless the customer doesn't think the ticket is closed.  They're the judge.  Check that they're happy it's closed; then it's closed.</li>
+				<li><strong>Open documentation:</strong> Don't hoard knowledge.  Write it down so others can benefit and learn from what you did.</li>
+			</ul>
+
+			<h4>Quality philosophy: The rework test</h4>
+		<p><strong>Quality threshold: "Will this require someone else to fix it or rework it?"</strong></p>
+		<ul>
+			<li><strong>YES:</strong> Slow down and get it right first.  The further code moves up the pipeline, the more expensive rework becomes.</li>
+			<li><strong>NO:</strong> Ship it.  Iterate if you need to.  Done is better than perfect.</li>
+		</ul>
+
+		<h5>Quality principles</h5>
+		<ul>
+				<li><strong>No 2am wake-ups:</strong> If you broke something downstream and someone has to run a manual process at 2am, that's not done.  That's leaving a mess.</li>
+			</ul>
+
+			<h4>The metrics that actually matter</h4>
+			<ul>
+				<li><strong>Deployment frequency of working features:</strong> How often are you shipping things users can use?</li>
+				<li><strong>Test coverage and quality:</strong> Does this need testing?  Are the pipelines passing?</li>
+				<li><strong>Decisions made vs delayed, and accepted:</strong> Did you make the call?  Does it stick?</li>
+				<li><strong>People unblocked:</strong> How many colleagues can now move forward because of your work?</li>
+				<li><strong>Time spent mentoring:</strong> Are you growing others?</li>
+				<li><strong>Documentation written:</strong> Did you leave good records?</li>
+			</ul>
+
+			<h4>What's NOT success</h4>
+			<ul>
+				<li><strong>Constant rework:</strong> Delivering something, then having to fix it repeatedly wastes everyone's time.</li>
+				<li><strong>Breaking things downstream:</strong> Your feature works, but it cascades failures to other teams.  That's a problem.</li>
+				<li><strong>Shipping without user validation:</strong> You built it.  Does anyone actually use it?  Does it solve their problem?</li>
+				<li><strong>GitHub commit history as a proxy for work:</strong> Lots of commits ≠ good work.  Deployment frequency of working features is better.</li>
+			</ul>
+		</section>
+	<section id="how-i-learn">
+		<h3>🎓 How I Learn Best</h3>
+		<p><strong>I learn by doing, not by watching.</strong> Give me solid pre-read time first so I can immerse myself and prepare, then let me get hands-on with feedback as I go.  I'll ask questions to validate my understanding.</p>
+
+		<h4>Pre-read essentials</h4>
+		<ul>
+			<li><strong>High-level overviews and diagrams:</strong> Diagrams are more useful than people think.</li>
+			<li><strong>Skip the code:</strong> I don't read much code; focus on the architecture and the why, not the implementation details.</li>
+			<li><strong>Give me time:</strong> Let me immerse myself in the material before we start.</li>
+		</ul>
+
+		<h4>The hands-on part</h4>
+		<ul>
+			<li><strong>I'll watch what you're doing:</strong> Not necessarily have it explained step-by-step.</li>
+			<li><strong>I'll ask questions:</strong> To validate my understanding as I go.</li>
+			<li><strong>Feedback in the moment:</strong> Helps me learn faster.</li>
+		</ul>
+
+		<h4>The clarity test</h4>
+		<ul>
+			<li><strong>If I can't understand it, it's over-complicated:</strong> That's a signal to simplify.</li>
+			<li><strong>When something's unclear:</strong> Simplify the language, add examples, or break it into smaller pieces.</li>
+			<li><strong>If I struggle, others will too.</strong></li>
+		</ul>
+
+		<h4>What doesn't work</h4>
+		<ul>
+			<li><strong>Click-click-click e-learning modules:</strong> I switch off.  Dull, monotonous training loses me.</li>
+			<li><strong>Passive watching:</strong> Without the chance to engage, I'm not learning.</li>
+		</ul>
+
+		<h4>What I need from you</h4>
+		<ul>
+			<li><strong>Show me passion and energy.</strong> I feed off it.  Engagement matters more than perfection.</li>
+			<li><strong>Be excited about what you're teaching.</strong> That energy is contagious.</li>
+		</ul>
+	</section>
+		<section id="no-protocols-advanced">
 		<h3>🚫 The "No" Protocols (Full Context)</h3>
 			<p>I struggle with saying no.  I want to help, and I worry that setting boundaries means letting people down.  But unfiltered access to my time means I can't do deep work, and "yes" without process means commitments I can't keep.  Here's how I'm trying to protect focus without being a blocker:</p>
 
@@ -372,8 +497,6 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 			<h2>📝 Coming Soon</h2>
 			<p>These items are still being developed and will be added soon:</p>
 			<ul>
-				<li>Working Preferences — tools, documentation style, collaboration preferences</li>
-				<li>How to give me feedback — preferred style and what helps me improve</li>
 				<li>My role and responsibilities — scope, decisions I own, team dependencies</li>
 			</ul>
 		</section>
