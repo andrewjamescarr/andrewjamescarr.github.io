@@ -317,10 +317,10 @@ hr {
 
 .side-nav {
   position: sticky;
-  top: 1.5rem;
+  top: 0.5rem;
   display: grid;
   gap: 0;
-  padding: 1.25rem;
+  padding: 0.75rem;
   background: rgba(247, 249, 251, 0.98);
   backdrop-filter: blur(6px);
   border: 1px solid #e5e7eb;
@@ -490,9 +490,9 @@ hr {
 /* Navigation Groups */
 .nav-group {
   display: grid;
-  gap: 0.5rem;
-  padding: 0.75rem 0;
-  margin: 0.75rem 0;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
 }
 
 .nav-group:first-of-type {
@@ -502,28 +502,28 @@ hr {
 
 .nav-group:not(:last-of-type) {
   border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 1rem;
+  padding-bottom: 0.65rem;
 }
 
 .nav-group-label {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: $teal-dark;
-  padding: 0.6rem 0.65rem;
-  margin-bottom: 0.6rem;
-  margin-top: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
 
 .nav-group a {
-  padding: 0.5rem 0.65rem;
-  border-radius: 8px;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
   border: 1px solid transparent;
   background: white;
   color: $teal-dark;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   text-decoration: none;
   transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
 }

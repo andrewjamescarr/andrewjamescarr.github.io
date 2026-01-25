@@ -522,12 +522,6 @@ title: Andrew Carr's User Guide
 			</details>
 		</div>
 
-		<section class="coming-soon">
-			<h2>📝 Coming Soon</h2>
-			<p>These items are still being developed and will be added soon:</p>
-			<ul>
-				<li>My role and responsibilities — scope, decisions I own, team dependencies</li>
-			</ul>
-		</section>
+		
 	</div>
 </div>
