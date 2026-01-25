@@ -240,7 +240,7 @@ title: Andrew Carr's User Guide
 			<h4>How to submit work</h4>
 			<ul>
 				<li><strong>Use the Teams INGEST bot:</strong> Type <code>/ingest</code> in a Teams chat or channel (still being built, but it'll guide you through the questions below).</li>
-				<li><strong>Or submit directly:</strong> Email, Teams message, meeting notes, or Planner comment—anywhere works.  I'll ingest it.</li>
+				<li><strong>Or submit directly:</strong> Email, Teams message, meeting notes, or Planner comment. Anywhere works. I'll ingest it.</li>
 			</ul>
 
 			<h4>What I need to know</h4>
@@ -339,7 +339,7 @@ title: Andrew Carr's User Guide
 			  <li><strong>Widen my options:</strong> I never choose between "yes or no".  I force myself to find at least three viable alternatives.</li>
 			  <li><strong>Reality test:</strong> I find someone who disagrees with me and understand why.  This challenges my thinking.</li>
 			  <li><strong>Attain distance:</strong> What would I tell a friend to do in this situation? This removes my immediate fear or ego.</li>
-			  <li><strong>Prepare to be wrong:</strong> Set a tripwire—"If X hasn't happened by Y, we stop and reassess."</li>
+			  <li><strong>Prepare to be wrong:</strong> Set a tripwire: "If X hasn't happened by Y, we stop and reassess."</li>
 			</ul>
 
 			<h4>Resources I rely on</h4>
@@ -505,18 +505,82 @@ title: Andrew Carr's User Guide
 				</summary>
 				<div class="accordion-content">
 					<section id="known-defects">
-						<p>Welcome to the Production Environment.  Whilst every effort has been made to ship a stable version of myself, please be advised that this build contains several legacy features and unpatched vulnerabilities.</p>
-						<p>Below you'll find a comprehensive list of Known Defects.  Quirky architectural choices and 'working-as-intended' bugs that haven't quite made it to the next sprint.  I decided to treat these as documented features rather than system failures, so please review the changelog below before submitting a formal bug report.</p>
-						<table>
-							<thead>
-								<tr><th>Defect</th><th>Workaround</th></tr>
-							</thead>
-							<tbody>
-								<tr><td><strong>Migraine</strong><br />Stress, tiredness, poor eating/drinking can trigger; early signs: difficulty concentrating, possible emesis.</td><td>Sleep in a dark room; coffee, painkillers, sumatriptan.</td></tr>
-								<tr><td><strong>Context assumption</strong><br />I may assume shared context and skip details.</td><td>Ask me to add context; I will happily expand.</td></tr>
-								<tr><td><strong>Misophonia</strong><br/>Noises like loud eating/tea slurping can trigger.</td><td>If I eat too the effect lessens; I may step away briefly.</td></tr>
-							</tbody>
-						</table>
+						<p>Welcome to the Production Environment. While every effort has been made to ship a stable version of myself, please be advised that this build contains several legacy features and unpatched vulnerabilities.</p>
+						<p>Below you'll find open issues in the backlog. These are documented features, not system failures. Please review before submitting a bug report.</p>
+					
+						<div class="issues-list">
+							<div class="issue-card">
+								<div class="issue-header">
+									<div class="issue-title">
+										<span class="issue-number">#DEF-001</span>
+										<strong>Migraine Trigger Under Load</strong>
+									</div>
+									<div class="issue-labels">
+										<span class="label label-critical">Critical</span>
+										<span class="label label-health">health</span>
+										<span class="label label-open">Open</span>
+									</div>
+								</div>
+								<div class="issue-body">
+									<p><strong>Description:</strong> Stress, tiredness, poor eating/drinking habits can trigger system instability. Early warning signs include difficulty concentrating and possible emesis.</p>
+									<p><strong>Workaround:</strong> Sleep in a dark room; coffee, painkillers, sumatriptan can stabilize the system. Preventive measures include regular breaks and adequate hydration.</p>
+								</div>
+							</div>
+
+							<div class="issue-card">
+								<div class="issue-header">
+									<div class="issue-title">
+										<span class="issue-number">#DEF-002</span>
+										<strong>Context Assumption Bug</strong>
+									</div>
+									<div class="issue-labels">
+										<span class="label label-minor">Minor</span>
+										<span class="label label-communication">communication</span>
+										<span class="label label-wontfix">Wontfix</span>
+									</div>
+								</div>
+								<div class="issue-body">
+									<p><strong>Description:</strong> May assume shared context and skip explanatory details. This optimization reduces communication overhead but can cause confusion for new collaborators.</p>
+									<p><strong>Workaround:</strong> Simply ask for additional context. I'm happy to expand on details and will recalibrate my assumption levels based on feedback.</p>
+								</div>
+							</div>
+
+							<div class="issue-card">
+								<div class="issue-header">
+									<div class="issue-title">
+										<span class="issue-number">#DEF-003</span>
+										<strong>Misophonia Audio Processing Error</strong>
+									</div>
+									<div class="issue-labels">
+										<span class="label label-major">Major</span>
+										<span class="label label-sensory">sensory</span>
+										<span class="label label-open">Open</span>
+									</div>
+								</div>
+								<div class="issue-body">
+									<p><strong>Description:</strong> Certain repetitive sounds (loud eating, tea slurping) trigger unexpected system responses. Audio processing filter appears to be overly sensitive to specific frequency patterns.</p>
+									<p><strong>Workaround:</strong> If I'm also eating, the effect diminishes significantly. May need to step away briefly to reset audio processing. Generally manageable with awareness.</p>
+								</div>
+							</div>
+
+							<div class="issue-card">
+								<div class="issue-header">
+									<div class="issue-title">
+										<span class="issue-number">#DEF-004</span>
+										<strong>Loud Keyboard Typing</strong>
+									</div>
+									<div class="issue-labels">
+										<span class="label label-minor">Minor</span>
+										<span class="label label-sensory">sensory</span>
+										<span class="label label-open">Open</span>
+									</div>
+								</div>
+								<div class="issue-body">
+									<p><strong>Description:</strong> I type with considerable force on my laptop keyboard, producing noticeable noise. Affects cohabitation comfort (wife's annoyance is a key metric). Danger escalates significantly if mechanical keyboard ever introduced.</p>
+									<p><strong>Workaround:</strong> Remote work in separate office, headphones on spouse, or acceptance. Thank goodness for laptop keyboards.  Mechanical would be catastrophic.</p>
+								</div>
+							</div>
+						</div>
 					</section>
 				</div>
 			</details>
