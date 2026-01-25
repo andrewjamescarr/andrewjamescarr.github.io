@@ -26,9 +26,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1.5rem;
-  background: white;
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(135deg, $teal 0%, $teal-dark 100%);
+  border-bottom: 3px solid $orange;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -44,16 +44,16 @@ body {
 .page-header .project-name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: $teal-dark;
+  color: white;
   letter-spacing: -0.01em;
   margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .page-header .project-tagline {
   font-size: 0.875rem;
   font-weight: 400;
-  color: $ink;
-  opacity: 0.7;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
 
@@ -65,10 +65,10 @@ body {
 #search-input {
   width: 100%;
   padding: 0.5rem 0.75rem;
-  border: 1px solid #d1d5db;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 6px;
   font-size: 0.875rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   color: $ink;
   outline: none;
   transition: border-color 150ms ease, box-shadow 150ms ease;

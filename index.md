@@ -42,12 +42,12 @@ title: Andrew Carr's User Guide
 		<div class="accordions-wrapper">
 			<details class="accordion" closed>
 				<summary class="accordion-summary">
-					<h2>� Personal</h2>
+					<h2>🙋 Personal</h2>
 					<span class="accordion-icon">▼</span>
 				</summary>
 				<div class="accordion-content">
 					<section id="about-me">
-						<h3>🙋 About Me</h3>
+
 						<h4>Conversation starters</h4>
 						<p>Not great at small talk?  Get started with one of these conversation starters.</p>
 						<ul>
