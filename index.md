@@ -10,14 +10,17 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 	<aside class="side-nav">
 		<div class="nav-title">Jump to</div>
 		<div class="nav-group">
-			<div class="nav-group-label">📖 Basic</div>
+			<div class="nav-group-label">� Personal</div>
+			<a href="#about-me">🙋 About Me</a>
+		</div>
+		<div class="nav-group">
+			<div class="nav-group-label">�📖 Basic</div>
 			<a href="#quick-facts">✅ Quick Facts</a>
 			<a href="#communication">💬 Communication</a>
 			<a href="#logistics">🧭 Logistics</a>
 			<a href="#availability">📅 Availability</a>
 			<a href="#no-protocols-basic">🚫 No Protocols</a>
 			<a href="#work-intake">📥 Work Intake</a>
-			<a href="#working-preferences">⚙️ Preferences</a>
 		</div>
 	<div class="nav-group">
 		<div class="nav-group-label">🚀 Advanced</div>
@@ -35,20 +38,65 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 		<div class="accordions-wrapper">
 			<details class="accordion" closed>
 				<summary class="accordion-summary">
-					<h2>📖 Basic Essentials</h2>
+					<h2>� Personal</h2>
 					<span class="accordion-icon">▼</span>
 				</summary>
 				<div class="accordion-content">
-					<section id="quick-facts">
-						<h3>✅ Quick Facts</h3>
+					<section id="about-me">
+						<h3>🙋 About Me</h3>
 						<h4>Conversation starters</h4>
-						<p>Not great at small talk?  Get started with one of these conversation starters.</p><ul>
+						<p>Not great at small talk?  Get started with one of these conversation starters.</p>
+						<ul>
 							<li>Why I took up running.</li>
 							<li>The time I handcuffed myself to a shopping trolley.</li>
 							<li>The Back to the Future Trilogy.</li>
 							<li>Why I became qualified as a touch-typist at age 16 (RSA I/II/III, Pitman Advanced, C&G).</li>
 							<li>One space or two after a full stop; discuss.</li>
 						</ul>
+
+						<h4>My humour</h4>
+						<p>Dark.  Occasionally smutty.  Shaped by Bottom, Red Dwarf, Blackadder, and a childhood of British comedy where wit required reading between the lines.</p>
+						<p><em>My eldest daughter has decided it's a feature, not a bug.  I'm inclined to agree.</em></p>
+
+						<h4>Favourite quote</h4>
+						<blockquote class="featured-quote">
+							<span class="quote-mark">"</span>
+							<p>Progress over perfection</p>
+						</blockquote>
+
+						<div class="two-column-interests">
+							<div class="interest-column">
+								<h4>📚 Books I'm reading (January 2026)</h4>
+								<ul>
+									<li><a href="https://www.amazon.com/dp/0393652370"><strong>The Decision Book</strong></a> <span class="book-author">by Mikael Krogerus</span> <span class="book-context">How to think clearly and make better calls.</span></li>
+									<li><a href="https://www.amazon.com/dp/0192845527"><strong>Ambulance Care Practice</strong></a> <span class="book-author">by Richard Pilbery</span> <span class="book-context">Because learning never stops.</span></li>
+									<li><a href="https://www.amazon.com/dp/0374248458"><strong>Four Thousand Weeks</strong></a> <span class="book-author">by Oliver Burkeman</span> <span class="book-context">How to stop feeling behind and start living.</span></li>
+									<li><a href="https://nooffice.org/"><strong>No Office</strong></a> <span class="book-author">by Michael Sliwinski</span> <span class="book-context">Work is something you do, not a place you go.  Still relevant.</span></li>
+								</ul>
+							</div>
+
+							<div class="interest-column">
+								<h4>💡 Things I'm interested in (January 2026)</h4>
+								<ul>
+									<li><strong>Digital compartmentalisation:</strong> Keeping work, home, and learning separate but integrated.</li>
+									<li><strong>GitHub Pages:</strong> Static sites, version control, deployment pipelines.  Simple, elegant.</li>
+									<li><strong>Building my home office:</strong> Navigating planning permission and creating a proper workspace.</li>
+									<li><strong>Ubiquiti UniFi network:</strong> Building home infrastructure that actually works.</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+				</div>
+			</details>
+
+			<details class="accordion" closed>
+				<summary class="accordion-summary">
+					<h2>📖 Basic Essentials</h2>
+					<span class="accordion-icon">▼</span>
+				</summary>
+				<div class="accordion-content">
+					<section id="quick-facts">
+						<h3>✅ Quick Facts</h3>
 
 						<h4>Superpowers & Kryptonite</h4>
 						<div class="traits-grid">
@@ -79,39 +127,7 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 								</ul>
 							</div>
 						</div>
-
-						<h4>My humour</h4>
-						<p>Dark.  Occasionally smutty.  Shaped by Bottom, Red Dwarf, Blackadder, and a childhood of British comedy where wit required reading between the lines.</p>
-						<p><em>My 11-year-old has decided it's a feature, not a bug.  I'm inclined to agree.</em></p>
-
-						<h4>Favourite quote</h4>
-	                    <blockquote class="featured-quote">
-	                    	<span class="quote-mark">"</span>
-	                    	<p>Progress over perfection</p>
-	                    </blockquote>
-
-						<div class="two-column-interests">
-							<div class="interest-column">
-								<h4>📚 Books I'm reading (January 2026)</h4>
-								<ul>
-									<li><a href="https://www.amazon.com/dp/0393652370"><strong>The Decision Book</strong></a> <span class="book-author">by Mikael Krogerus</span> <span class="book-context">How to think clearly and make better calls.</span></li>
-									<li><a href="https://www.amazon.com/dp/0192845527"><strong>Ambulance Care Practice</strong></a> <span class="book-author">by Richard Pilbery</span> <span class="book-context">Because learning never stops.</span></li>
-									<li><a href="https://www.amazon.com/dp/0374248458"><strong>Four Thousand Weeks</strong></a> <span class="book-author">by Oliver Burkeman</span> <span class="book-context">How to stop feeling behind and start living.</span></li>
-									<li><a href="https://nooffice.org/"><strong>No Office</strong></a> <span class="book-author">by Michael Sliwinski</span> <span class="book-context">Work is something you do, not a place you go.  Still relevant.</span></li>
-								</ul>
-							</div>
-
-							<div class="interest-column">
-								<h4>💡 Things I'm interested in (January 2026)</h4>
-								<ul>
-									<li><strong>Digital compartmentalisation</strong>Keeping work, home, and learning separate but integrated.</li>
-									<li><strong>GitHub Pages</strong>Static sites, version control, deployment pipelines.  Simple, elegant.</li>
-									<li><strong>Building my home office</strong>Navigating planning permission and creating a proper workspace.</li>
-									<li><strong>Ubiquiti UniFi network</strong>Building home infrastructure that actually works.</li>
-								</ul>
-							</div>
-						</div>
-					</section>
+				</section>
 
 				<section id="communication">
 					<h3>💬 Communication</h3>
@@ -146,11 +162,11 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 				<section id="logistics">
 					<h3>🧭 Logistics</h3>
 					<ul>
-						<li>In the Bristol office: Monday and Wednesday (7am to 4pm).  I have a 2 hour commute!</li>
-						<li>Remote working or customer sites on other days: Core hours roughly 10am to 4pm, with flexibility for life.</li>
-						<li>Non-negotiable: evenings/weekends are family time.</li>
-						<li>I adapt for dispersed teams; time is taken back later.</li>
-						<li>Personal boundaries matter; please share yours so we can respect them together.</li>
+						<li><strong>Bristol office:</strong> Monday and Wednesday (7am to 4pm).  I have a 2 hour commute!</li>
+						<li><strong>Remote or customer sites:</strong> Other days with core hours roughly 10am to 4pm, with flexibility for life.</li>
+						<li><strong>Non-negotiable:</strong> Evenings and weekends are family time.</li>
+						<li><strong>Dispersed teams:</strong> I adapt for global collaboration; I take time back later.</li>
+						<li><strong>Your boundaries matter:</strong> Please share yours so we can respect them together.</li>
 					</ul>
 				</section>
 
@@ -356,9 +372,9 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 			<h2>📝 Coming Soon</h2>
 			<p>These items are still being developed and will be added soon:</p>
 			<ul>
-				<li>The "No" Protocols — how I protect my time and focus</li>
-				<li>Risk tolerance and decision thresholds</li>
-				<li>Core mental models I rely on</li>
+				<li>Working Preferences — tools, documentation style, collaboration preferences</li>
+				<li>How to give me feedback — preferred style and what helps me improve</li>
+				<li>My role and responsibilities — scope, decisions I own, team dependencies</li>
 			</ul>
 		</section>
 	</div>
