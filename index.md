@@ -3,12 +3,9 @@ layout: default
 title: Andrew Carr's User Guide
 ---
 
-# 👋 Welcome
-A single-page user manual so new teammates can work smoothly with me.  Skim the highlights, then dive deeper where needed.
-
 <div class="layout-with-nav">
 	<aside class="side-nav">
-		<div class="nav-title">Jump to</div>
+
 		<div class="nav-group">
 			<div class="nav-group-label">� Personal</div>
 			<a href="#about-me">🙋 About Me</a>
@@ -28,7 +25,10 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 		<div class="nav-group-label">🚀 Advanced</div>
 		<a href="#how-i-work">🧠 How I Work</a>
 		<a href="#decision-frameworks">🧩 Decisions</a>
-		<a href="#measurement-of-success">📊 Measurement of Success</a>			<a href="#how-i-learn">🎓 How I Learn</a>		<a href="#no-protocols-advanced">🚫 No Protocols (Full)</a>
+		<a href="#measurement-of-success">📊 Measurement of Success</a>
+		<a href="#how-i-learn">🎓 How I Learn</a>
+		<a href="#collaboration">👥 Collaboration</a>
+		<a href="#no-protocols-advanced">🚫 No Protocols (Full)</a>
 		</div>
 		<div class="nav-group">
 			<div class="nav-group-label">🐛 Other</div>
@@ -435,7 +435,34 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 			<li><strong>Be excited about what you're teaching.</strong> That energy is contagious.</li>
 		</ul>
 	</section>
-		<section id="no-protocols-advanced">
+
+	<section id="collaboration">
+		<h3>👥 Collaboration</h3>
+
+		<h4>Whiteboarding is my thinking tool</h4>
+		<ul>
+			<li><strong>In-person:</strong> Shared drawing and whiteboards.</li>
+			<li><strong>Online:</strong> Shared whiteboard tools or MS Paint if needed; tablets are great for quick sketches.</li>
+			<li><strong>A picture paints a thousand words:</strong> I use drawing for all problem types: architecture decisions, process flows, problem decomposition.</li>
+			<li><strong>Everyone draws simultaneously:</strong> This is collaborative thinking, not passive watching.</li>
+		</ul>
+
+		<h4>Brainstorming</h4>
+		<ul>
+			<li><strong>Free-form and expansive:</strong> Build on ideas; don't sit in your own bubble waiting to create something new.</li>
+			<li><strong>Building on an idea is as valuable as creating one.</strong> I'll say "that's interesting, what if we..." as much as I'll propose something from scratch.</li>
+			<li><strong>After we brainstorm:</strong> We share the sketches to broaden knowledge and document thinking.</li>
+		</ul>
+
+		<h4>Documentation & write-ups</h4>
+		<ul>
+			<li><strong>Work in the open:</strong> Share sketches and thinking as we go.</li>
+			<li><strong>Sometimes I own the write-up:</strong> The act of writing helps me figure things out.  I tend to want it to be perfect, so I may iterate.</li>
+			<li><strong>The goal is shared knowledge:</strong> Not gatekeeping.  Get it documented so others can learn and build on it.</li>
+		</ul>
+	</section>
+
+	<section id="no-protocols-advanced">
 		<h3>🚫 The "No" Protocols (Full Context)</h3>
 			<p>I struggle with saying no.  I want to help, and I worry that setting boundaries means letting people down.  But unfiltered access to my time means I can't do deep work, and "yes" without process means commitments I can't keep.  Here's how I'm trying to protect focus without being a blocker:</p>
 
