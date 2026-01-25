@@ -156,7 +156,35 @@ A single-page user manual so new teammates can work smoothly with me.  Skim the 
 
 			<section id="availability">
 				<h3>📅 Availability</h3>
-				<p><em>Details about availability patterns—coming soon.</em></p>
+				
+				<h4>Calendar management</h4>
+				<ul>
+					<li><strong>What's on my calendar is accurate:</strong> If it's blocked, I'm not available.</li>
+					<li><strong>Focus blocks:</strong> Purple blocks = deep work, do not disturb.</li>
+					<li><strong>Flexible time:</strong> White space = available for meetings if you need me.</li>
+					<li><strong>Book directly:</strong> You don't need to ask permission; just send the invite.</li>
+				</ul>
+				
+				<h4>Response time expectations</h4>
+				<ul>
+					<li><strong>Email:</strong> 24-48 hours for non-urgent matters</li>
+					<li><strong>Teams:</strong> Same-day during working hours</li>
+					<li><strong>Urgent channels:</strong> Within 1 hour if truly urgent</li>
+					<li><strong>Outside hours:</strong> I won't respond until next working day</li>
+				</ul>
+				
+				<h4>Best times to book me</h4>
+				<ul>
+					<li><strong>Mondays/Wednesdays:</strong> 10am-3pm (in Bristol office, easier for in-person)</li>
+					<li><strong>Other days:</strong> 11am-3pm (remote, better for focused conversations)</li>
+					<li><strong>Avoid:</strong> Before 9am, after 4pm, or Friday afternoons</li>
+				</ul>
+				
+				<h4>Regular time off</h4>
+				<ul>
+					<li><strong>School holidays:</strong> I may have reduced availability for childcare</li>
+					<li><strong>Notice:</strong> I'll flag capacity changes at least 2 weeks ahead</li>
+				</ul>
 			</section>
 
 <section id="no-protocols-basic">
