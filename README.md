@@ -59,9 +59,9 @@ A fully automated CI/CD pipeline builds the site and deploys it to GitHub Pages.
 
 Only creating a Release on GitHub triggers a live deployment.
 
-### ✔ Version page
+### ✖ Version page (removed)
 
-A Jekyll page (`version.md`) displays version information and is automatically built and published.
+The previous `version.md` page has been removed.
 
 ***
 
@@ -86,7 +86,7 @@ A Jekyll page (`version.md`) displays version information and is automatically b
     ├── _includes/                  # Reusable HTML fragments
     ├── assets/                     # CSS / images
     ├── index.md                    # Homepage (Markdown)
-    ├── version.md                  # Version page (Markdown)
+    ├── version.md                  # Version page (removed)
     ├── Gemfile                     # Jekyll dependencies
     ├── CNAME                       # (Optional) custom domain
     └── .github/
@@ -187,30 +187,9 @@ This means:
 
 ***
 
-# 🔢 Version Page
+# 🔢 Version Page (removed)
 
-The file `version.md` includes front matter:
-
-```yaml
----
-layout: default
-title: Version
-permalink: /version/
----
-```
-
-This generates the page:
-
-👉 <https://andrewjamescarr.github.io/version/>
-
-It can include any content, such as:
-
-*   Current release version
-*   Changelog
-*   Deployment metadata
-*   Notes for visitors
-
-If desired, we can extend this to automatically inject the GitHub Release version into the page — just ask.
+The `version.md` page and its permalink have been removed. If you want an automated release-version display added back later, we can reintroduce it.
 
 ***
 
