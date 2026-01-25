@@ -3,6 +3,8 @@ layout: default
 title: Andrew Carr's User Guide
 ---
 
+<div id="search-results" class="search-results hidden"></div>
+
 <div class="layout-with-nav">
 	<aside class="side-nav">
 

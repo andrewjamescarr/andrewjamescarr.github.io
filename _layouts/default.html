@@ -13,8 +13,13 @@
   </head>
   <body>
     <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      <div class="header-left">
+        <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      </div>
+      <div class="header-right">
+        <input type="text" id="search-input" placeholder="Search this guide..." />
+      </div>
     </header>
 
     <main id="content" class="main-content" role="main">
@@ -22,5 +27,7 @@
 
       {% include footer.html %}
     </main>
+    
+    <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
   </body>
 </html>
