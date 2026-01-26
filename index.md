@@ -376,12 +376,8 @@ title: Andrew Carr's User Guide
 		<ul>
 			<li><strong>YES:</strong> Slow down and get it right first.  The further code moves up the pipeline, the more expensive rework becomes.</li>
 			<li><strong>NO:</strong> Ship it.  Iterate if you need to.  Done is better than perfect.</li>
+			<li><strong>No 2am wake-ups:</strong> If you broke something downstream and someone has to run a manual process at 2am, that's not done.  That's leaving a mess.</li>
 		</ul>
-
-		<h5>Quality principles</h5>
-		<ul>
-				<li><strong>No 2am wake-ups:</strong> If you broke something downstream and someone has to run a manual process at 2am, that's not done.  That's leaving a mess.</li>
-			</ul>
 
 			<h4>The metrics that actually matter</h4>
 			<ul>
@@ -421,9 +417,9 @@ title: Andrew Carr's User Guide
 
 		<h4>The clarity test</h4>
 		<ul>
-			<li><strong>If I can't understand it, it's over-complicated:</strong> That's a signal to simplify.</li>
+			<li><strong>When explanation requires effort:</strong> That's a signal the concept is over-complicated.  Simplify it.</li>
 			<li><strong>When something's unclear:</strong> Simplify the language, add examples, or break it into smaller pieces.</li>
-			<li><strong>If I struggle, others will too.</strong></li>
+			<li><strong>If it needs work to explain, others will struggle too.</strong></li>
 		</ul>
 
 		<h4>What doesn't work</h4>
