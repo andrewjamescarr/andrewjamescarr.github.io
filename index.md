@@ -239,8 +239,9 @@ title: Andrew Carr's User Guide
 
 			<h4>How to submit work</h4>
 			<ul>
-				<li><strong>Use the Teams INGEST bot:</strong> Type <code>/ingest</code> in a Teams chat or channel (still being built, but it'll guide you through the questions below).</li>
-				<li><strong>Or submit directly:</strong> Email, Teams message, meeting notes, or Planner comment. Anywhere works. I'll ingest it.</li>
+				<li><strong>Or submit directly:</strong> Email, Teams message, meeting notes.  Anywhere works. I'll ingest it.</li>
+				<!--<li><strong>Use the Teams INGEST bot:</strong> Type <code>/ingest</code> in a Teams chat or channel (still being built, but it'll guide you through the questions below).</li>-->
+
 			</ul>
 
 			<h4>What I need to know</h4>
