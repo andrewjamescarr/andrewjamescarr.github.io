@@ -8,7 +8,12 @@ $teal: #0f766e;
 $teal-dark: #0b4f49;
 $orange: #f59e0b;
 $ink: #1f2933;
+$ink-muted: #656d76;
 $paper: #f7f9fb;
+$paper-strong: #ffffff;
+$border: #e5e7eb;
+$shadow: rgba(0, 0, 0, 0.04);
+$shadow-strong: rgba(0, 0, 0, 0.08);
 
 html {
   scroll-behavior: smooth;
@@ -28,7 +33,7 @@ body {
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, $teal 0%, $teal-dark 100%);
   border-bottom: 3px solid $orange;
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15);
+  box-shadow: 0 4px 12px $shadow;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -44,17 +49,18 @@ body {
 .page-header .project-name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: white;
+  color: $paper-strong;
   letter-spacing: -0.01em;
   margin: 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 3px $shadow;
 }
 
 .page-header .project-tagline {
   font-size: 0.875rem;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
+  color: $paper-strong;
   margin: 0;
+  opacity: 0.9;
 }
 
 .page-header .header-right {
@@ -65,21 +71,21 @@ body {
 #search-input {
   width: 100%;
   padding: 0.5rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid $border;
   border-radius: 6px;
   font-size: 0.875rem;
-  background: rgba(255, 255, 255, 0.95);
+  background: $paper-strong;
   color: $ink;
   outline: none;
   transition: border-color 150ms ease, box-shadow 150ms ease;
 
   &:focus {
     border-color: $teal;
-    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+    box-shadow: 0 0 0 3px rgba($teal, 0.1);
   }
 
   &::placeholder {
-    color: #9ca3af;
+    color: $ink-muted;
   }
 }
 
@@ -90,10 +96,10 @@ body {
   width: 400px;
   max-height: 500px;
   overflow-y: auto;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: $paper-strong;
+  border: 1px solid $border;
   border-radius: 8px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px $shadow;
   z-index: 99;
 
   &.hidden {
@@ -103,12 +109,12 @@ body {
 
 .search-result-item {
   padding: 0.75rem 1rem;
-  border-bottom: 1px solid #f3f4f6;
+  border-bottom: 1px solid $paper;
   cursor: pointer;
   transition: background 100ms ease;
 
   &:hover {
-    background: #f9fafb;
+    background: $paper;
   }
 
   &:last-child {
@@ -157,18 +163,18 @@ body {
   gap: 0.5rem;
   margin: 1rem 0 1.5rem;
   padding: 0.75rem 0.5rem;
-  background: rgba(247, 249, 251, 0.96);
+  background: $paper;
   backdrop-filter: blur(6px);
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   border-radius: 10px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 6px 18px $shadow;
 }
 
 .top-nav a {
   padding: 0.4rem 0.75rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: white;
+  background: $paper-strong;
   color: $teal-dark;
   font-weight: 600;
   text-decoration: none;
@@ -176,8 +182,8 @@ body {
 }
 
 .top-nav a:hover {
-  border-color: rgba(15, 118, 110, 0.4);
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.1);
+  border-color: rgba($teal, 0.4);
+  box-shadow: 0 4px 12px rgba($teal, 0.1);
   transform: translateY(-1px);
 }
 
@@ -221,7 +227,7 @@ blockquote {
   border-left: 4px solid $teal;
   padding-left: 1rem;
   color: $teal-dark;
-  background: rgba(15, 118, 110, 0.06);
+  background: rgba($teal, 0.06);
   border-radius: 6px;
 }
 
@@ -231,10 +237,10 @@ blockquote {
   border-left: 6px solid $orange;
   padding: 1.5rem 1.5rem 1.5rem 2rem;
   color: $teal-dark;
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(15, 118, 110, 0.08));
+  background: linear-gradient(135deg, rgba($orange, 0.08), rgba($teal, 0.08));
   border-radius: 10px;
   position: relative;
-  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.12);
+  box-shadow: 0 8px 24px $shadow;
   margin: 1.5rem 0;
 }
 
@@ -257,18 +263,18 @@ blockquote {
 table {
   border-collapse: collapse;
   width: 100%;
-  background: white;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  background: $paper-strong;
+  box-shadow: 0 6px 18px $shadow;
 }
 
 table th, table td {
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   padding: 0.75rem;
   text-align: left;
 }
 
 table th {
-  background: rgba(15, 118, 110, 0.08);
+  background: rgba($teal, 0.08);
   color: $teal-dark;
 }
 
@@ -286,14 +292,14 @@ a:hover {
 
 hr {
   border: none;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid $border;
   margin: 2rem 0;
 }
 
 .site-footer {
   margin-top: 3rem;
   padding: 1.25rem 0;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid $border;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -321,11 +327,11 @@ hr {
   display: grid;
   gap: 0;
   padding: 0.75rem;
-  background: rgba(247, 249, 251, 0.98);
+  background: rgba($paper, 0.98);
   backdrop-filter: blur(6px);
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   border-radius: 12px;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 24px $shadow;
 }
 
 .side-nav .nav-title {
@@ -395,21 +401,21 @@ hr {
 }
 
 .accordion {
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   border-radius: 12px;
-  background: white;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  background: $paper-strong;
+  box-shadow: 0 6px 18px $shadow;
   overflow: hidden;
   transition: box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .accordion:hover {
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-  border-color: rgba(15, 118, 110, 0.3);
+  box-shadow: 0 10px 28px $shadow-strong;
+  border-color: rgba($teal, 0.3);
 }
 
 .accordion[open] {
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 28px $shadow-strong;
 }
 
 .accordion-summary {
@@ -429,7 +435,7 @@ hr {
 }
 
 .accordion-summary:hover {
-  background: rgba(15, 118, 110, 0.04);
+  background: rgba($teal, 0.04);
 }
 
 .accordion-summary h2 {
@@ -484,7 +490,7 @@ hr {
 .accordion-content section + section {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid $border;
 }
 
 /* Navigation Groups */
@@ -501,7 +507,7 @@ hr {
 }
 
 .nav-group:not(:last-of-type) {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid $border;
   padding-bottom: 0.65rem;
 }
 
@@ -520,7 +526,7 @@ hr {
   padding: 0.4rem 0.5rem;
   border-radius: 6px;
   border: 1px solid transparent;
-  background: white;
+  background: $paper-strong;
   color: $teal-dark;
   font-weight: 600;
   font-size: 0.85rem;
@@ -529,10 +535,10 @@ hr {
 }
 
 .nav-group a:hover {
-  border-color: rgba(15, 118, 110, 0.4);
-  box-shadow: 0 3px 10px rgba(15, 118, 110, 0.12);
+  border-color: rgba($teal, 0.4);
+  box-shadow: 0 3px 10px rgba($teal, 0.12);
   transform: translateX(3px);
-  background: rgba(15, 118, 110, 0.06);
+  background: rgba($teal, 0.06);
 }
 
 /* Traits Grid for Good/Not Good sections */
@@ -546,24 +552,24 @@ hr {
 .trait-card {
   padding: 1.25rem;
   border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: white;
+  border: 1px solid $border;
+  background: $paper-strong;
   transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
 .trait-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px $shadow-strong;
 }
 
 .trait-card.good {
   border-left: 4px solid #10b981;
-  background: rgba(16, 185, 129, 0.04);
+  background: rgba(#10b981, 0.04);
 }
 
 .trait-card.bad {
-  border-left: 4px solid #f59e0b;
-  background: rgba(245, 158, 11, 0.04);
+  border-left: 4px solid $orange;
+  background: rgba($orange, 0.04);
 }
 
 .trait-header {
@@ -607,8 +613,8 @@ hr {
 .coming-soon {
   margin-top: 3rem;
   padding: 1.5rem;
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.06), rgba(245, 158, 11, 0.04));
-  border: 1px solid rgba(15, 118, 110, 0.15);
+  background: linear-gradient(135deg, rgba($teal, 0.06), rgba($orange, 0.04));
+  border: 1px solid rgba($teal, 0.15);
   border-radius: 12px;
 }
 
@@ -620,7 +626,7 @@ hr {
 
 .coming-soon p {
   margin-top: 0;
-  color: rgba(31, 41, 51, 0.8);
+  color: rgba($ink, 0.8);
 }
 
 .coming-soon ul {
@@ -660,7 +666,7 @@ hr {
 
 .interest-column li {
   padding: 1rem;
-  background: rgba(247, 249, 251, 0.6);
+  background: rgba($paper, 0.6);
   border-left: 3px solid $teal;
   border-radius: 6px;
   transition: all 150ms ease;
@@ -668,7 +674,7 @@ hr {
 }
 
 .interest-column li:hover {
-  background: rgba(247, 249, 251, 1);
+  background: $paper;
   border-left-color: $orange;
   transform: translateX(4px);
 }
@@ -683,7 +689,7 @@ hr {
 .book-author {
   display: block;
   font-size: 0.9rem;
-  color: rgba(11, 79, 73, 0.7);
+  color: rgba($teal-dark, 0.7);
   font-weight: 500;
   margin-top: 0.3rem;
 }
@@ -691,7 +697,7 @@ hr {
 .book-context {
   display: block;
   font-size: 0.95rem;
-  color: rgba(31, 41, 51, 0.8);
+  color: rgba($ink, 0.8);
   margin-top: 0.4rem;
   font-style: italic;
 }
@@ -754,16 +760,16 @@ hr {
 }
 
 .issue-card {
-  border: 1px solid #d0d7de;
+  border: 1px solid $border;
   border-radius: 8px;
-  background: white;
+  background: $paper-strong;
   padding: 1rem;
   transition: border-color 200ms ease, box-shadow 200ms ease;
 }
 
 .issue-card:hover {
   border-color: $teal;
-  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.1);
+  box-shadow: 0 4px 12px rgba($teal, 0.1);
 }
 
 .issue-header {
@@ -789,7 +795,7 @@ hr {
 .issue-number {
   font-family: 'SFMono-Regular', Consolas, monospace;
   font-size: 0.85rem;
-  color: #656d76;
+  color: $ink-muted;
   font-weight: 600;
 }
 
@@ -811,46 +817,46 @@ hr {
 
 .label-critical {
   background: #da3633;
-  color: white;
+  color: $paper-strong;
 }
 
 .label-major {
   background: #fb8500;
-  color: white;
+  color: $paper-strong;
 }
 
 .label-minor {
   background: #0969da;
-  color: white;
+  color: $paper-strong;
 }
 
 .label-health {
   background: #e85d75;
-  color: white;
+  color: $paper-strong;
 }
 
 .label-communication {
   background: #8250df;
-  color: white;
+  color: $paper-strong;
 }
 
 .label-sensory {
   background: #1f883d;
-  color: white;
+  color: $paper-strong;
 }
 
 .label-open {
   background: #0969da;
-  color: white;
+  color: $paper-strong;
 }
 
 .label-wontfix {
   background: #6e7781;
-  color: white;
+  color: $paper-strong;
 }
 
 .issue-body {
-  color: #656d76;
+  color: $ink-muted;
   font-size: 0.9rem;
   line-height: 1.6;
 }
