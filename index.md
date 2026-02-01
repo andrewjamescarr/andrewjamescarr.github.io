@@ -3,17 +3,25 @@ layout: default
 title: Andrew Carr's User Guide
 ---
 
+<div id="top"></div>
+
 <div id="search-results" class="search-results hidden"></div>
 
 <div class="layout-with-nav">
-	<aside class="side-nav">
+	<button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">☰ Menu</button>
+	<div class="nav-backdrop" data-nav-close></div>
+	<aside id="site-nav" class="side-nav nav-drawer" aria-label="Section navigation">
+		<div class="nav-drawer-header">
+			<span class="nav-drawer-title">Menu</span>
+			<button class="nav-close" type="button" aria-label="Close menu">✕</button>
+		</div>
 
 		<div class="nav-group">
-			<div class="nav-group-label">� Personal</div>
+			<div class="nav-group-label">👤 Personal</div>
 			<a href="#about-me">🙋 About Me</a>
 		</div>
 		<div class="nav-group">
-			<div class="nav-group-label">�📖 Basic</div>
+			<div class="nav-group-label">📖 Basic</div>
 			<a href="#quick-facts">✅ Quick Facts</a>
 			<a href="#communication">💬 Communication</a>
 			<a href="#logistics">🧭 Logistics</a>
@@ -36,9 +44,39 @@ title: Andrew Carr's User Guide
 			<div class="nav-group-label">🐛 Other</div>
 			<a href="#known-defects">Known Defects</a>
 		</div>
+		<div class="nav-group nav-group-utilities">
+			<div class="nav-group-label">🧭 Utilities</div>
+			<a href="#top" class="back-to-top">↑ Back to top</a>
+		</div>
 	</aside>
 
 	<div class="main-sections">
+		<div class="intro-grid">
+			<section id="tldr" class="tldr-card">
+				<h2>TL;DR</h2>
+				<ul>
+					<li><strong>Async first:</strong> Written requests with clear context beat drop-ins.</li>
+					<li><strong>Calendar is truth:</strong> Book directly; focus blocks are DND.</li>
+					<li><strong>Urgent means urgent:</strong> Only life/death or imminent harm.</li>
+					<li><strong>Capacity is capped:</strong> I run max 3 active items at a time.</li>
+					<li><strong>Direct feedback wins:</strong> Tell me the issue and what good looks like.</li>
+				</ul>
+			</section>
+			<aside id="contact-card" class="contact-card" aria-label="Contact card">
+				<h2>Contact Card</h2>
+				<ul class="contact-chips">
+					<li class="contact-chip"><span class="chip-label">Preferred</span><span class="chip-text">Email → Teams → WhatsApp/Signal (urgent only)</span></li>
+					<li class="contact-chip"><span class="chip-label">Response</span><span class="chip-text">Email 24–48h · Teams same-day · Urgent within 1h</span></li>
+					<li class="contact-chip"><span class="chip-label">Office days</span><span class="chip-text">Mon/Wed (Bristol) 7am–4pm</span></li>
+					<li class="contact-chip"><span class="chip-label">Remote days</span><span class="chip-text">Core hours 10am–4pm</span></li>
+					<li class="contact-chip"><span class="chip-label">Best booking</span><span class="chip-text">Mon/Wed 10am–3pm · Other days 11am–3pm</span></li>
+				</ul>
+			</aside>
+		</div>
+		<div class="no-protocols-callout">
+			<h3>🚫 Important: The "No" Protocols</h3>
+			<p>I say <strong>no</strong> to: end-of-day asks, meetings without agendas, surprise decisions, info dumps. Truly urgent means life/death or imminent harm only. <a href="#no-protocols-basic" class="callout-link">Learn more →</a></p>
+		</div>
 		<div class="accordions-wrapper">
 			<details class="accordion" closed>
 				<summary class="accordion-summary">
@@ -136,7 +174,7 @@ title: Andrew Carr's User Guide
 				<section id="communication">
 					<h3>💬 Communication</h3>
 					
-					<h4>How to reach me (in order of preference)</h4>
+					<h4 id="reach-me">How to reach me (in order of preference)</h4>
 					<ul>
 						<li><strong>Email:</strong> For anything that needs detail, retrieval, or a record.</li>
 						<li><strong>Teams:</strong> For time-sensitive things that need same-day response.</li>
@@ -144,7 +182,7 @@ title: Andrew Carr's User Guide
 						<li><strong>Teams call:</strong> Only if it's genuinely urgent; I'll pick up.</li>
 					</ul>
 
-					<h4>My communication style</h4>
+					<h4 id="communication-style">My communication style</h4>
 					<ul>
 						<li><strong>Direct and explicit:</strong> Never intended to offend, but clarity wins over softness.</li>
 						<li><strong>I read everything:</strong> I reply only when needed.  Silence usually means I agree.</li>
@@ -154,7 +192,7 @@ title: Andrew Carr's User Guide
 						<li><strong>Names matter:</strong> Getting your name right is important.  If I get it wrong, I genuinely want to know.</li>
 					</ul>
 
-					<h4>Email specifics</h4>
+					<h4 id="email-specifics">Email specifics</h4>
 					<ul>
 						<li><strong>CC:</strong> Means "for your information".  I check it less frequently than TO lines.</li>
 						<li><strong>@mentions:</strong> Flag action required.  I'll see these and prioritise response.</li>
