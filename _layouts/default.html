@@ -20,6 +20,60 @@
   </head>
   <body>
     <a href="#content" class="skip-to-main">Skip to main content</a>
+    
+    <!-- Command Palette -->
+    <div id="command-palette-backdrop" class="command-palette-backdrop"></div>
+    <div id="command-palette" class="command-palette">
+      <div class="command-palette-header">
+        <input 
+          type="text" 
+          id="command-palette-input" 
+          class="command-palette-input"
+          placeholder="Type a command or section..."
+          aria-label="Search commands"
+        />
+        <div class="command-palette-hint">Press ESC to close</div>
+      </div>
+      <div id="command-palette-results" class="command-palette-results"></div>
+    </div>
+
+    <!-- Keyboard Shortcuts Help -->
+    <div id="keyboard-help-backdrop" class="keyboard-help-backdrop"></div>
+    <div id="keyboard-help" class="keyboard-help">
+      <div class="keyboard-help-header">
+        <h2>Keyboard Shortcuts</h2>
+        <button class="keyboard-help-close" data-help-close type="button" aria-label="Close help">✕</button>
+      </div>
+      <div class="keyboard-help-content">
+        <div class="shortcuts-grid">
+          <div class="shortcut-item">
+            <div class="shortcut-keys">Cmd/Ctrl + K</div>
+            <div class="shortcut-action">Open command palette</div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-keys">?</div>
+            <div class="shortcut-action">Show keyboard shortcuts</div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-keys">/</div>
+            <div class="shortcut-action">Focus search box</div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-keys">↑ / ↓</div>
+            <div class="shortcut-action">Navigate results</div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-keys">Enter</div>
+            <div class="shortcut-action">Select highlighted result</div>
+          </div>
+          <div class="shortcut-item">
+            <div class="shortcut-keys">Escape</div>
+            <div class="shortcut-action">Close any modal</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header class="page-header" role="banner">
       <div class="header-left">
         <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
@@ -47,5 +101,7 @@
     <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/dark-mode.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/reading-time.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/command-palette.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/keyboard-shortcuts.js' | relative_url }}"></script>
   </body>
 </html>

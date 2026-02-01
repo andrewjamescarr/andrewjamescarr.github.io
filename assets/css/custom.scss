@@ -465,6 +465,330 @@ html.dark-mode .callout-link:hover {
   border-bottom-color: rgba(252, 165, 165, 0.6);
 }
 
+/* Command Palette */
+.command-palette-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  z-index: 199;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.command-palette-backdrop.active {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.command-palette {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 90%;
+  max-width: 600px;
+  max-height: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  z-index: 200;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.command-palette.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.command-palette-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.command-palette-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 150ms ease;
+}
+
+.command-palette-input:focus {
+  border-color: $teal;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.command-palette-hint {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.command-palette-results {
+  overflow-y: auto;
+  max-height: 380px;
+}
+
+.command-palette-results::-webkit-scrollbar {
+  width: 6px;
+}
+
+.command-palette-results::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.palette-result-item {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background 100ms ease;
+  font-size: 0.95rem;
+  font-family: inherit;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.palette-result-item:last-child {
+  border-bottom: none;
+}
+
+.palette-result-item:hover,
+.palette-result-item.highlighted {
+  background: #f9fafb;
+}
+
+.palette-result-emoji {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 24px;
+}
+
+.palette-result-title {
+  flex: 1;
+  font-weight: 500;
+}
+
+.palette-result-title mark {
+  background: rgba(245, 158, 11, 0.3);
+  font-weight: 600;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.palette-result-type {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.palette-no-results {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+html.dark-mode .command-palette {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+html.dark-mode .command-palette-header {
+  border-bottom-color: #374151;
+}
+
+html.dark-mode .command-palette-input {
+  background: #111827;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+html.dark-mode .command-palette-input:focus {
+  border-color: #86efac;
+  box-shadow: 0 0 0 3px rgba(134, 239, 172, 0.1);
+}
+
+html.dark-mode .palette-result-item:hover,
+html.dark-mode .palette-result-item.highlighted {
+  background: #2d3748;
+}
+
+html.dark-mode .palette-result-title mark {
+  background: rgba(245, 158, 11, 0.4);
+  color: #fbbf24;
+}
+
+html.dark-mode .palette-result-type {
+  color: #6b7280;
+}
+
+/* Keyboard Shortcuts Help */
+.keyboard-help-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  z-index: 299;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.keyboard-help-backdrop.active {
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.keyboard-help {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.keyboard-help.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.keyboard-help.active ~ .keyboard-help-backdrop {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.keyboard-help-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.keyboard-help-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: $teal-dark;
+}
+
+.keyboard-help-close {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0.25rem;
+  transition: color 150ms ease;
+}
+
+.keyboard-help-close:hover {
+  color: $teal-dark;
+}
+
+.keyboard-help-content {
+  padding: 1.5rem;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.shortcuts-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.shortcut-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.shortcut-keys {
+  font-family: 'Courier New', monospace;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $teal-dark;
+  white-space: nowrap;
+  min-width: 120px;
+}
+
+.shortcut-action {
+  flex: 1;
+  padding-top: 0.5rem;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+html.dark-mode .keyboard-help {
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+html.dark-mode .keyboard-help-header {
+  border-bottom-color: #374151;
+}
+
+html.dark-mode .keyboard-help-header h2 {
+  color: #86efac;
+}
+
+html.dark-mode .keyboard-help-close {
+  color: #9ca3af;
+}
+
+html.dark-mode .keyboard-help-close:hover {
+  color: #86efac;
+}
+
+html.dark-mode .shortcut-keys {
+  background: #111827;
+  border-color: #374151;
+  color: #86efac;
+}
+
+html.dark-mode .shortcut-action {
+  color: #d1d5db;
+}
+
 /* Print Styles */
 @media print {
   .page-header {
@@ -481,7 +805,11 @@ html.dark-mode .callout-link:hover {
   .nav-backdrop,
   .nav-drawer,
   .update-badge,
-  .search-results {
+  .search-results,
+  .command-palette,
+  .command-palette-backdrop,
+  .keyboard-help,
+  .keyboard-help-backdrop {
     display: none !important;
   }
 
