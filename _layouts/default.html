@@ -85,6 +85,7 @@
         </span>
       </div>
       <div class="header-right">
+        <button class="speech-toggle-btn" type="button" aria-label="Toggle read aloud" title="Read aloud (requires Web Speech support)">🔊</button>
         <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
         <label for="search-input" class="search-label">Search</label>
         <input type="text" id="search-input" placeholder="Search this guide..." aria-label="Search guide" />
@@ -103,5 +104,7 @@
     <script src="{{ '/assets/js/reading-time.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/command-palette.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/keyboard-shortcuts.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/view-transitions.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/speech-reader.js' | relative_url }}"></script>
   </body>
 </html>

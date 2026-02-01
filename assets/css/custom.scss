@@ -304,6 +304,35 @@ html.dark-mode .theme-toggle {
   border-color: rgba(134, 239, 172, 0.3);
 }
 
+.speech-toggle-btn {
+  position: relative;
+  top: auto;
+  right: auto;
+  z-index: 50;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 150ms ease;
+  opacity: 0.85;
+  flex-shrink: 0;
+  display: none;
+}
+
+.speech-toggle-btn:hover {
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+html.dark-mode .speech-toggle-btn {
+  background: #2d3748;
+  border-color: rgba(134, 239, 172, 0.3);
+}
+
 
 #search-input {
   width: 100%;
@@ -789,6 +818,236 @@ html.dark-mode .shortcut-action {
   color: #d1d5db;
 }
 
+/* View Transitions API */
+::view-transition-old(root) {
+  animation: fadeOut 200ms ease-in-out forwards;
+}
+
+::view-transition-new(root) {
+  animation: fadeIn 200ms ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Speech Reader Controls */
+.speech-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 2px solid $orange;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 150;
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 300ms ease;
+  font-family: inherit;
+}
+
+.speech-controls.active {
+  transform: translateY(0);
+}
+
+.speech-controls.hidden {
+  display: none;
+}
+
+.speech-controls-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.speech-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.1rem;
+  border: 2px solid $teal;
+  border-radius: 8px;
+  background: rgba(15, 118, 110, 0.08);
+  color: $teal-dark;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 150ms ease;
+  font-family: inherit;
+}
+
+.speech-btn:hover:not(:disabled) {
+  background: rgba(15, 118, 110, 0.15);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
+}
+
+.speech-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.speech-icon {
+  font-size: 1.2rem;
+}
+
+.speech-text {
+  display: none;
+}
+
+.speech-controls-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.speech-controls-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: $teal-dark;
+}
+
+.speech-controls-group input[type="range"] {
+  width: 100px;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.speech-controls-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: $teal;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.speech-controls-group input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: $teal;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.speech-controls-group select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  color: $teal-dark;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.speech-controls-group select:focus {
+  border-color: $teal;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+}
+
+.speech-status {
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+html.dark-mode .speech-controls {
+  background: #1f2937;
+  border-top-color: $orange;
+  color: #e5e7eb;
+}
+
+html.dark-mode .speech-btn {
+  border-color: #86efac;
+  background: rgba(134, 239, 172, 0.08);
+  color: #86efac;
+}
+
+html.dark-mode .speech-btn:hover:not(:disabled) {
+  background: rgba(134, 239, 172, 0.15);
+  box-shadow: 0 4px 12px rgba(134, 239, 172, 0.2);
+}
+
+html.dark-mode .speech-controls-group label {
+  color: #86efac;
+}
+
+html.dark-mode .speech-controls-group input[type="range"] {
+  background: #374151;
+}
+
+html.dark-mode .speech-controls-group input[type="range"]::-webkit-slider-thumb {
+  background: #86efac;
+}
+
+html.dark-mode .speech-controls-group input[type="range"]::-moz-range-thumb {
+  background: #86efac;
+}
+
+html.dark-mode .speech-controls-group select {
+  border-color: #374151;
+  background: #111827;
+  color: #86efac;
+}
+
+html.dark-mode .speech-controls-group select:focus {
+  border-color: #86efac;
+  box-shadow: 0 0 0 3px rgba(134, 239, 172, 0.1);
+}
+
+html.dark-mode .speech-status {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .speech-controls-inner {
+    gap: 0.75rem;
+  }
+
+  .speech-text {
+    display: inline;
+  }
+
+  .speech-controls-group {
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .speech-status {
+    flex-basis: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
 /* Print Styles */
 @media print {
   .page-header {
@@ -801,6 +1060,7 @@ html.dark-mode .shortcut-action {
 
   .header-right,
   .search-label,
+  .speech-toggle-btn,
   .nav-toggle,
   .nav-backdrop,
   .nav-drawer,
@@ -809,7 +1069,8 @@ html.dark-mode .shortcut-action {
   .command-palette,
   .command-palette-backdrop,
   .keyboard-help,
-  .keyboard-help-backdrop {
+  .keyboard-help-backdrop,
+  .speech-controls {
     display: none !important;
   }
 
