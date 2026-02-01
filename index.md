@@ -199,6 +199,14 @@ title: Andrew Carr's User Guide
 						<li><strong>Structure:</strong> Lead with the ask/action/deadline, then reasoning, then supporting facts.<br />See <a href="https://www.linkedin.com/pulse/deliver-bottom-line-up-front-andrew-james-carr/">Bottom line up front</a> for why.</li>
 						<li><strong>Everything is kept:</strong> I read and archive everything.  Useful for reference and follow-up.</li>
 					</ul>
+					<div class="related-sections">
+						<h4>Related</h4>
+						<ul>
+							<li><a href="#availability">→ Availability</a></li>
+							<li><a href="#work-intake">→ Work Intake</a></li>
+							<li><a href="#no-protocols-basic">→ No Protocols</a></li>
+						</ul>
+					</div>
 				</section>
 
 				<section id="logistics">

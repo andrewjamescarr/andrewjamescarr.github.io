@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8">
     {% seo %}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.title | default: site.title }}" />
+    <meta property="og:description" content="Andrew Carr's User Guide - How to work with me, my communication style, decision frameworks, and availability." />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}" />
+    <meta name="twitter:description" content="A personal user guide covering communication preferences, availability, working style, and how to collaborate effectively." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +19,7 @@
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
   <body>
+    <a href="#content" class="skip-to-main">Skip to main content</a>
     <header class="page-header" role="banner">
       <div class="header-left">
         <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
@@ -23,6 +31,7 @@
         </span>
       </div>
       <div class="header-right">
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌙</button>
         <label for="search-input" class="search-label">Search</label>
         <input type="text" id="search-input" placeholder="Search this guide..." aria-label="Search guide" />
       </div>
@@ -36,5 +45,7 @@
     
     <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/dark-mode.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/reading-time.js' | relative_url }}"></script>
   </body>
 </html>
