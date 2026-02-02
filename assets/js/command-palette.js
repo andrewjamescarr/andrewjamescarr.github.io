@@ -21,6 +21,8 @@ class CommandPalette {
     this.backdropEl = document.getElementById('command-palette-backdrop');
     this.commands = [];
     this.highlightedIndex = -1;
+    this.lastActiveElement = null;
+    this.boundTrapFocus = (event) => this.trapFocus(event);
     
     this.buildCommandIndex();
     this.setupEventListeners();
@@ -120,6 +122,8 @@ class CommandPalette {
         this.close();
       }
     });
+
+    this.paletteEl.addEventListener('keydown', this.boundTrapFocus);
   }
 
   /**
@@ -129,7 +133,11 @@ class CommandPalette {
    * @returns {void}
    */
   open() {
+    this.lastActiveElement = document.activeElement;
     this.paletteEl.classList.add('active');
+    this.paletteEl.setAttribute('aria-hidden', 'false');
+    this.backdropEl.classList.add('active');
+    document.body.style.overflow = 'hidden';
     this.inputEl.value = '';
     this.inputEl.focus();
     this.filterCommands('');
@@ -143,7 +151,13 @@ class CommandPalette {
    */
   close() {
     this.paletteEl.classList.remove('active');
+    this.paletteEl.setAttribute('aria-hidden', 'true');
+    this.backdropEl.classList.remove('active');
+    document.body.style.overflow = '';
     this.highlightedIndex = -1;
+    if (this.lastActiveElement && typeof this.lastActiveElement.focus === 'function') {
+      this.lastActiveElement.focus();
+    }
   }
 
   /**
@@ -274,6 +288,42 @@ class CommandPalette {
         item.scrollIntoView({ block: 'nearest' });
       }
     });
+  }
+
+  /**
+   * Gets focusable elements within a container
+   * 
+   * @param {HTMLElement} container - Container to search for focusable elements
+   * @returns {HTMLElement[]} Array of focusable elements
+   */
+  getFocusableElements(container) {
+    return Array.from(container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    ));
+  }
+
+  /**
+   * Traps focus within the command palette when open
+   * 
+   * @param {KeyboardEvent} event - Keydown event
+   * @returns {void}
+   */
+  trapFocus(event) {
+    if (event.key !== 'Tab' || !this.paletteEl.classList.contains('active')) return;
+
+    const focusables = this.getFocusableElements(this.paletteEl);
+    if (focusables.length === 0) return;
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 
   selectCommand(index, results) {

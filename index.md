@@ -5,7 +5,7 @@ title: Andrew Carr's User Guide
 
 <div id="top"></div>
 
-<div id="search-results" class="search-results hidden"></div>
+<div id="search-results" class="search-results hidden" role="listbox" aria-label="Search results" aria-live="polite" aria-atomic="true" aria-hidden="true"></div>
 
 <div class="layout-with-nav">
 	<button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">☰ Menu</button>

@@ -97,9 +97,27 @@ The previous `version.md` page has been removed.
 
 # 💻 Local Development
 
-Choose either Docker (no system Ruby needed) or native Ruby.
+Choose either Docker Compose (recommended), Docker CLI, or native Ruby.
 
-### Option A: Quick start with Docker (recommended)
+### Option A: Docker Compose (recommended)
+
+Start the dev server with LiveReload:
+
+```bash
+docker compose up
+```
+
+Then open 👉 <http://localhost:4000>
+
+Build a production site (one-off):
+
+```bash
+docker compose run --rm jekyll jekyll build
+```
+
+Stop the server with Ctrl+C.
+
+### Option B: Quick start with Docker CLI
 
 ```bash
 docker run --rm -v "$PWD":/srv/jekyll -w /srv/jekyll -e BUNDLE_PATH=vendor/bundle -p 4000:4000 jekyll/jekyll:4 bundle exec jekyll serve --livereload --host 0.0.0.0
@@ -107,7 +125,7 @@ docker run --rm -v "$PWD":/srv/jekyll -w /srv/jekyll -e BUNDLE_PATH=vendor/bundl
 
 Then open 👉 <http://localhost:4000> (LiveReload on port 35729).
 
-### Option B: Native Ruby
+### Option C: Native Ruby
 
 1) Install Ruby 3.1+ (rbenv or system Ruby)
 

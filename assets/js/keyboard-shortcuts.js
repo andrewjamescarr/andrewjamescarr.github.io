@@ -18,6 +18,8 @@ class KeyboardShortcuts {
     this.helpEl = document.getElementById('keyboard-help');
     this.backdropEl = document.getElementById('keyboard-help-backdrop');
     this.closeBtn = document.querySelector('[data-help-close]');
+    this.lastActiveElement = null;
+    this.boundTrapFocus = (event) => this.trapFocus(event);
     
     this.shortcuts = [
       { keys: 'Cmd/Ctrl + K', action: 'Open command palette', icon: '⌨️' },
@@ -61,6 +63,8 @@ class KeyboardShortcuts {
         this.close();
       }
     });
+
+    this.helpEl?.addEventListener('keydown', this.boundTrapFocus);
   }
 
   /**
@@ -84,7 +88,11 @@ class KeyboardShortcuts {
    */
   open() {
     this.helpEl.classList.add('active');
+    this.helpEl.setAttribute('aria-hidden', 'false');
+    this.backdropEl?.classList.add('active');
+    this.lastActiveElement = document.activeElement;
     document.body.style.overflow = 'hidden';
+    this.closeBtn?.focus();
   }
 
   /**
@@ -95,7 +103,48 @@ class KeyboardShortcuts {
    */
   close() {
     this.helpEl.classList.remove('active');
+    this.helpEl.setAttribute('aria-hidden', 'true');
+    this.backdropEl?.classList.remove('active');
     document.body.style.overflow = '';
+    if (this.lastActiveElement && typeof this.lastActiveElement.focus === 'function') {
+      this.lastActiveElement.focus();
+    }
+  }
+
+  /**
+   * Gets focusable elements within a container
+   * 
+   * @param {HTMLElement} container - Container to search for focusable elements
+   * @returns {HTMLElement[]} Array of focusable elements
+   */
+  getFocusableElements(container) {
+    return Array.from(container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    ));
+  }
+
+  /**
+   * Traps focus within the help modal when open
+   * 
+   * @param {KeyboardEvent} event - Keydown event
+   * @returns {void}
+   */
+  trapFocus(event) {
+    if (event.key !== 'Tab' || !this.helpEl?.classList.contains('active')) return;
+
+    const focusables = this.getFocusableElements(this.helpEl);
+    if (focusables.length === 0) return;
+
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 }
 

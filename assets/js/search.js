@@ -20,9 +20,53 @@ class Search {
 
     this.searchTimeout = null;
     this.currentHighlightedIndex = -1;
+    this.indexReady = false;
     
-    this.searchIndex = this.buildSearchIndex();
+    this.searchIndex = [];
+    this.scheduleIndexBuild();
     this.setupEventListeners();
+  }
+
+  /**
+   * Schedules search index building during idle time
+   * Falls back to a timeout when requestIdleCallback is unavailable
+   * 
+   * @returns {void}
+   */
+  scheduleIndexBuild() {
+    const build = () => {
+      this.searchIndex = this.buildSearchIndex();
+      this.indexReady = true;
+    };
+
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      window.requestIdleCallback(build, { timeout: 1000 });
+    } else {
+      setTimeout(build, 0);
+    }
+  }
+
+  /**
+   * Ensures the search index is ready before querying
+   * 
+   * @returns {void}
+   */
+  ensureIndexReady() {
+    if (this.indexReady) return;
+    this.searchIndex = this.buildSearchIndex();
+    this.indexReady = true;
+  }
+
+  /**
+   * Toggles search results visibility and accessibility attributes
+   * 
+   * @param {boolean} isVisible - Whether the results should be visible
+   * @returns {void}
+   */
+  setResultsVisibility(isVisible) {
+    this.searchResults.classList.toggle('hidden', !isVisible);
+    this.searchResults.setAttribute('aria-hidden', isVisible ? 'false' : 'true');
+    this.searchInput.setAttribute('aria-expanded', isVisible ? 'true' : 'false');
   }
 
   /**
@@ -172,6 +216,8 @@ class Search {
     if (!query || query.length < 2) {
       return [];
     }
+
+    this.ensureIndexReady();
     
     const queryLower = query.toLowerCase();
     const results = [];
@@ -224,7 +270,7 @@ class Search {
   displayResults(results) {
     if (results.length === 0) {
       this.searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-title">No results found</div></div>';
-      this.searchResults.classList.remove('hidden');
+      this.setResultsVisibility(true);
       return;
     }
     
@@ -239,7 +285,7 @@ class Search {
     }).join('');
     
     this.searchResults.innerHTML = html;
-    this.searchResults.classList.remove('hidden');
+    this.setResultsVisibility(true);
     
     this.searchResults.querySelectorAll('.search-result-item').forEach(item => {
       item.addEventListener('click', () => {
@@ -264,7 +310,7 @@ class Search {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 60);
 
-        this.searchResults.classList.add('hidden');
+        this.setResultsVisibility(false);
         this.searchInput.value = '';
       });
     });
@@ -299,7 +345,7 @@ class Search {
       const query = this.searchInput.value.trim();
       
       if (query.length < 2) {
-        this.searchResults.classList.add('hidden');
+        this.setResultsVisibility(false);
         this.currentHighlightedIndex = -1;
         return;
       }
@@ -330,7 +376,7 @@ class Search {
           }
         } else if (e.key === 'Escape') {
           e.preventDefault();
-          this.searchResults.classList.add('hidden');
+          this.setResultsVisibility(false);
           this.currentHighlightedIndex = -1;
         }
       }
@@ -338,13 +384,13 @@ class Search {
 
     document.addEventListener('click', (e) => {
       if (!this.searchInput.contains(e.target) && !this.searchResults.contains(e.target)) {
-        this.searchResults.classList.add('hidden');
+        this.setResultsVisibility(false);
       }
     });
 
     this.searchInput.addEventListener('focus', () => {
       if (this.searchInput.value.trim().length >= 2) {
-        this.searchResults.classList.remove('hidden');
+        this.setResultsVisibility(true);
       }
     });
   }
