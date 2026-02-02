@@ -9,6 +9,7 @@ $teal-dark: #0b4f49;
 $orange: #f59e0b;
 $ink: #1f2933;
 $ink-muted: #656d76;
+$ink-soft: #555;
 $paper: #f7f9fb;
 $paper-strong: #ffffff;
 $border: #e5e7eb;
@@ -31,3 +32,25 @@ $teal-alpha-border: rgba(15, 118, 110, 0.2);
 // Orange variations (with alpha)
 $orange-alpha-light: rgba(245, 158, 11, 0.08);
 $orange-alpha-medium: rgba(245, 158, 11, 0.3);
+
+// Dark mode palette
+$dark-bg-primary: #111827;
+$dark-bg-secondary: #1f2937;
+$dark-bg-tertiary: #2d3748;
+$dark-header-start: #0f4f4a;
+$dark-header-end: #082f2b;
+$dark-border: #374151;
+$dark-text: #f3f4f6;
+$dark-text-bright: #e5e7eb;
+$dark-text-muted: #d1d5db;
+$dark-text-contrast: #f0fdf4;
+$dark-text-soft: #9ca3af;
+$dark-text-subtle: #6b7280;
+$dark-accent: #86efac;
+$dark-accent-strong: #4ade80;
+$dark-accent-soft: #a7f3d0;
+$dark-warn: #fbbf24;
+$dark-danger: #fca5a5;
+$dark-danger-base: #ef4444;
+$dark-danger-strong: #ff6b6b;
+$dark-success: #10b981;
