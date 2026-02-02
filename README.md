@@ -211,6 +211,25 @@ The `version.md` page and its permalink have been removed. If you want an automa
 
 ***
 
+# ✅ Validation & QA
+
+Run lightweight HTML and internal link checks locally (Docker Compose):
+
+```bash
+./scripts/validate.sh
+```
+
+This will:
+1) Build the site
+2) Run html-proofer against the generated `_site` output
+
+Notes:
+- External links are skipped to avoid flaky network failures
+- Internal hashes and HTML structure are validated
+- First run installs gems into vendor/bundle (can take a minute)
+
+***
+
 # 📦 Requirements
 
 ### To build locally:
