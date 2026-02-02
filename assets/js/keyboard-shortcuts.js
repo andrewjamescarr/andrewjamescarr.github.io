@@ -1,6 +1,19 @@
-// Keyboard Shortcuts - Display shortcuts help modal
+/**
+ * @module KeyboardShortcuts
+ * 
+ * Displays keyboard shortcuts help modal triggered by '?' key
+ * Shows all available keyboard shortcuts with icons and descriptions
+ */
 
+/**
+ * Keyboard shortcuts help modal controller
+ * Manages display of keyboard shortcut reference modal
+ */
 class KeyboardShortcuts {
+  /**
+   * Initializes the keyboard shortcuts help modal
+   * Sets up DOM references, shortcut list, and event listeners
+   */
   constructor() {
     this.helpEl = document.getElementById('keyboard-help');
     this.backdropEl = document.getElementById('keyboard-help-backdrop');
@@ -18,6 +31,12 @@ class KeyboardShortcuts {
     this.setupEventListeners();
   }
 
+  /**
+   * Attaches event listeners for help modal triggers
+   * Handles '?' key, backdrop clicks, close button, and ESC key
+   * 
+   * @returns {void}
+   */
   setupEventListeners() {
     // Trigger: ? key (without modifier, and not in input)
     document.addEventListener('keydown', (e) => {
@@ -44,6 +63,11 @@ class KeyboardShortcuts {
     });
   }
 
+  /**
+   * Toggles the help modal open/closed
+   * 
+   * @returns {void}
+   */
   toggle() {
     if (this.helpEl.classList.contains('active')) {
       this.close();
@@ -52,11 +76,23 @@ class KeyboardShortcuts {
     }
   }
 
+  /**
+   * Opens the help modal
+   * Adds 'active' class and prevents body scrolling
+   * 
+   * @returns {void}
+   */
   open() {
     this.helpEl.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
 
+  /**
+   * Closes the help modal
+   * Removes 'active' class and restores body scrolling
+   * 
+   * @returns {void}
+   */
   close() {
     this.helpEl.classList.remove('active');
     document.body.style.overflow = '';

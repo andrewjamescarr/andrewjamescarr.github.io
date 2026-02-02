@@ -4,6 +4,7 @@
 @import "{{ site.theme }}";
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Source+Serif+4:ital@0;1&display=swap");
 
+// Base colors
 $teal: #0f766e;
 $teal-dark: #0b4f49;
 $orange: #f59e0b;
@@ -12,8 +13,25 @@ $ink-muted: #656d76;
 $paper: #f7f9fb;
 $paper-strong: #ffffff;
 $border: #e5e7eb;
+
+// Shadow values
 $shadow: rgba(0, 0, 0, 0.04);
 $shadow-strong: rgba(0, 0, 0, 0.08);
+$shadow-medium: rgba(0, 0, 0, 0.12);
+$shadow-heavy: rgba(0, 0, 0, 0.15);
+
+// Transparent overlays
+$overlay-light: rgba(0, 0, 0, 0.5);
+$overlay-dark: rgba(0, 0, 0, 0.6);
+
+// Teal variations (with alpha)
+$teal-alpha-light: rgba(15, 118, 110, 0.1);
+$teal-alpha-medium: rgba(15, 118, 110, 0.15);
+$teal-alpha-border: rgba(15, 118, 110, 0.2);
+
+// Orange variations (with alpha)
+$orange-alpha-light: rgba(245, 158, 11, 0.08);
+$orange-alpha-medium: rgba(245, 158, 11, 0.3);
 
 .skip-to-main {
   position: absolute;
@@ -508,7 +526,7 @@ html.dark-mode .callout-link:hover {
 }
 
 .command-palette-backdrop.active {
-  background: rgba(0, 0, 0, 0.5);
+  background: $overlay-light;
   opacity: 1;
   pointer-events: auto;
 }
@@ -523,7 +541,7 @@ html.dark-mode .callout-link:hover {
   max-height: 500px;
   background: $paper-strong;
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 60px $shadow-heavy;
   z-index: 200;
   opacity: 0;
   pointer-events: none;
@@ -557,7 +575,7 @@ html.dark-mode .callout-link:hover {
 
 .command-palette-input:focus {
   border-color: $teal;
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+  box-shadow: 0 0 0 3px $teal-alpha-light;
 }
 
 .command-palette-hint {
@@ -689,7 +707,7 @@ html.dark-mode .palette-result-type {
 }
 
 .keyboard-help-backdrop.active {
-  background: rgba(0, 0, 0, 0.6);
+  background: $overlay-dark;
   opacity: 1;
   pointer-events: auto;
 }
@@ -703,7 +721,7 @@ html.dark-mode .palette-result-type {
   max-width: 500px;
   background: $paper-strong;
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 60px $shadow-heavy;
   z-index: 300;
   opacity: 0;
   pointer-events: none;
@@ -852,7 +870,7 @@ html.dark-mode .shortcut-action {
   right: 0;
   background: $paper-strong;
   border-top: 2px solid $orange;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -4px 12px $teal-alpha-light;
   z-index: 150;
   padding: 1rem;
   transform: translateY(100%);
@@ -1453,7 +1471,7 @@ hr {
   backdrop-filter: blur(6px);
   border: 1px solid $border;
   border-radius: 12px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 28px $shadow-medium;
 }
 
 .nav-drawer {

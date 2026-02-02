@@ -1,4 +1,9 @@
-// Side navigation enhancements: active section highlight and accordion opening
+/**
+ * @module Navigation
+ * 
+ * Side navigation enhancements: active section highlight, accordion opening, mobile drawer
+ * Handles scroll-based active link highlighting and mobile navigation menu
+ */
 (function() {
   const nav = document.querySelector('.side-nav');
   if (!nav) return;
@@ -14,12 +19,24 @@
   const sections = Array.from(document.querySelectorAll('section[id], #top'));
   const linkById = new Map();
 
+  /**
+   * Opens the mobile navigation drawer
+   * Adds 'nav-open' class to body and updates ARIA attributes
+   * 
+   * @returns {void}
+   */
   function openNav() {
     if (!toggleButton) return;
     body.classList.add('nav-open');
     toggleButton.setAttribute('aria-expanded', 'true');
   }
 
+  /**
+   * Closes the mobile navigation drawer
+   * Removes 'nav-open' class from body and updates ARIA attributes
+   * 
+   * @returns {void}
+   */
   function closeNav() {
     if (!toggleButton) return;
     body.classList.remove('nav-open');
@@ -66,12 +83,25 @@
     });
   });
 
+  /**
+   * Sets the active navigation link by ID
+   * Removes 'active' class from all links, then applies to specified link
+   * 
+   * @param {string} id - The section ID to mark as active
+   * @returns {void}
+   */
   function setActive(id) {
     links.forEach(link => link.classList.remove('active'));
     const activeLink = linkById.get(id);
     if (activeLink) activeLink.classList.add('active');
   }
 
+  /**
+   * Finds the currently active section based on scroll position
+   * Uses 140px offset to determine which section is in view
+   * 
+   * @returns {HTMLElement|null} The active section element or null
+   */
   function findActiveSection() {
     const offset = 140;
     let active = null;
@@ -86,6 +116,12 @@
     return active;
   }
 
+  /**
+   * Handles scroll events with requestAnimationFrame throttling
+   * Updates active link highlighting based on current scroll position
+   * 
+   * @returns {void}
+   */
   let ticking = false;
   function onScroll() {
     if (ticking) return;

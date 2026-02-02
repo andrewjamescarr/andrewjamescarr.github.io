@@ -1,6 +1,19 @@
-// View Transitions API - Smooth animated transitions between sections
+/**
+ * @module ViewTransitions
+ * 
+ * View Transitions API - Smooth animated transitions between sections
+ * Uses browser's native view transitions for smooth navigation and accordion animations
+ */
 
+/**
+ * Manages view transitions for page navigation
+ * Provides smooth animated transitions between sections using View Transitions API
+ */
 class ViewTransitions {
+  /**
+   * Initializes the view transitions handler
+   * Checks browser support and sets up transition listeners
+   */
   constructor() {
     this.supported = 'startViewTransition' in document;
     
@@ -9,6 +22,12 @@ class ViewTransitions {
     }
   }
 
+  /**
+   * Sets up click event listeners for transitions
+   * Intercepts navigation and accordion clicks to apply view transitions
+   * 
+   * @returns {void}
+   */
   setupTransitions() {
     // Intercept all navigation within the page
     document.addEventListener('click', (e) => {
@@ -31,6 +50,13 @@ class ViewTransitions {
     });
   }
 
+  /**
+   * Navigates to target with view transition animation
+   * Uses View Transitions API if supported, falls back to direct navigation
+   * 
+   * @param {string} href - The hash href to navigate to
+   * @returns {void}
+   */
   navigateWithTransition(href) {
     const target = document.querySelector(href);
     if (!target) return;
@@ -44,6 +70,14 @@ class ViewTransitions {
     }
   }
 
+  /**
+   * Performs the actual navigation logic
+   * Opens accordion if needed, updates URL hash, and scrolls to target
+   * 
+   * @param {HTMLElement} target - The target element to navigate to
+   * @param {string} href - The hash href for URL update
+   * @returns {void}
+   */
   performNavigation(target, href) {
     // Open accordion if needed
     const accordion = target.closest('.accordion');
@@ -58,6 +92,12 @@ class ViewTransitions {
     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  /**
+   * Performs a view transition for accordion interactions
+   * Placeholder for accordion-specific transition effects
+   * 
+   * @returns {void}
+   */
   performTransition() {
     if (this.supported) {
       // Simple transition for accordions

@@ -1,4 +1,9 @@
-// Calculate and display reading time for accordion sections
+/**
+ * @module ReadingTime
+ * 
+ * Calculates and displays reading time badges for accordion sections
+ * Uses 200 words per minute as the reading speed estimate
+ */
 (function() {
   const accordions = document.querySelectorAll('.accordion');
   

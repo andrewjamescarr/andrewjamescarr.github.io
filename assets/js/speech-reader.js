@@ -1,6 +1,19 @@
-// Web Speech API - Read aloud functionality
+/**
+ * @module SpeechReader
+ * 
+ * Web Speech API - Read aloud functionality for page content
+ * Provides text-to-speech with speed/voice controls and reading progress tracking
+ */
 
+/**
+ * Text-to-speech reader using Web Speech API
+ * Manages voice synthesis, reading controls, and UI state
+ */
 class SpeechReader {
+  /**
+   * Initializes the speech reader
+   * Checks browser support, sets up UI and event listeners
+   */
   constructor() {
     this.synth = window.speechSynthesis;
     this.isSupported = 'speechSynthesis' in window;
@@ -25,6 +38,12 @@ class SpeechReader {
     }
   }
 
+  /**
+   * Sets up UI references for speech controls
+   * Finds or creates the controls panel with buttons and settings
+   * 
+   * @returns {void}
+   */
   setupUI() {
     // Find or create speech controls panel
     this.controlsEl = document.getElementById('speech-controls') || this.createControlsPanel();
@@ -36,6 +55,12 @@ class SpeechReader {
     this.statusEl = this.controlsEl.querySelector('.speech-status');
   }
 
+  /**
+   * Creates the speech controls panel HTML element
+   * Builds control interface with play/pause/stop buttons, speed slider, and voice selector
+   * 
+   * @returns {HTMLElement} The speech controls panel element
+   */
   createControlsPanel() {
     const panel = document.createElement('div');
     panel.id = 'speech-controls';

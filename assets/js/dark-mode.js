@@ -1,11 +1,27 @@
-// Dark mode toggle with localStorage persistence
+/**
+ * Dark mode toggle with localStorage persistence
+ * Manages theme switching between light and dark modes with support for:
+ * - User preference persistence via localStorage
+ * - System preference detection (prefers-color-scheme)
+ * - Automatic syncing with system theme changes
+ * 
+ * @module DarkMode
+ */
 (function() {
   const themeToggle = document.querySelector('.theme-toggle');
   const html = document.documentElement;
   
   if (!themeToggle) return;
 
-  // Check for saved preference or system preference
+  /**
+   * Gets the initial theme preference
+   * Priority order:
+   * 1. Saved localStorage preference
+   * 2. System preference (prefers-color-scheme)
+   * 3. Default to 'light'
+   * 
+   * @returns {'light'|'dark'} The initial theme to use
+   */
   function getInitialTheme() {
     const saved = localStorage.getItem('theme');
     if (saved) return saved;
@@ -16,6 +32,15 @@
     return 'light';
   }
 
+  /**
+   * Sets the theme and updates UI elements
+   * Updates:
+   * - HTML class ('dark-mode')
+   * - Toggle button icon and title
+   * - localStorage preference
+   * 
+   * @param {'light'|'dark'} theme - The theme to apply
+   */
   function setTheme(theme) {
     if (theme === 'dark') {
       html.classList.add('dark-mode');

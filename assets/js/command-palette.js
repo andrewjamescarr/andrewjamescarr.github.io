@@ -1,6 +1,19 @@
-// Command Palette - Quick navigation with Cmd+K or Ctrl+K
+/**
+ * @module CommandPalette
+ * 
+ * Quick navigation command palette with Cmd+K or Ctrl+K trigger
+ * Provides fuzzy search for sections and special actions (theme toggle, search, scroll to top)
+ */
 
+/**
+ * Command palette for quick navigation and actions
+ * Supports keyboard shortcuts (Cmd+K / Ctrl+K) and fuzzy search
+ */
 class CommandPalette {
+  /**
+   * Initializes the command palette
+   * Sets up DOM references, builds command index, and attaches event listeners
+   */
   constructor() {
     this.paletteEl = document.getElementById('command-palette');
     this.inputEl = document.getElementById('command-palette-input');
@@ -13,6 +26,12 @@ class CommandPalette {
     this.setupEventListeners();
   }
 
+  /**
+   * Builds the command index from navigation links and special actions
+   * Creates command objects with id, title, emoji, type, and action properties
+   * 
+   * @returns {void}
+   */
   buildCommandIndex() {
     this.commands = [];
 
@@ -67,6 +86,12 @@ class CommandPalette {
     );
   }
 
+  /**
+   * Attaches event listeners for keyboard shortcuts and user interactions
+   * Handles Cmd+K / Ctrl+K trigger, search input, keyboard navigation, backdrop clicks
+   * 
+   * @returns {void}
+   */
   setupEventListeners() {
     // Trigger: Cmd+K or Ctrl+K
     document.addEventListener('keydown', (e) => {
@@ -97,6 +122,12 @@ class CommandPalette {
     });
   }
 
+  /**
+   * Opens the command palette
+   * Clears input, focuses search, and displays initial results
+   * 
+   * @returns {void}
+   */
   open() {
     this.paletteEl.classList.add('active');
     this.inputEl.value = '';
@@ -104,11 +135,24 @@ class CommandPalette {
     this.filterCommands('');
   }
 
+  /**
+   * Closes the command palette
+   * Removes active class and resets highlighted index
+   * 
+   * @returns {void}
+   */
   close() {
     this.paletteEl.classList.remove('active');
     this.highlightedIndex = -1;
   }
 
+  /**
+   * Filters commands based on search query
+   * Uses exact match, starts with, includes, and fuzzy matching with scoring
+   * 
+   * @param {string} query - The search query text
+   * @returns {void}
+   */
   filterCommands(query) {
     const normalized = query.toLowerCase();
     
@@ -142,6 +186,14 @@ class CommandPalette {
     this.displayResults(scored);
   }
 
+  /**
+   * Performs fuzzy string matching
+   * Checks if all characters of query appear in str in the correct order
+   * 
+   * @param {string} str - The string to search in
+   * @param {string} query - The query pattern
+   * @returns {boolean} True if fuzzy match succeeds
+   */
   fuzzyMatch(str, query) {
     let queryIdx = 0;
     for (let i = 0; i < str.length && queryIdx < query.length; i++) {
@@ -150,6 +202,13 @@ class CommandPalette {
     return queryIdx === query.length;
   }
 
+  /**
+   * Displays filtered command results in the palette
+   * Renders result items with emoji, highlighted title, and type badge
+   * 
+   * @param {Object[]} results - Array of command objects to display
+   * @returns {void}
+   */
   displayResults(results) {
     this.highlightedIndex = -1;
     this.resultsEl.innerHTML = '';
