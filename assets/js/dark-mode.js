@@ -7,11 +7,47 @@
  * 
  * @module DarkMode
  */
-(function() {
-  const themeToggle = document.querySelector('.theme-toggle');
-  const html = document.documentElement;
-  
-  if (!themeToggle) return;
+
+/**
+ * Dark mode theme manager
+ * Provides toggle functionality with localStorage and system preference support
+ */
+class DarkMode {
+  /**
+   * Initializes the dark mode manager
+   * Sets up toggle button, applies initial theme, and listens for changes
+   */
+  constructor() {
+    this.themeToggle = document.querySelector('.theme-toggle');
+    this.html = document.documentElement;
+    
+    if (!this.themeToggle) return;
+    
+    this.initialize();
+  }
+
+  /**
+   * Initializes theme and event listeners
+   * @returns {void}
+   */
+  initialize() {
+    const initialTheme = this.getInitialTheme();
+    this.setTheme(initialTheme);
+    
+    this.themeToggle.addEventListener('click', () => {
+      const current = this.html.classList.contains('dark-mode') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      this.setTheme(next);
+    });
+    
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          this.setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+    }
+  }
 
   /**
    * Gets the initial theme preference
@@ -22,7 +58,7 @@
    * 
    * @returns {'light'|'dark'} The initial theme to use
    */
-  function getInitialTheme() {
+  getInitialTheme() {
     const saved = localStorage.getItem('theme');
     if (saved) return saved;
     
@@ -40,37 +76,23 @@
    * - localStorage preference
    * 
    * @param {'light'|'dark'} theme - The theme to apply
+   * @returns {void}
    */
-  function setTheme(theme) {
+  setTheme(theme) {
     if (theme === 'dark') {
-      html.classList.add('dark-mode');
-      themeToggle.textContent = '☀️';
-      themeToggle.title = 'Switch to light mode';
+      this.html.classList.add('dark-mode');
+      this.themeToggle.textContent = '☀️';
+      this.themeToggle.title = 'Switch to light mode';
     } else {
-      html.classList.remove('dark-mode');
-      themeToggle.textContent = '🌙';
-      themeToggle.title = 'Switch to dark mode';
+      this.html.classList.remove('dark-mode');
+      this.themeToggle.textContent = '🌙';
+      this.themeToggle.title = 'Switch to dark mode';
     }
     localStorage.setItem('theme', theme);
   }
+}
 
-  // Initialize theme
-  const initialTheme = getInitialTheme();
-  setTheme(initialTheme);
-
-  // Toggle on click
-  themeToggle.addEventListener('click', () => {
-    const current = html.classList.contains('dark-mode') ? 'dark' : 'light';
-    const next = current === 'dark' ? 'light' : 'dark';
-    setTheme(next);
-  });
-
-  // Listen for system theme changes
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        setTheme(e.matches ? 'dark' : 'light');
-      }
-    });
-  }
-})();
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  new DarkMode();
+});

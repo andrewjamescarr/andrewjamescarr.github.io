@@ -7,11 +7,23 @@
  * 
  * @module Search
  */
-(function() {
-  const searchInput = document.getElementById('search-input');
-  const searchResults = document.getElementById('search-results');
-  
-  if (!searchInput || !searchResults) return;
+class Search {
+  /**
+   * Initializes the Search module
+   * Sets up DOM elements, builds search index, and configures event listeners
+   */
+  constructor() {
+    this.searchInput = document.getElementById('search-input');
+    this.searchResults = document.getElementById('search-results');
+    
+    if (!this.searchInput || !this.searchResults) return;
+
+    this.searchTimeout = null;
+    this.currentHighlightedIndex = -1;
+    
+    this.searchIndex = this.buildSearchIndex();
+    this.setupEventListeners();
+  }
 
   /**
    * Converts text to URL-friendly slug
@@ -22,7 +34,7 @@
    * @example
    * slugify("How to Work") // Returns: "how-to-work"
    */
-  function slugify(text) {
+  slugify(text) {
     return text
       .toLowerCase()
       .replace(/[^a-z0-9\s-]/g, '')
@@ -38,11 +50,11 @@
    * 
    * @returns {void}
    */
-  function ensureHeadingIds() {
+  ensureHeadingIds() {
     const headings = document.querySelectorAll('.main-sections h2, .main-sections h3, .main-sections h4');
     headings.forEach(heading => {
       if (heading.id) return;
-      const base = slugify(heading.textContent || 'section');
+      const base = this.slugify(heading.textContent || 'section');
       if (!base) return;
 
       let candidate = base;
@@ -70,27 +82,20 @@
    * 
    * @returns {SearchIndexItem[]} Array of indexed items
    */
-  function buildSearchIndex() {
-    ensureHeadingIds();
+  buildSearchIndex() {
+    this.ensureHeadingIds();
     const index = [];
 
-    /**
-     * Gets the parent section title for a heading
-     * Looks for accordion parent or returns 'Overview'
-     * 
-     * @param {HTMLElement} heading - The heading element
-     * @returns {string} Section title
-     */
-    function getSectionTitle(heading) {
+    const getSectionTitle = (heading) => {
       const accordion = heading.closest('.accordion');
       if (accordion) {
         const summary = accordion.querySelector('.accordion-summary h2');
         if (summary) return summary.textContent.trim();
       }
       return 'Overview';
-    }
+    };
 
-    function getAnchorElement(heading) {
+    const getAnchorElement = (heading) => {
       if (heading.id) return heading;
 
       const summary = heading.closest('.accordion-summary');
@@ -105,16 +110,9 @@
 
       const ancestorWithId = heading.closest('[id]');
       return ancestorWithId || null;
-    }
+    };
 
-    /**
-     * Extracts a text snippet from content after a heading
-     * Collects text from next sibling elements up to 200 characters
-     * 
-     * @param {HTMLElement} heading - The heading element
-     * @returns {string} Content snippet (max 200 chars)
-     */
-    function getContentSnippet(heading) {
+    const getContentSnippet = (heading) => {
       const summary = heading.closest('.accordion-summary');
       if (summary) {
         const accordion = heading.closest('.accordion');
@@ -138,7 +136,7 @@
       }
 
       return content.trim().substring(0, 200);
-    }
+    };
 
     document.querySelectorAll('.main-sections h2, .main-sections h3, .main-sections h4').forEach(heading => {
       const headingText = heading.textContent.trim();
@@ -157,8 +155,6 @@
     return index;
   }
 
-  const searchIndex = buildSearchIndex();
-
   /**
    * Performs search query against indexed content with scoring algorithm
    * 
@@ -172,7 +168,7 @@
    * @param {string} query - The search query text
    * @returns {SearchIndexItem[]} Matching results sorted by score (descending)
    */
-  function search(query) {
+  search(query) {
     if (!query || query.length < 2) {
       return [];
     }
@@ -180,30 +176,26 @@
     const queryLower = query.toLowerCase();
     const results = [];
     
-    searchIndex.forEach(item => {
+    this.searchIndex.forEach(item => {
       let score = 0;
       const titleLower = item.title.toLowerCase();
       const contentLower = item.content.toLowerCase();
       const sectionLower = item.section.toLowerCase();
       
-      // Exact title match = highest score
       if (titleLower === queryLower) {
         score += 100;
       } else if (titleLower.includes(queryLower)) {
         score += 50;
       }
       
-      // Section match
       if (sectionLower.includes(queryLower)) {
         score += 20;
       }
       
-      // Content match
       if (contentLower.includes(queryLower)) {
         score += 10;
       }
       
-      // Word boundary matches
       const words = queryLower.split(/\s+/);
       words.forEach(word => {
         if (word.length > 2) {
@@ -217,9 +209,8 @@
       }
     });
     
-    // Sort by score descending
     results.sort((a, b) => b.score - a.score);
-    return results.slice(0, 10); // Top 10 results
+    return results.slice(0, 10);
   }
 
   /**
@@ -230,10 +221,10 @@
    * @param {SearchIndexItem[]} results - Array of search results with scores
    * @returns {void}
    */
-  function displayResults(results) {
+  displayResults(results) {
     if (results.length === 0) {
-      searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-title">No results found</div></div>';
-      searchResults.classList.remove('hidden');
+      this.searchResults.innerHTML = '<div class="search-result-item"><div class="search-result-title">No results found</div></div>';
+      this.searchResults.classList.remove('hidden');
       return;
     }
     
@@ -247,13 +238,12 @@
       `;
     }).join('');
     
-    searchResults.innerHTML = html;
-    searchResults.classList.remove('hidden');
+    this.searchResults.innerHTML = html;
+    this.searchResults.classList.remove('hidden');
     
-    // Add click handlers to results
-    searchResults.querySelectorAll('.search-result-item').forEach(item => {
-      item.addEventListener('click', function() {
-        const id = this.getAttribute('data-id');
+    this.searchResults.querySelectorAll('.search-result-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const id = item.getAttribute('data-id');
         if (!id) return;
 
         const element = document.getElementById(id);
@@ -274,68 +264,11 @@
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }, 60);
 
-        searchResults.classList.add('hidden');
-        searchInput.value = '';
+        this.searchResults.classList.add('hidden');
+        this.searchInput.value = '';
       });
     });
   }
-
-  /**
-   * Handles search input with debouncing and keyboard navigation
-   * Debounces search queries by 200ms to avoid excessive processing
-   * Tracks highlighted result index for arrow key navigation
-   */
-  let searchTimeout;
-  let currentHighlightedIndex = -1;
-
-  searchInput.addEventListener('input', function() {
-    clearTimeout(searchTimeout);
-    const query = this.value.trim();
-    
-    if (query.length < 2) {
-      searchResults.classList.add('hidden');
-      currentHighlightedIndex = -1;
-      return;
-    }
-    
-    searchTimeout = setTimeout(() => {
-      const results = search(query);
-      displayResults(results);
-      currentHighlightedIndex = -1;
-    }, 200);
-  });
-
-  /**
-   * Handles keyboard navigation within search results
-   * - ArrowDown: Move to next result
-   * - ArrowUp: Move to previous result
-   * - Enter: Navigate to highlighted result
-   * - Escape: Close results panel
-   */
-  searchInput.addEventListener('keydown', function(e) {
-    if (!searchResults.classList.contains('hidden')) {
-      const items = Array.from(searchResults.querySelectorAll('.search-result-item'));
-      
-      if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        currentHighlightedIndex = Math.min(currentHighlightedIndex + 1, items.length - 1);
-        updateHighlight(items);
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        currentHighlightedIndex = Math.max(currentHighlightedIndex - 1, -1);
-        updateHighlight(items);
-      } else if (e.key === 'Enter') {
-        e.preventDefault();
-        if (currentHighlightedIndex >= 0 && items[currentHighlightedIndex]) {
-          items[currentHighlightedIndex].click();
-        }
-      } else if (e.key === 'Escape') {
-        e.preventDefault();
-        searchResults.classList.add('hidden');
-        currentHighlightedIndex = -1;
-      }
-    }
-  });
 
   /**
    * Updates visual highlighting of search results
@@ -344,9 +277,9 @@
    * @param {HTMLElement[]} items - Array of search result item elements
    * @returns {void}
    */
-  function updateHighlight(items) {
+  updateHighlight(items) {
     items.forEach((item, index) => {
-      if (index === currentHighlightedIndex) {
+      if (index === this.currentHighlightedIndex) {
         item.classList.add('highlighted');
         item.scrollIntoView({ block: 'nearest' });
       } else {
@@ -355,18 +288,68 @@
     });
   }
 
+  /**
+   * Sets up event listeners for search input and document interactions
+   * 
+   * @returns {void}
+   */
+  setupEventListeners() {
+    this.searchInput.addEventListener('input', () => {
+      clearTimeout(this.searchTimeout);
+      const query = this.searchInput.value.trim();
+      
+      if (query.length < 2) {
+        this.searchResults.classList.add('hidden');
+        this.currentHighlightedIndex = -1;
+        return;
+      }
+      
+      this.searchTimeout = setTimeout(() => {
+        const results = this.search(query);
+        this.displayResults(results);
+        this.currentHighlightedIndex = -1;
+      }, 200);
+    });
 
-  // Hide results when clicking outside
-  document.addEventListener('click', function(e) {
-    if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
-      searchResults.classList.add('hidden');
-    }
-  });
+    this.searchInput.addEventListener('keydown', (e) => {
+      if (!this.searchResults.classList.contains('hidden')) {
+        const items = Array.from(this.searchResults.querySelectorAll('.search-result-item'));
+        
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          this.currentHighlightedIndex = Math.min(this.currentHighlightedIndex + 1, items.length - 1);
+          this.updateHighlight(items);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          this.currentHighlightedIndex = Math.max(this.currentHighlightedIndex - 1, -1);
+          this.updateHighlight(items);
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (this.currentHighlightedIndex >= 0 && items[this.currentHighlightedIndex]) {
+            items[this.currentHighlightedIndex].click();
+          }
+        } else if (e.key === 'Escape') {
+          e.preventDefault();
+          this.searchResults.classList.add('hidden');
+          this.currentHighlightedIndex = -1;
+        }
+      }
+    });
 
-  // Show results when focusing on search input if there's a query
-  searchInput.addEventListener('focus', function() {
-    if (this.value.trim().length >= 2) {
-      searchResults.classList.remove('hidden');
-    }
-  });
-})();
+    document.addEventListener('click', (e) => {
+      if (!this.searchInput.contains(e.target) && !this.searchResults.contains(e.target)) {
+        this.searchResults.classList.add('hidden');
+      }
+    });
+
+    this.searchInput.addEventListener('focus', () => {
+      if (this.searchInput.value.trim().length >= 2) {
+        this.searchResults.classList.remove('hidden');
+      }
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  new Search();
+});

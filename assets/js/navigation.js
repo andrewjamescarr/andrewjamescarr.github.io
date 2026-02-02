@@ -4,20 +4,92 @@
  * Side navigation enhancements: active section highlight, accordion opening, mobile drawer
  * Handles scroll-based active link highlighting and mobile navigation menu
  */
-(function() {
-  const nav = document.querySelector('.side-nav');
-  if (!nav) return;
 
-  const toggleButton = document.querySelector('.nav-toggle');
-  const closeButton = document.querySelector('.nav-close');
-  const backdrop = document.querySelector('.nav-backdrop');
-  const body = document.body;
+/**
+ * Navigation manager
+ * Provides scroll-based active link highlighting and mobile drawer functionality
+ */
+class Navigation {
+  /**
+   * Initializes the navigation manager
+   * Sets up event listeners and initial state
+   */
+  constructor() {
+    this.nav = document.querySelector('.side-nav');
+    if (!this.nav) return;
 
-  const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
-  if (links.length === 0) return;
+    this.toggleButton = document.querySelector('.nav-toggle');
+    this.closeButton = document.querySelector('.nav-close');
+    this.backdrop = document.querySelector('.nav-backdrop');
+    this.body = document.body;
 
-  const sections = Array.from(document.querySelectorAll('section[id], #top'));
-  const linkById = new Map();
+    this.links = Array.from(this.nav.querySelectorAll('a[href^="#"]'));
+    if (this.links.length === 0) return;
+
+    this.sections = Array.from(document.querySelectorAll('section[id], #top'));
+    this.linkById = new Map();
+    this.ticking = false;
+    
+    this.setupEventListeners();
+  }
+
+  /**
+   * Sets up all event listeners for navigation
+   * @returns {void}
+   */
+  setupEventListeners() {
+    if (this.toggleButton) {
+      this.toggleButton.addEventListener('click', () => this.toggleNav());
+    }
+    if (this.backdrop) {
+      this.backdrop.addEventListener('click', () => this.closeNav());
+    }
+    if (this.closeButton) {
+      this.closeButton.addEventListener('click', () => this.closeNav());
+    }
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') this.closeNav();
+    });
+
+    this.links.forEach(link => {
+      const href = link.getAttribute('href') || '';
+      const id = decodeURIComponent(href.replace('#', '')).trim();
+      if (id) this.linkById.set(id, link);
+
+      link.addEventListener('click', () => {
+        const target = document.getElementById(id);
+        if (target) {
+          const accordion = target.closest('.accordion');
+          if (accordion && !accordion.hasAttribute('open')) {
+            accordion.setAttribute('open', 'true');
+          }
+        }
+        this.setActive(id);
+        this.closeNav();
+      });
+    });
+
+    window.addEventListener('scroll', () => this.onScroll(), { passive: true });
+    window.addEventListener('resize', () => this.onScroll());
+    window.addEventListener('hashchange', () => {
+      const id = decodeURIComponent((window.location.hash || '').replace('#', '')).trim();
+      if (id) this.setActive(id);
+    });
+
+    this.onScroll();
+  }
+
+  /**
+   * Toggles the mobile navigation drawer
+   * @returns {void}
+   */
+  toggleNav() {
+    if (this.body.classList.contains('nav-open')) {
+      this.closeNav();
+    } else {
+      this.openNav();
+    }
+  }
 
   /**
    * Opens the mobile navigation drawer
@@ -25,10 +97,10 @@
    * 
    * @returns {void}
    */
-  function openNav() {
-    if (!toggleButton) return;
-    body.classList.add('nav-open');
-    toggleButton.setAttribute('aria-expanded', 'true');
+  openNav() {
+    if (!this.toggleButton) return;
+    this.body.classList.add('nav-open');
+    this.toggleButton.setAttribute('aria-expanded', 'true');
   }
 
   /**
@@ -37,51 +109,11 @@
    * 
    * @returns {void}
    */
-  function closeNav() {
-    if (!toggleButton) return;
-    body.classList.remove('nav-open');
-    toggleButton.setAttribute('aria-expanded', 'false');
+  closeNav() {
+    if (!this.toggleButton) return;
+    this.body.classList.remove('nav-open');
+    this.toggleButton.setAttribute('aria-expanded', 'false');
   }
-
-  if (toggleButton) {
-    toggleButton.addEventListener('click', () => {
-      if (body.classList.contains('nav-open')) {
-        closeNav();
-      } else {
-        openNav();
-      }
-    });
-  }
-
-  if (backdrop) {
-    backdrop.addEventListener('click', closeNav);
-  }
-
-  if (closeButton) {
-    closeButton.addEventListener('click', closeNav);
-  }
-
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeNav();
-  });
-
-  links.forEach(link => {
-    const href = link.getAttribute('href') || '';
-    const id = decodeURIComponent(href.replace('#', '')).trim();
-    if (id) linkById.set(id, link);
-
-    link.addEventListener('click', () => {
-      const target = document.getElementById(id);
-      if (target) {
-        const accordion = target.closest('.accordion');
-        if (accordion && !accordion.hasAttribute('open')) {
-          accordion.setAttribute('open', 'true');
-        }
-      }
-      setActive(id);
-      closeNav();
-    });
-  });
 
   /**
    * Sets the active navigation link by ID
@@ -90,9 +122,9 @@
    * @param {string} id - The section ID to mark as active
    * @returns {void}
    */
-  function setActive(id) {
-    links.forEach(link => link.classList.remove('active'));
-    const activeLink = linkById.get(id);
+  setActive(id) {
+    this.links.forEach(link => link.classList.remove('active'));
+    const activeLink = this.linkById.get(id);
     if (activeLink) activeLink.classList.add('active');
   }
 
@@ -102,11 +134,11 @@
    * 
    * @returns {HTMLElement|null} The active section element or null
    */
-  function findActiveSection() {
+  findActiveSection() {
     const offset = 140;
     let active = null;
 
-    sections.forEach(section => {
+    this.sections.forEach(section => {
       const rect = section.getBoundingClientRect();
       if (rect.top - offset <= 0 && rect.bottom > offset) {
         active = section;
@@ -122,25 +154,20 @@
    * 
    * @returns {void}
    */
-  let ticking = false;
-  function onScroll() {
-    if (ticking) return;
-    ticking = true;
+  onScroll() {
+    if (this.ticking) return;
+    this.ticking = true;
     window.requestAnimationFrame(() => {
-      const activeSection = findActiveSection();
+      const activeSection = this.findActiveSection();
       if (activeSection && activeSection.id) {
-        setActive(activeSection.id);
+        this.setActive(activeSection.id);
       }
-      ticking = false;
+      this.ticking = false;
     });
   }
+}
 
-  window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
-  window.addEventListener('hashchange', () => {
-    const id = decodeURIComponent((window.location.hash || '').replace('#', '')).trim();
-    if (id) setActive(id);
-  });
-
-  onScroll();
-})();
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  new Navigation();
+});
