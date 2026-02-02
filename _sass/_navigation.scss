@@ -1,0 +1,244 @@
+// Navigation Styles
+// Extracted from custom.scss
+
+// Top Navigation
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.75rem 0.5rem;
+  background: rgba($paper, 0.96);
+  backdrop-filter: blur(6px);
+  border: 1px solid $border;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px $shadow;
+}
+
+.top-nav a {
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: $paper-strong;
+  color: $teal-dark;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.top-nav a:hover {
+  border-color: rgba(15, 118, 110, 0.4);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.1);
+  transform: translateY(-1px);
+}
+
+// Side Navigation
+.layout-with-nav {
+  display: block;
+  position: relative;
+}
+
+.side-nav {
+  display: grid;
+  gap: 0;
+  padding: 0.75rem 0.85rem;
+  background: rgba(247, 249, 251, 0.98);
+  backdrop-filter: blur(6px);
+  border: 1px solid $border;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px $shadow-medium;
+}
+
+// Navigation Drawer
+.nav-drawer {
+  position: fixed;
+  top: 0;
+  left: -340px;
+  width: 320px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 220;
+  transition: left 220ms ease;
+  padding-top: 0.75rem;
+}
+
+body.nav-open .nav-drawer {
+  left: 0;
+}
+
+// Navigation Toggle Button
+.nav-toggle {
+  position: fixed;
+  top: 6.5rem;
+  left: 1.25rem;
+  z-index: 230;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 118, 110, 0.3);
+  background: $paper-strong;
+  color: $teal-dark;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(15, 118, 110, 0.12);
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.nav-toggle:hover {
+  border-color: rgba(15, 118, 110, 0.5);
+  box-shadow: 0 8px 22px rgba(15, 118, 110, 0.16);
+}
+
+body.nav-open .nav-toggle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+// Navigation Backdrop
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 200ms ease, visibility 200ms ease;
+  z-index: 210;
+}
+
+body.nav-open .nav-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Navigation Drawer Header
+.nav-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.75rem 0.75rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid $border;
+}
+
+// Navigation Drawer Title
+.nav-drawer-title {
+  font-weight: 800;
+  color: $teal-dark;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+// Navigation Close Button
+.nav-close {
+  border: none;
+  background: rgba(15, 118, 110, 0.1);
+  color: $teal-dark;
+  border-radius: 8px;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background 120ms ease;
+}
+
+.nav-close:hover {
+  background: rgba(15, 118, 110, 0.18);
+}
+
+// Side Navigation Title
+.side-nav .nav-title {
+  font-weight: 700;
+  color: $teal-dark;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $teal;
+  font-size: 0.9rem;
+  line-height: 1.3;
+
+  small {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $ink;
+    margin-top: 0.2rem;
+    opacity: 0.85;
+  }
+}
+
+// Navigation Groups
+.nav-group {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+}
+
+.nav-group:first-of-type {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.nav-group:not(:last-of-type) {
+  border-bottom: 1px solid $border;
+  padding-bottom: 0.65rem;
+}
+
+.nav-group-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $teal-dark;
+  padding: 0.4rem 0.5rem;
+  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.nav-group a {
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: $paper-strong;
+  color: $teal-dark;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.nav-group a:hover {
+  border-color: rgba(15, 118, 110, 0.4);
+  box-shadow: 0 3px 10px rgba(15, 118, 110, 0.12);
+  transform: translateX(3px);
+  background: rgba(15, 118, 110, 0.06);
+}
+
+.nav-group a.active {
+  border-color: rgba(15, 118, 110, 0.6);
+  background: rgba(15, 118, 110, 0.12);
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.12);
+  transform: translateX(4px);
+}
+
+.nav-group-utilities .back-to-top {
+  font-weight: 700;
+  color: $teal-dark;
+}
+
+// Mobile Navigation Adjustments
+@media (max-width: 960px) {
+  .nav-toggle {
+    top: 5.25rem;
+    left: 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav-drawer {
+    width: 100%;
+    left: -100%;
+  }
+}

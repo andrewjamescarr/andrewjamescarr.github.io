@@ -1,0 +1,156 @@
+// Page header layout and flex containers
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, $teal 0%, $teal-dark 100%);
+  border-bottom: 3px solid $orange;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  gap: 2rem;
+}
+
+.page-header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-shrink: 0;
+  min-width: 300px;
+}
+
+.page-header .header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.page-header .project-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
+  margin: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.page-header .project-tagline {
+  display: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+// Main content container
+.main-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+
+// Intro grid layout
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1.2fr;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+/* Mobile responsiveness for intro grid */
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet and larger mobile devices */
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+// Site footer
+.site-footer {
+  margin-top: 3rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid $border;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  color: $teal-dark;
+}
+
+.site-footer .footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+// Layout with nav
+.layout-with-nav {
+  display: block;
+  position: relative;
+}
+
+// Print layout adjustments
+@media print {
+  .page-header {
+    position: static;
+    background: $paper-strong;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-right,
+  .search-label,
+  .speech-toggle-btn,
+  .nav-toggle,
+  .nav-backdrop,
+  .nav-drawer,
+  .update-badge,
+  .search-results,
+  .command-palette,
+  .command-palette-backdrop,
+  .keyboard-help,
+  .keyboard-help-backdrop,
+  .speech-controls {
+    display: none !important;
+  }
+
+  .project-tagline {
+    color: #666 !important;
+  }
+
+  .layout-with-nav {
+    display: block;
+  }
+
+  .main-content {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .intro-grid {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+/* Accessibility
+   ========================================================================== */
+
+.skip-to-main {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0b4f49;
+  color: white;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.skip-to-main:focus {
+  top: 0;
+}
+
+/* View Transitions
+   ========================================================================== */
+
+::view-transition-old(root) {
+  animation: fadeOut 200ms ease-in-out forwards;
+}
+
+::view-transition-new(root) {
+  animation: fadeIn 200ms ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* List Spacing
+   ========================================================================== */
+
+.page-content li > ul + * {
+  margin-top: 0 !important;
+}

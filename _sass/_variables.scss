@@ -1,0 +1,33 @@
+// ============================================
+// SCSS Variables
+// Color palette and design tokens
+// ============================================
+
+// Base colors
+$teal: #0f766e;
+$teal-dark: #0b4f49;
+$orange: #f59e0b;
+$ink: #1f2933;
+$ink-muted: #656d76;
+$paper: #f7f9fb;
+$paper-strong: #ffffff;
+$border: #e5e7eb;
+
+// Shadow values
+$shadow: rgba(0, 0, 0, 0.04);
+$shadow-strong: rgba(0, 0, 0, 0.08);
+$shadow-medium: rgba(0, 0, 0, 0.12);
+$shadow-heavy: rgba(0, 0, 0, 0.15);
+
+// Transparent overlays
+$overlay-light: rgba(0, 0, 0, 0.5);
+$overlay-dark: rgba(0, 0, 0, 0.6);
+
+// Teal variations (with alpha)
+$teal-alpha-light: rgba(15, 118, 110, 0.1);
+$teal-alpha-medium: rgba(15, 118, 110, 0.15);
+$teal-alpha-border: rgba(15, 118, 110, 0.2);
+
+// Orange variations (with alpha)
+$orange-alpha-light: rgba(245, 158, 11, 0.08);
+$orange-alpha-medium: rgba(245, 158, 11, 0.3);
