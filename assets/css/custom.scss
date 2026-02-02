@@ -431,28 +431,6 @@ html.dark-mode .speech-toggle-btn {
   }
 }
 
-@media (max-width: 900px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Ensure mobile devices get single-column layout */
-@media (max-width: 768px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-/* Extra small devices */
-@media (max-width: 480px) {
-  .intro-grid {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-}
-
 .no-protocols-callout {
   background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.04));
   border: 1px solid rgba(239, 68, 68, 0.25);
@@ -1214,6 +1192,29 @@ html.dark-mode .speech-status {
   gap: 1.5rem;
   align-items: stretch;
   margin-bottom: 2rem;
+}
+
+/* Mobile responsiveness for intro grid */
+@media (max-width: 900px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Tablet and larger mobile devices */
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }
 
 .tldr-card,
