@@ -367,7 +367,7 @@ html.dark-mode .speech-toggle-btn {
   width: 400px;
   max-height: 500px;
   overflow-y: auto;
-  background: white;
+  background: $paper-strong;
   border: 1px solid $border;
   border-radius: 8px;
   box-shadow: 0 10px 30px $shadow-strong;
@@ -521,7 +521,7 @@ html.dark-mode .callout-link:hover {
   width: 90%;
   max-width: 600px;
   max-height: 500px;
-  background: white;
+  background: $paper-strong;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   z-index: 200;
@@ -538,7 +538,7 @@ html.dark-mode .callout-link:hover {
 
 .command-palette-header {
   padding: 1rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid $border;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -547,7 +547,7 @@ html.dark-mode .callout-link:hover {
 .command-palette-input {
   flex: 1;
   padding: 0.75rem 1rem;
-  border: 2px solid #e5e7eb;
+  border: 2px solid $border;
   border-radius: 8px;
   font-size: 1rem;
   font-family: inherit;
@@ -701,7 +701,7 @@ html.dark-mode .palette-result-type {
   transform: translate(-50%, -50%) scale(0.95);
   width: 90%;
   max-width: 500px;
-  background: white;
+  background: $paper-strong;
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   z-index: 300;
@@ -726,7 +726,7 @@ html.dark-mode .palette-result-type {
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid $border;
 }
 
 .keyboard-help-header h2 {
@@ -769,7 +769,7 @@ html.dark-mode .palette-result-type {
 .shortcut-keys {
   font-family: 'Courier New', monospace;
   background: #f3f4f6;
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   border-radius: 6px;
   padding: 0.5rem 0.75rem;
   font-size: 0.85rem;
@@ -850,7 +850,7 @@ html.dark-mode .shortcut-action {
   bottom: 0;
   left: 0;
   right: 0;
-  background: white;
+  background: $paper-strong;
   border-top: 2px solid $orange;
   box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
   z-index: 150;
@@ -927,7 +927,7 @@ html.dark-mode .shortcut-action {
   width: 100px;
   height: 6px;
   border-radius: 3px;
-  background: #e5e7eb;
+  background: $border;
   outline: none;
   -webkit-appearance: none;
   appearance: none;
@@ -956,9 +956,9 @@ html.dark-mode .shortcut-action {
 
 .speech-controls-group select {
   padding: 0.5rem 0.75rem;
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   border-radius: 6px;
-  background: white;
+  background: $paper-strong;
   color: $teal-dark;
   font-family: inherit;
   font-size: 0.9rem;
@@ -1051,7 +1051,7 @@ html.dark-mode .speech-status {
 @media print {
   .page-header {
     position: static;
-    background: white;
+    background: $paper-strong;
     border: none;
     box-shadow: none;
     margin-bottom: 1.5rem;
@@ -1087,13 +1087,13 @@ html.dark-mode .speech-status {
 
   .accordion {
     page-break-inside: avoid;
-    border: 1px solid #e5e7eb;
+    border: 1px solid $border;
     margin-bottom: 1.5rem;
   }
 
   .accordion-summary {
     background: #f3f4f6 !important;
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid $border;
   }
 
   .accordion-icon {
@@ -1127,7 +1127,7 @@ html.dark-mode .speech-status {
 
   .no-protocols-callout {
     border: 1px solid #999;
-    background: white;
+    background: $paper-strong;
   }
 
   .intro-grid {
@@ -1389,12 +1389,12 @@ blockquote {
 table {
   border-collapse: collapse;
   width: 100%;
-  background: white;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  background: $paper-strong;
+  box-shadow: 0 6px 18px $shadow;
 }
 
 table th, table td {
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   padding: 0.75rem;
   text-align: left;
 }
@@ -1418,14 +1418,14 @@ a:hover {
 
 hr {
   border: none;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid $border;
   margin: 2rem 0;
 }
 
 .site-footer {
   margin-top: 3rem;
   padding: 1.25rem 0;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid $border;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
@@ -1451,7 +1451,7 @@ hr {
   padding: 0.75rem 0.85rem;
   background: rgba(247, 249, 251, 0.98);
   backdrop-filter: blur(6px);
-  border: 1px solid #e5e7eb;
+  border: 1px solid $border;
   border-radius: 12px;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
@@ -1480,7 +1480,7 @@ body.nav-open .nav-drawer {
   padding: 0.55rem 0.95rem;
   border-radius: 999px;
   border: 1px solid rgba(15, 118, 110, 0.3);
-  background: white;
+  background: $paper-strong;
   color: $teal-dark;
   font-weight: 700;
   box-shadow: 0 6px 18px rgba(15, 118, 110, 0.12);
@@ -1518,7 +1518,7 @@ body.nav-open .nav-backdrop {
   justify-content: space-between;
   padding: 0 0.75rem 0.75rem;
   margin-bottom: 0.25rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid $border;
 }
 
 .nav-drawer-title {
@@ -1681,7 +1681,7 @@ html.dark-mode .reading-time {
 .related-sections {
   margin-top: 1.5rem;
   padding-top: 1rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid $border;
 }
 
 html.dark-mode .related-sections {
@@ -1791,7 +1791,7 @@ html.dark-mode .related-sections a:hover {
 .accordion-content section + section {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid $border;
 }
 
 /* Navigation Groups */
@@ -1808,7 +1808,7 @@ html.dark-mode .related-sections a:hover {
 }
 
 .nav-group:not(:last-of-type) {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid $border;
   padding-bottom: 0.65rem;
 }
 
@@ -1827,7 +1827,7 @@ html.dark-mode .related-sections a:hover {
   padding: 0.4rem 0.5rem;
   border-radius: 6px;
   border: 1px solid transparent;
-  background: white;
+  background: $paper-strong;
   color: $teal-dark;
   font-weight: 600;
   font-size: 0.85rem;
@@ -1865,8 +1865,8 @@ html.dark-mode .related-sections a:hover {
 .trait-card {
   padding: 1.25rem;
   border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  background: white;
+  border: 1px solid $border;
+  background: $paper-strong;
   transition: transform 150ms ease, box-shadow 150ms ease;
 }
 
@@ -2101,7 +2101,7 @@ html.dark-mode .trait-card ul {
 .issue-card {
   border: 1px solid #d0d7de;
   border-radius: 8px;
-  background: white;
+  background: $paper-strong;
   padding: 1rem;
   transition: border-color 200ms ease, box-shadow 200ms ease;
 }
@@ -2134,7 +2134,7 @@ html.dark-mode .trait-card ul {
 .issue-number {
   font-family: 'SFMono-Regular', Consolas, monospace;
   font-size: 0.85rem;
-  color: #656d76;
+  color: $ink-muted;
   font-weight: 600;
 }
 
@@ -2195,7 +2195,7 @@ html.dark-mode .trait-card ul {
 }
 
 .issue-body {
-  color: #656d76;
+  color: $ink-muted;
   font-size: 0.9rem;
   line-height: 1.6;
 }
