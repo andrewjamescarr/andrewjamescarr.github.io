@@ -86,7 +86,7 @@ title: Andrew Carr's User Guide
 				<div class="accordion-content">
 					<section id="about-me">
 
-						<h4>Conversation starters</h4>
+						<h3>Conversation starters</h3>
 						<p>Not great at small talk?  Get started with one of these conversation starters.</p>
 						<ul>
 							<li>Why I took up running.</li>
@@ -96,11 +96,11 @@ title: Andrew Carr's User Guide
 							<li>One space or two after a full stop; discuss.</li>
 						</ul>
 
-						<h4>My humour</h4>
+						<h3>My humour</h3>
 						<p>Dark.  Occasionally smutty.  Shaped by Bottom, Red Dwarf, Blackadder, and a childhood of British comedy where wit required reading between the lines.</p>
 						<p><em>My eldest daughter has decided it's a feature, not a bug.  I'm inclined to agree.</em></p>
 
-						<h4>Favourite quote</h4>
+						<h3>Favourite quote</h3>
 						<blockquote class="featured-quote">
 							<span class="quote-mark">"</span>
 							<p>Progress over perfection</p>
@@ -108,7 +108,7 @@ title: Andrew Carr's User Guide
 
 						<div class="two-column-interests">
 							<div class="interest-column">
-								<h4>📚 Books I'm reading (January 2026)</h4>
+								<h3>📚 Books I'm reading (January 2026)</h3>
 								<ul>
 									<li><a href="https://www.amazon.com/dp/0393652370"><strong>The Decision Book</strong></a> <span class="book-author">by Mikael Krogerus</span> <span class="book-context">How to think clearly and make better calls.</span></li>
 									<li><a href="https://www.amazon.com/dp/0192845527"><strong>Ambulance Care Practice</strong></a> <span class="book-author">by Richard Pilbery</span> <span class="book-context">Because learning never stops.</span></li>
@@ -118,7 +118,7 @@ title: Andrew Carr's User Guide
 							</div>
 
 							<div class="interest-column">
-								<h4>💡 Things I'm interested in (January 2026)</h4>
+								<h3>💡 Things I'm interested in (January 2026)</h3>
 								<ul>
 									<li><strong>Digital compartmentalisation:</strong> Keeping work, home, and learning separate but integrated.</li>
 									<li><strong>GitHub Pages:</strong> Static sites, version control, deployment pipelines.  Simple, elegant.</li>
