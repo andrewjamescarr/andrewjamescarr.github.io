@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hero Style Extended Demo v2</title>
+    <style>
+      :root {
+        --ink: #1f2933;
+        --muted: #5b6b7a;
+        --teal: #0f766e;
+        --teal-dark: #0b4f49;
+        --orange: #f59e0b;
+        --paper: #f6f7f9;
+        --card: #ffffff;
+        --border: #e5e7eb;
+        --shadow: 0 16px 36px rgba(15, 118, 110, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        line-height: 1.6;
+        padding: 2rem 1.5rem 3rem;
+      }
+
+      .demo-wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        gap: 2rem;
+      }
+
+      .section-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        padding: 1.75rem 2rem;
+      }
+
+      .section-card.hero {
+        background: linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.02));
+        border: 1px solid rgba(15, 118, 110, 0.2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-card.hero::after {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(circle at center, rgba(245, 158, 11, 0.2), transparent 60%);
+      }
+
+      .hero-header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-title h1 {
+        margin: 0 0 0.4rem;
+        font-size: 2rem;
+      }
+
+      .hero-title p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 520px;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-actions button,
+      .cta-card button {
+        border: none;
+        border-radius: 999px;
+        padding: 0.6rem 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: var(--teal);
+        color: white;
+      }
+
+      .btn-ghost {
+        background: rgba(15, 118, 110, 0.1);
+        color: var(--teal-dark);
+      }
+
+      .glance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+
+      .glance-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1rem 1.2rem;
+        box-shadow: 0 8px 20px rgba(15, 118, 110, 0.08);
+      }
+
+      .glance-card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .glance-card .metric {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--teal-dark);
+      }
+
+      .glance-card .detail {
+        margin: 0.35rem 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .highlight-card {
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.03));
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(15, 118, 110, 0.12);
+        color: var(--teal-dark);
+        padding: 0.25rem 0.6rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: 0.5rem;
+      }
+
+      .section-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .section-header h2 {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+
+      .section-header p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .chip-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .chip {
+        border-radius: 999px;
+        padding: 0.35rem 0.75rem;
+        background: rgba(15, 118, 110, 0.1);
+        color: var(--teal-dark);
+        font-weight: 700;
+        font-size: 0.8rem;
+      }
+
+      .how-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .how-step {
+        border-radius: 16px;
+        background: rgba(15, 118, 110, 0.08);
+        padding: 1rem 1.2rem;
+        border: 1px solid rgba(15, 118, 110, 0.15);
+      }
+
+      .how-step h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1rem;
+        color: var(--teal-dark);
+      }
+
+      .how-step p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .agreement-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .agreement-card {
+        border-radius: 16px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 1rem 1.2rem;
+        box-shadow: 0 8px 18px rgba(15, 118, 110, 0.06);
+      }
+
+      .agreement-card h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1rem;
+      }
+
+      .agreement-card ul {
+        margin: 0.5rem 0 0;
+        padding-left: 1.1rem;
+        color: var(--muted);
+      }
+
+      .comms-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+
+      .comms-card {
+        border-radius: 16px;
+        background: var(--card);
+        border: 1px solid var(--border);
+        padding: 1rem 1.2rem;
+      }
+
+      .comms-card h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1rem;
+      }
+
+      .comms-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta-card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 20px;
+        border: 1px solid rgba(15, 118, 110, 0.2);
+        background: linear-gradient(135deg, rgba(15, 118, 110, 0.14), rgba(15, 118, 110, 0.02));
+        padding: 1.5rem 2rem;
+      }
+
+      .cta-card h2 {
+        margin: 0 0 0.4rem;
+      }
+
+      .cta-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      @media (max-width: 720px) {
+        .section-card {
+          padding: 1.5rem;
+        }
+
+        .hero-title h1 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-wrap">
+      <section class="section-card hero" aria-label="At a glance hero">
+        <div class="hero-header">
+          <div class="hero-title">
+            <h1>At a Glance</h1>
+            <p>Simple entry point with the hero visual language.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-primary" type="button">Copy working agreement</button>
+            <button class="btn-ghost" type="button">Download one‑pager</button>
+          </div>
+        </div>
+
+        <div class="glance-grid">
+          <article class="glance-card highlight-card">
+            <h3>Response time</h3>
+            <div class="metric">Same day</div>
+            <p class="detail">Async first. Urgent items get a quick acknowledgment.</p>
+            <span class="pill">Preferred: written</span>
+          </article>
+
+          <article class="glance-card">
+            <h3>Office days</h3>
+            <div class="metric">Mon + Wed</div>
+            <p class="detail">Best for workshops and pairing in Bristol.</p>
+          </article>
+
+          <article class="glance-card">
+            <h3>Focus blocks</h3>
+            <div class="metric">Tue AM</div>
+            <p class="detail">Deep work. Slack only for critical items.</p>
+          </article>
+
+          <article class="glance-card">
+            <h3>Decision style</h3>
+            <div class="metric">Type 2 bias</div>
+            <p class="detail">Fast for reversible decisions, slower for one‑way doors.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-card" aria-label="How to use this guide">
+        <div class="section-header">
+          <div>
+            <h2>How to use this guide</h2>
+            <p>Three quick steps for first‑time readers.</p>
+          </div>
+        </div>
+        <div class="how-strip">
+          <article class="how-step">
+            <h3>1. Start with the at‑a‑glance</h3>
+            <p>Get the essentials: response time, office days, and focus windows.</p>
+          </article>
+          <article class="how-step">
+            <h3>2. Pick your scenario</h3>
+            <p>Jump to comms, decisions, or feedback based on your need.</p>
+          </article>
+          <article class="how-step">
+            <h3>3. Use the agreement</h3>
+            <p>Copy the working agreement to set expectations quickly.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-card" aria-label="Working agreement">
+        <div class="section-header">
+          <div>
+            <h2>Working agreement</h2>
+            <p>Reusable expectations for fast alignment.</p>
+          </div>
+          <div class="chip-row">
+            <span class="chip">Async first</span>
+            <span class="chip">Clear asks</span>
+            <span class="chip">Timeboxed</span>
+          </div>
+        </div>
+        <div class="agreement-grid">
+          <article class="agreement-card">
+            <h3>Requests</h3>
+            <ul>
+              <li>Lead with the ask, then context.</li>
+              <li>Include a deadline and success criteria.</li>
+            </ul>
+          </article>
+          <article class="agreement-card">
+            <h3>Decisions</h3>
+            <ul>
+              <li>Flag Type 1 vs Type 2.</li>
+              <li>Bring options + recommendation.</li>
+            </ul>
+          </article>
+          <article class="agreement-card">
+            <h3>Meetings</h3>
+            <ul>
+              <li>Agenda required for syncs.</li>
+              <li>Default to 25/50 minutes.</li>
+            </ul>
+          </article>
+          <article class="agreement-card">
+            <h3>Feedback</h3>
+            <ul>
+              <li>Direct and kind.</li>
+              <li>Include a next step.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-card" aria-label="Comms grid">
+        <div class="section-header">
+          <div>
+            <h2>Communication grid</h2>
+            <p>Use the card layout to keep comms guidance scannable.</p>
+          </div>
+        </div>
+        <div class="comms-grid">
+          <article class="comms-card">
+            <h3>Async update</h3>
+            <p>1–3 bullets, status, blockers, next step.</p>
+          </article>
+          <article class="comms-card">
+            <h3>Decision request</h3>
+            <p>Provide options, trade‑offs, and your recommendation.</p>
+          </article>
+          <article class="comms-card">
+            <h3>Escalation</h3>
+            <p>Start with urgency + impact. I’ll respond same day.</p>
+          </article>
+          <article class="comms-card">
+            <h3>Feedback</h3>
+            <p>Specific example, impact, and desired change.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-card" aria-label="Next steps">
+        <div>
+          <h2>Next steps</h2>
+          <p>Pick the fastest route to alignment and I’ll take it from there.</p>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" type="button">Book time</button>
+          <button class="btn-ghost" type="button">Send a brief</button>
+          <button class="btn-ghost" type="button">Copy agreement</button>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

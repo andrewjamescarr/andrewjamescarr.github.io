@@ -51,28 +51,38 @@ title: Andrew Carr's User Guide
 	</aside>
 
 	<div class="main-sections">
-		<div class="intro-grid">
-			<section id="tldr" class="tldr-card">
-				<h2>TL;DR</h2>
-				<ul>
-					<li><strong>Async first:</strong> Written requests with clear context beat drop-ins.</li>
-					<li><strong>Calendar is truth:</strong> Book directly; focus blocks are DND.</li>
-					<li><strong>Urgent means urgent:</strong> Only life/death or imminent harm.</li>
-					<li><strong>Capacity is capped:</strong> I run max 3 active items at a time.</li>
-					<li><strong>Direct feedback wins:</strong> Tell me the issue and what good looks like.</li>
-				</ul>
-			</section>
-			<aside id="contact-card" class="contact-card" aria-label="Contact card">
-				<h2>Contact Card</h2>
-				<ul class="contact-chips">
-					<li class="contact-chip"><span class="chip-label">Preferred</span><span class="chip-text">Email → Teams → WhatsApp/Signal (urgent only)</span></li>
-					<li class="contact-chip"><span class="chip-label">Response</span><span class="chip-text">Email 24–48h · Teams same-day · Urgent within 1h</span></li>
-					<li class="contact-chip"><span class="chip-label">Office days</span><span class="chip-text">Mon/Wed (Bristol) 7am–4pm</span></li>
-					<li class="contact-chip"><span class="chip-label">Remote days</span><span class="chip-text">Core hours 10am–4pm</span></li>
-					<li class="contact-chip"><span class="chip-label">Best booking</span><span class="chip-text">Mon/Wed 10am–3pm · Other days 11am–3pm</span></li>
-				</ul>
-			</aside>
-		</div>
+		<section class="section-card hero" aria-label="At a glance hero">
+			<div class="hero-header">
+				<div class="hero-title">
+					<h1>At a Glance</h1>
+					<p>Your quick read for how to work with me: response times, office days, capacity, and feedback style.</p>
+				</div>
+			</div>
+
+			<div class="glance-grid">
+				<article class="glance-card highlight-card">
+					<h3>Response time</h3>
+					<div class="metric">Email 24–48h</div>
+					<p class="detail">Teams same-day · Urgent within 1 hour.</p>
+					<span class="pill">Preferred: written</span>
+				</article>
+				<article class="glance-card">
+					<h3>Office days</h3>
+					<div class="metric">Mon + Wed</div>
+					<p class="detail">Bristol office, 7am–4pm.</p>
+				</article>
+				<article class="glance-card">
+					<h3>Capacity</h3>
+					<div class="metric">Max 3 items</div>
+					<p class="detail">Everything else waits in triage until capacity frees up.</p>
+				</article>
+				<article class="glance-card">
+					<h3>Feedback</h3>
+					<div class="metric">Direct + kind</div>
+					<p class="detail">Tell me the issue and what good looks like.</p>
+				</article>
+			</div>
+		</section>
 		<div class="no-protocols-callout">
 			<h3>🚫 Important: The "No" Protocols</h3>
 			<p>I say <strong>no</strong> to: end-of-day asks, meetings without agendas, surprise decisions, info dumps. Truly urgent means life/death or imminent harm only. <a href="#no-protocols-basic" class="callout-link">Learn more →</a></p>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hero At-a-Glance Demo</title>
+    <style>
+      :root {
+        --ink: #1f2933;
+        --muted: #5b6b7a;
+        --teal: #0f766e;
+        --teal-dark: #0b4f49;
+        --orange: #f59e0b;
+        --paper: #f6f7f9;
+        --card: #ffffff;
+        --border: #e5e7eb;
+        --shadow: 0 16px 36px rgba(15, 118, 110, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        line-height: 1.6;
+        padding: 2rem 1.5rem 3rem;
+      }
+
+      .demo-wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(15, 118, 110, 0.02));
+        border: 1px solid rgba(15, 118, 110, 0.2);
+        border-radius: 20px;
+        padding: 2rem 2.5rem;
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: -120px;
+        right: -120px;
+        width: 260px;
+        height: 260px;
+        border-radius: 50%;
+        background: radial-gradient(circle at center, rgba(245, 158, 11, 0.2), transparent 60%);
+      }
+
+      .hero-header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.75rem;
+      }
+
+      .hero-title h1 {
+        margin: 0 0 0.4rem;
+        font-size: 2rem;
+      }
+
+      .hero-title p {
+        margin: 0;
+        color: var(--muted);
+        max-width: 520px;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .hero-actions button {
+        border: none;
+        border-radius: 999px;
+        padding: 0.6rem 1.2rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: var(--teal);
+        color: white;
+      }
+
+      .btn-ghost {
+        background: rgba(15, 118, 110, 0.1);
+        color: var(--teal-dark);
+      }
+
+      .glance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+      }
+
+      .glance-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1rem 1.2rem;
+        box-shadow: 0 8px 20px rgba(15, 118, 110, 0.08);
+      }
+
+      .glance-card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+      }
+
+      .glance-card .metric {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--teal-dark);
+      }
+
+      .glance-card .detail {
+        margin: 0.35rem 0 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .highlight-card {
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(245, 158, 11, 0.03));
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(15, 118, 110, 0.12);
+        color: var(--teal-dark);
+        padding: 0.25rem 0.6rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-top: 0.5rem;
+      }
+
+      @media (max-width: 720px) {
+        .hero {
+          padding: 1.5rem;
+        }
+
+        .hero-title h1 {
+          font-size: 1.6rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-wrap">
+      <section class="hero" aria-label="At a glance hero">
+        <div class="hero-header">
+          <div class="hero-title">
+            <h1>At a Glance</h1>
+            <p>Quick stats for how to work with me: availability, response time, and preferred workflows.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn-primary" type="button">Copy working agreement</button>
+            <button class="btn-ghost" type="button">Download one‑pager</button>
+          </div>
+        </div>
+
+        <div class="glance-grid">
+          <article class="glance-card highlight-card">
+            <h3>Response time</h3>
+            <div class="metric">Same day</div>
+            <p class="detail">Async first. Urgent items get a quick acknowledgment.</p>
+            <span class="pill">Preferred: written</span>
+          </article>
+
+          <article class="glance-card">
+            <h3>Office days</h3>
+            <div class="metric">Mon + Wed</div>
+            <p class="detail">Best for workshops and pairing in Bristol.</p>
+          </article>
+
+          <article class="glance-card">
+            <h3>Focus blocks</h3>
+            <div class="metric">Tue AM</div>
+            <p class="detail">Deep work. Slack only for critical items.</p>
+          </article>
+
+          <article class="glance-card">
+            <h3>Decision style</h3>
+            <div class="metric">Type 2 bias</div>
+            <p class="detail">Fast for reversible decisions, slower for one‑way doors.</p>
+          </article>
+
+          <article class="glance-card">
+            <h3>Meetings</h3>
+            <div class="metric">Thu PM</div>
+            <p class="detail">Best window for live reviews and planning.</p>
+          </article>
+
+          <article class="glance-card">
+            <h3>Feedback</h3>
+            <div class="metric">Direct + kind</div>
+            <p class="detail">Short, structured, with clear next steps.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

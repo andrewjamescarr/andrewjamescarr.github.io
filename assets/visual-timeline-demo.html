@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visual Timeline Demo</title>
+    <style>
+      :root {
+        --ink: #1f2933;
+        --muted: #5b6b7a;
+        --teal: #0f766e;
+        --teal-dark: #0b4f49;
+        --paper: #f6f7f9;
+        --border: #e5e7eb;
+        --card: #ffffff;
+        --shadow: 0 12px 28px rgba(15, 118, 110, 0.15);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+        background: var(--paper);
+        color: var(--ink);
+        line-height: 1.6;
+        padding: 2rem 1.5rem 3rem;
+      }
+
+      .demo-wrap {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      header {
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        margin: 0 0 0.5rem;
+        font-size: 2rem;
+      }
+
+      p.lead {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .timeline {
+        position: relative;
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        gap: 1.5rem 2rem;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 70px;
+        top: 10px;
+        bottom: 10px;
+        width: 4px;
+        background: linear-gradient(180deg, var(--teal), #cce5e2);
+        border-radius: 999px;
+      }
+
+      .time-block {
+        display: contents;
+      }
+
+      .time-label {
+        font-weight: 700;
+        color: var(--teal-dark);
+        text-align: right;
+        padding-right: 1rem;
+        font-size: 0.95rem;
+      }
+
+      .time-label span {
+        display: inline-block;
+        background: rgba(15, 118, 110, 0.12);
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+      }
+
+      .event-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 1.25rem 1.5rem;
+        box-shadow: var(--shadow);
+        position: relative;
+      }
+
+      .event-card::before {
+        content: "";
+        position: absolute;
+        left: -11px;
+        top: 32px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: var(--teal);
+        box-shadow: 0 0 0 6px rgba(15, 118, 110, 0.15);
+      }
+
+      .event-card h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1.1rem;
+      }
+
+      .event-card p {
+        margin: 0 0 0.75rem;
+        color: var(--muted);
+      }
+
+      .event-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .pill {
+        padding: 0.25rem 0.7rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background: rgba(245, 158, 11, 0.15);
+        color: #92400e;
+      }
+
+      .pill.teal {
+        background: rgba(15, 118, 110, 0.12);
+        color: var(--teal-dark);
+      }
+
+      @media (max-width: 720px) {
+        .timeline {
+          grid-template-columns: 1fr;
+          gap: 1.25rem;
+        }
+
+        .timeline::before {
+          left: 18px;
+        }
+
+        .time-label {
+          text-align: left;
+          padding-left: 2.5rem;
+        }
+
+        .event-card {
+          margin-left: 2.5rem;
+        }
+
+        .event-card::before {
+          left: -35px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-wrap">
+      <header>
+        <h1>Visual Timeline Demo</h1>
+        <p class="lead">Standalone preview only. No changes to the main guide.</p>
+      </header>
+
+      <section class="timeline" aria-label="Availability timeline">
+        <div class="time-block">
+          <div class="time-label"><span>Mon</span></div>
+          <article class="event-card">
+            <h3>Office Day</h3>
+            <p>In Bristol 07:00–16:00. Best time for in-person sessions.</p>
+            <div class="event-meta">
+              <span class="pill teal">In‑person</span>
+              <span class="pill">Book ahead</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="time-block">
+          <div class="time-label"><span>Tue</span></div>
+          <article class="event-card">
+            <h3>Deep Work</h3>
+            <p>Focus blocks before noon. Async updates preferred.</p>
+            <div class="event-meta">
+              <span class="pill teal">Async</span>
+              <span class="pill">Low‑interrupt</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="time-block">
+          <div class="time-label"><span>Wed</span></div>
+          <article class="event-card">
+            <h3>Office Day</h3>
+            <p>In Bristol 07:00–16:00. Workshops and pairing welcome.</p>
+            <div class="event-meta">
+              <span class="pill teal">In‑person</span>
+              <span class="pill">Workshops</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="time-block">
+          <div class="time-label"><span>Thu</span></div>
+          <article class="event-card">
+            <h3>Collaboration Window</h3>
+            <p>Best day for reviews, planning, and synchronous discussions.</p>
+            <div class="event-meta">
+              <span class="pill teal">Sync OK</span>
+              <span class="pill">Reviews</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="time-block">
+          <div class="time-label"><span>Fri</span></div>
+          <article class="event-card">
+            <h3>Wrap‑Up & Learning</h3>
+            <p>Light meetings. Recap notes and learning slots.</p>
+            <div class="event-meta">
+              <span class="pill teal">Retros</span>
+              <span class="pill">Learning</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

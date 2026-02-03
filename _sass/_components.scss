@@ -175,6 +175,122 @@
   }
 }
 
+/* At a Glance Hero */
+.section-card {
+  background: $paper-strong;
+  border: 1px solid $border;
+  border-radius: 20px;
+  box-shadow: 0 16px 36px rgba($teal, 0.16);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-card.hero {
+  background: linear-gradient(135deg, rgba($teal, 0.12), rgba($teal, 0.02));
+  border: 1px solid rgba($teal, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-card.hero::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, rgba($orange, 0.2), transparent 60%);
+}
+
+.hero-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  flex: 1 1 100%;
+}
+
+.hero-title h1 {
+  margin: 0 0 0.4rem;
+  font-size: 2rem;
+}
+
+.hero-title p {
+  margin: 0;
+  color: $ink-muted;
+  max-width: none;
+}
+
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.glance-card {
+  background: $paper-strong;
+  border: 1px solid $border;
+  border-radius: 16px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 8px 20px rgba($teal, 0.08);
+}
+
+.glance-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $ink-muted;
+}
+
+.glance-card .metric {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: $teal-dark;
+}
+
+.glance-card .detail {
+  margin: 0.35rem 0 0;
+  color: $ink-muted;
+  font-size: 0.95rem;
+}
+
+.highlight-card {
+  border: 1px solid rgba($orange, 0.3);
+  background: linear-gradient(135deg, rgba($orange, 0.15), rgba($orange, 0.03));
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba($teal, 0.12);
+  color: $teal-dark;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .section-card {
+    padding: 1.5rem;
+  }
+
+  .hero-title h1 {
+    font-size: 1.6rem;
+  }
+}
+
 /* No Protocols Callout */
 .no-protocols-callout {
   background: linear-gradient(135deg, rgba(239, 68, 68, 0.08), rgba(239, 68, 68, 0.04));
